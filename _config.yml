@@ -1,0 +1,36 @@
+# Permalinks
+permalink: pretty
+
+# Setup
+title: Publog
+tagline: Developer Blog of Shivishbrahma
+url: http://shivishbrahma.github.io/publog
+paginate: 1
+baseurl: ''
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+    sass_dir: _sass
+    style: :compressed
+
+# About/contact
+author:
+    name: Purbayan Chowdhury
+    url: https://twitter.com/shivishbrahma
+    email: pur.cho.99@gmail.com
+
+# Custom vars
+version: 0.1.0
+github:
+    repo: https://github.com/shivishbrahma/blog
+
+# Gems
+gems:
+    - jekyll-paginate
+    - jekyll-gist
+
+plugins:
+    - jekyll-paginate
+    - jekyll-gist
