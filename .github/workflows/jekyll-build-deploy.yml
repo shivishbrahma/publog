@@ -1,0 +1,38 @@
+name: Build & Deploy with Jekyll
+
+on:
+    push:
+        branches:
+            - main
+    pull_request:
+        branches:
+            - main
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        # strategy:
+        #     matrix:
+        #         jekyll-version:
+        #             - 4.2.x
+
+        steps:
+        - uses: actions/checkout@v3
+        - name: Install Ruby
+          run: |
+            sudo apt-get update
+            sudo apt-get install -y ruby-full ruby-bundler build-essential zlib1g-dev
+        - name: Install Jekyll
+          run: gem install jekyll
+        - name: Install Rubygems
+          run: gem install jekyll-sitemap jekyll-gist jekyll-paginate jekyll-seo-tag
+        - name: Build Jekyll
+          run: jekyll build
+        
+        - name: Deploy Jekyll
+          run: git config user.name github-actions
+          run: git config user.email github-actions@github.com
+          run : git --work-tree _site add --all
+          run : git commit -m "Deploy to GitHub Pages"
+          run : git push origin HEAD:gh-pages --force
+
+
