@@ -16,7 +16,6 @@ jobs:
         #             - 4.2.x
 
         steps:
-            - uses: actions/checkout@v3
             - name: Install Ruby
               run: |
                   sudo apt-get update
@@ -28,10 +27,14 @@ jobs:
             - name: Build Jekyll
               run: jekyll build
 
-            - name: Deploy Jekyll
-              run: |
-                  git config user.name github-actions
-                  git config user.email github-actions@github.com
-                  git --work-tree _site add --all
-                  git commit -m "Deploy to GitHub Pages"
-                  git push origin HEAD:gh-pages --force
+            - uses: actions/checkout@v3
+            - run: git config user.name github-actions
+              shell: bash
+            - run: git config user.email github-actions@github.com
+              shell: bash
+            - run: git --work-tree _site add --all
+              shell: bash
+            - run: git commit -m "Deploy to GitHub Pages"
+              shell: bash
+            - run: git push origin HEAD:gh-pages --force
+              shell: bash
