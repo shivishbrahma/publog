@@ -6,7 +6,7 @@ title: Publog
 tagline: Developer Blog of Shivishbrahma
 url: http://shivishbrahma.github.io/publog
 paginate: 1
-baseurl: ''
+baseurl: '/publog'
 
 # Assets
 #
@@ -37,7 +37,7 @@ author:
 # Custom vars
 version: 0.1.0
 github:
-    repo: https://github.com/shivishbrahma/blog
+    repo: https://github.com/shivishbrahma/publog
 
 # Gems
 gems:
