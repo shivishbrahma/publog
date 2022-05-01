@@ -1,8 +1,8 @@
 <head>
     <link href="http://gmpg.org/xfn/11" rel="profile" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta http-equiv="content-security-policy"
-        content="default-src 'self'; script-src 'self' 'unsafe-inline' shivishbrahma.github.io *.disqus.com a.disquscdn.com requirejs.org www.google-analytics.com; style-src 'self' 'unsafe-inline' shivishbrahma.github.io a.disquscdn.com fonts.googleapis.com; img-src 'self' *; media-src 'self'  shivishbrahma.github.io; frame-src disqus.com;">
+    <!-- <meta http-equiv="content-security-policy"
+        content="default-src 'self'; style-src 'self' 'unsafe-inline' {{ page.url | relative_url }} fonts.googleapis.com a.disquscdn.com; script-src 'self' 'unsafe-inline' {{ page.url | relative_url }} *.disqus.com a.disquscdn.com requirejs.org www.google-analytics.com; img-src *; media-src 'self' {{ page.url | relative_url }}; frame-src disqus.com; object-src 'unsafe-eval';"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
 
     <title>
@@ -11,21 +11,21 @@
     </title>
 
     {% if page.url and site.baseurl %}
-    <link rel="canonical" href="{{ page.url | absolute_url }}" />
+    <link rel="canonical" href="{{ page.url | relative_url }}" />
     {% endif %}
 
-    <link rel="stylesheet" href="{{ '/public/css/poole.css' | absolute_url }}" />
-    <link rel="stylesheet" href="{{ '/public/css/syntax.css' | absolute_url }}" />
-    <link rel="stylesheet" href="{{ '/public/css/lanyon.css' | absolute_url }}" />
+    <link rel="stylesheet" href="{{ '/public/css/poole.css' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/public/css/syntax.css' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/public/css/lanyon.css' | relative_url }}" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&family=Noto+Serif+Bengali&display=swap" />
 
-    <link rel="shortcut icon" href="{{ '/public/favicon.ico' | absolute_url }}" />
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/public/apple-touch-icon.png' | absolute_url}}" />
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/public/favicon-32x32.png' | absolute_url}}" />
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/public/favicon-16x16.png' | absolute_url}}" />
+    <link rel="shortcut icon" href="{{ '/public/favicon.ico' | relative_url }}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/public/apple-touch-icon.png' | relative_url}}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/public/favicon-32x32.png' | relative_url}}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/public/favicon-16x16.png' | relative_url}}" />
 
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ '/atom.xml' | absolute_url }}" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ '/atom.xml' | relative_url }}" />
 
     {% if site.google_analytics_id %}
     <script>

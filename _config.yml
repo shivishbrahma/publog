@@ -6,7 +6,7 @@ title: Publog
 tagline: Developer Blog of Shivishbrahma
 url: http://shivishbrahma.github.io/publog
 paginate: 1
-baseurl: ''
+baseurl: '/publog'
 
 # Assets
 #
@@ -14,6 +14,19 @@ baseurl: ''
 sass:
     sass_dir: _sass
     style: :compressed
+
+# Set tags
+collections:
+    tags:
+        output: true
+        permalink: /tags/:path/
+        sort_order:
+            - published
+            - title
+    posts:
+        output: true
+        sort_order: date
+        sort_reverse: true
 
 # About/contact
 author:
@@ -24,7 +37,7 @@ author:
 # Custom vars
 version: 0.1.0
 github:
-    repo: https://github.com/shivishbrahma/blog
+    repo: https://github.com/shivishbrahma/publog
 
 # Gems
 gems:
@@ -34,3 +47,4 @@ gems:
 plugins:
     - jekyll-paginate
     - jekyll-gist
+

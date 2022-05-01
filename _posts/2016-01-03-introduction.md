@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Introduction To Ruby
+tags: ruby programming
 ---
 
 ## Numbers : Chapter 1
