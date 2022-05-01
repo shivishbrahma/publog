@@ -3,25 +3,34 @@ layout: default
 ---
 
 <div class="post">
-  <h1 class="post-title">{{ page.title }}</h1>
-  <span class="post-date">{{ page.date | date_to_string }}</span>
-  {{ content }}
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-tags">
+        {% for tag in page.tags %}
+        {% assign tag_slug = tag | slugify: "raw" %}
+        <a class="tag-link" href="{{ site.baseurl | append: '/tag/' | append: tag_slug | append: '/' }}"
+            rel="category tag">
+            {{ tag }}
+        </a>
+        {% endfor %}
+    </div>
+    <span class="post-date">{{ page.date | date_to_string }}</span>
+    {{ content }}
 </div>
 
 {% if site.related_posts.size >= 1 %}
 <div class="related">
-  <h2>Related posts</h2>
-  <ul class="related-posts">
-    {% for post in site.related_posts limit:3 %}
-      <li>
-        <h3>
-          <a href="{{ site.baseurl }}{{ post.url }}">
-            {{ post.title }}
-            <small>{{ post.date | date_to_string }}</small>
-          </a>
-        </h3>
-      </li>
-    {% endfor %}
-  </ul>
+    <h2>Related posts</h2>
+    <ul class="related-posts">
+        {% for post in site.related_posts limit:3 %}
+        <li>
+            <h3>
+                <a href="{{ site.baseurl }}{{ post.url }}">
+                    {{ post.title }}
+                    <small>{{ post.date | date_to_string }}</small>
+                </a>
+            </h3>
+        </li>
+        {% endfor %}
+    </ul>
 </div>
 {% endif %}
