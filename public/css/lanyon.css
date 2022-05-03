@@ -42,7 +42,7 @@ html {
 	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-html .lang-bn {
+html:lang(bn) {
 	font-family: 'Noto Serif Bengali', 'Lohit Bengali', serif;
 }
 
@@ -52,18 +52,19 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana,
+		sans-serif;
 	font-weight: 400;
 	color: #313131;
 	letter-spacing: -0.025rem;
 }
 
-h1 .font-bn,
-h2 .font-bn,
-h3 .font-bn,
-h4 .font-bn,
-h5 .font-bn,
-h6 .font-bn {
+h1:lang(bn),
+h2:lang(bn),
+h3:lang(bn),
+h4:lang(bn),
+h5:lang(bn),
+h6:lang(bn) {
 	font-family: 'Hind Siliguri', sans-serif;
 }
 

@@ -28,23 +28,39 @@ collections:
         sort_order: date
         sort_reverse: true
 
+# Gems
+gems:
+    - jekyll-paginate
+    - jekyll-gist
+    - jemoji
+    # - jekyll-multiple-languages-plugin
+
+plugins:
+    - jekyll-paginate
+    - jekyll-gist
+    - jemoji
+    # - jekyll-multiple-languages-plugin
+
 # About/contact
 author:
     name: Purbayan Chowdhury
-    url: https://twitter.com/shivishbrahma
+    website: https://shivishbrahma.github.io
     email: pur.cho.99@gmail.com
+    twitter: https://twitter.com/shivishbrahma
 
 # Custom vars
 version: 0.1.0
 github:
     repo: https://github.com/shivishbrahma/publog
 
-# Gems
-gems:
-    - jekyll-paginate
-    - jekyll-gist
+# Languages support
+# languages:
+#     - en
+#     - bn
 
-plugins:
-    - jekyll-paginate
-    - jekyll-gist
-
+# Markdown
+kramdown:
+  syntax_highlighter: rouge
+  input: GFM
+  auto_ids:       true
+  toc_levels:     1..3
