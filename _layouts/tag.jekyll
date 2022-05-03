@@ -6,7 +6,7 @@ layout: default
 <div class="posts">
   {% for post in site.posts %}
     {% if post.tags contains page.tag %}
-      {% include post_snippet.html %}
+      {% include post_snippet.jekyll %}
     {% endif %}
   {% endfor %}
 </div>

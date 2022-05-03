@@ -14,7 +14,9 @@ layout: default
         {% endfor %}
     </div>
     <span class="post-date">{{ page.date | date_to_string }}</span>
-    {{ content }}
+    <article class="post-content">
+        {{ page.content }}
+    </article>
 </div>
 
 {% if site.related_posts.size >= 1 %}

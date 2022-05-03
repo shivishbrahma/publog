@@ -5,11 +5,7 @@ date: '2022-04-01 16:13:06 +0530'
 tags: ruby programming
 ---
 
-## Table of Contents
-{:.no_toc}
-
-1. TOC
-{:toc}
+{% include toc.jekyll %}
 
 ## Numbers : Chapter 1
 
