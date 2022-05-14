@@ -33,7 +33,7 @@ File.open("_drafts/#{post_file_name}", 'w') do |f|
     f.write("date: '#{post_date.strftime('%Y-%m-%d %I:%M:%S %Z')}'\n")
     f.write("tags: #{post_tags}\n")
     f.write("---\n\n\n")
-    f.write("## Table of Contents\n{:.no_toc}\n")
+    f.write("{% include toc.jekyll %}\n")
 end
 
 puts "Post created: #{post_file_name}"
