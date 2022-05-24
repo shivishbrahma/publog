@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Home
+title: titles.home
 ---
 
-<h1 class="page-title">Recent Posts</h1>
+<h1 class="page-title">{% t recent_posts %}</h1>
 
 <div class="posts">
     {% for post in paginator.posts %} 
@@ -15,7 +15,7 @@ title: Home
 	{% if paginator.next_page %}
         <a class="pagination-item older" href="{{ paginator.next_page_path | relative_url }}">Older</a>
 	{% else %}
-        <span class="pagination-item older">Older</span>
+        <span class="pagination-item older">{% t older %}</span>
     {% endif %} 
         
     {% if paginator.previous_page %} 
@@ -25,6 +25,6 @@ title: Home
             <a class="pagination-item newer" href="{{ paginator.previous_page_path | relative_url }}">Newer</a>
         {% endif %} 
     {% else %}
-        <span class="pagination-item newer">Newer</span>
+        <span class="pagination-item newer">{% t newer %}</span>
 	{% endif %}
 </div>

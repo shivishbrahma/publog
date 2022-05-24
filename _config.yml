@@ -1,9 +1,7 @@
 # Permalinks
-permalink: pretty
+permalink: /:title/
 
 # Setup
-title: Publog
-tagline: Developer Blog of Shivishbrahma
 url: http://shivishbrahma.github.io/publog
 paginate: 1
 baseurl: '/publog'
@@ -30,16 +28,17 @@ collections:
 
 # Gems
 gems:
+    - jekyll-multiple-languages-plugin
     - jekyll-paginate
     - jekyll-gist
     - jemoji
-    # - jekyll-multiple-languages-plugin
 
+# Plugins
 plugins:
+    - jekyll-multiple-languages-plugin
     - jekyll-paginate
     - jekyll-gist
     - jemoji
-    # - jekyll-multiple-languages-plugin
 
 # About/contact
 author:
@@ -54,9 +53,9 @@ github:
     repo: https://github.com/shivishbrahma/publog
 
 # Languages support
-# languages:
-#     - en
-#     - bn
+languages: ["en", "bn"]
+
+exclude_from_localizations: ["javascript", "images", "css", "scripts", "favicon.ico"]
 
 # Markdown
 kramdown:
@@ -65,3 +64,5 @@ kramdown:
     input: GFM
     auto_ids: true
     toc_levels: 1..3
+
+lang: bn

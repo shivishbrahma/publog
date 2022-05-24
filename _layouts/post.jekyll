@@ -1,5 +1,6 @@
 ---
 layout: default
+type: post
 ---
 
 <div class="post">
@@ -7,13 +8,13 @@ layout: default
     <div class="post-tags">
         {% for tag in page.tags %}
         {% assign tag_slug = tag | slugify: "raw" %}
-        <a class="tag-link" href="{{ site.baseurl | append: '/tag/' | append: tag_slug | append: '/' }}"
+        <a class="tag-link" href="{{ site.baseurl | append: '/tags/' | append: tag_slug | append: '/' }}"
             rel="category tag">
             {{ tag }}
         </a>
         {% endfor %}
     </div>
-    <span class="post-date">{{ page.date | date_to_string }}</span>
+    <span class="post-date">{{ page.date | i18n_date_to_string: site.lang }}</span>
     <article class="post-content">
         {{ page.content }}
     </article>
@@ -21,14 +22,14 @@ layout: default
 
 {% if site.related_posts.size >= 1 %}
 <div class="related">
-    <h2>Related posts</h2>
+    <h2>{% t recent_posts %}</h2>
     <ul class="related-posts">
         {% for post in site.related_posts limit:3 %}
         <li>
             <h3>
                 <a href="{{ site.baseurl }}{{ post.url }}">
                     {{ post.title }}
-                    <small>{{ post.date | date_to_string }}</small>
+                    <small>{{ post.date | i18n_date_to_string: site.lang }}</small>
                 </a>
             </h3>
         </li>

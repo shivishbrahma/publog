@@ -8,10 +8,10 @@ Jekyll::Hooks.register :posts, :post_write do |post|
     tags.each do |tag|
       generate_tag_file(tag) if !all_existing_tags.include?(tag)
     end
-  end
+end
   
-  def generate_tag_file(tag)
+def generate_tag_file(tag)
     File.open("_tags/#{tag}.md", "wb") do |file|
-      file << "---\nlayout: tag\ntag: #{tag}\n---\n"
+        file << "---\nlayout: tag\ntag: #{tag}\n---\n"
     end
-  end
+end

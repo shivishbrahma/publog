@@ -4,8 +4,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
 
     <title>
-        {% if page.title == "Home" %} {{ site.title }} &middot; {{ site.tagline }} {% else %} {{ page.title }} &middot;
-        {{ site.title }} {% endif %}
+        {% if page.title == "Home" %} 
+            {{ site.title }} &middot; {{ site.tagline }} 
+        {% elsif page.path contains '_posts' or page.path contains '_tags' %} 
+            {{ page.title }} &middot; {% t title %}
+        {% else %} 
+            {% t page.title %} &middot; {% t title %} 
+        {% endif %}
     </title>
 
     {% if page.url and site.baseurl %}

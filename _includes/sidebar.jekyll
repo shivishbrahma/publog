@@ -9,8 +9,8 @@
     </div>
 
     <nav class="sidebar-nav">
-        <a class="sidebar-nav-item{% if page.title == 'Home' %} active{% endif %}" href="{{ '/' | relative_url }}">
-            Home
+        <a class="sidebar-nav-item{% if page.url == '/' %} active{% endif %}" href="{{ site.baseurl }}/">
+            {% t titles.home %}
         </a>
 
         {% comment %} The code below dynamically generates a sidebar nav of pages with `layout: page` in the
@@ -20,15 +20,23 @@
             {% if node.title != null %} 
                 {% if node.layout == "page" %}
                     <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}"
-                        href="{{ node.url | relative_url }}">{{ node.title }}</a>
+                        href="{{ site.baseurl }}{{ node.url }}">{% t node.title %}</a>
                 {% endif %} 
             {% endif %} 
         {% endfor %}
 
-        <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
+        <span class="sidebar-nav-item">
+            {% capture link1 %}{{ site.baseurl_root }}{{ page.url}}{% endcapture %}
+            <a href="{{ link1 }}" class="">{% t global.english %}</a> | 
+            {% capture link2 %}{{ site.baseurl_root }}/bn{{ page.url  }}{% endcapture %}
+            <a href="{{ link2 }}">{% t global.bengali %}</a>
+        </span>
+        <span class="sidebar-nav-item">{% t currently %} v{{ site.version | i18n_number: site.lang }}</span>
     </nav>
 
     <div class="sidebar-item">
-        <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+        <p>
+           {% t author %} &copy; {{ site.time | i18n_date: '%Y', site.lang }} | {% t all_rights_reserved %}
+        </p>
     </div>
 </div>
