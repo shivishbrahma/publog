@@ -1,4 +1,4 @@
-# Blog
+# Publog
 
 Developer Blog of Shivishbrahma
 
@@ -7,3 +7,4 @@ Developer Blog of Shivishbrahma
 Background: #161925
 Text: #f8f8f2
 Font: Libre Baskerville
+Language: English / Bengali
