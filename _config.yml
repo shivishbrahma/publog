@@ -70,3 +70,7 @@ exclude:
   - _sass
   - '*.gem'
 
+reading_time:
+  words_per_minute: 180
+  format: "%d %s"
+

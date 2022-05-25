@@ -5,6 +5,7 @@ global:
 
 title: পাব্লগ 
 tagline: শিবিশব্রহ্মার বিকাশকারী ব্লগ
+description: শিবিশব্রহ্মার বিকাশকারী ব্লগ
 author: পূর্বায়ণ চৌধুরী
 
 older: পুরোনো
@@ -79,3 +80,33 @@ date:
     - অক্টো
     - নভে
     - ডিসে
+  am: পূর্বাহ্ন
+  pm: অপরাহ্ন
+  formats:
+    default: '%d %b %Y'
+    short: '%d %b %H:%M'
+    long: '%d %B %Y %H:%M'
+    full: '%A, %d %B %Y %H:%M:%S %z'
+    only_second: '%S'
+    only_minute: '%M'
+    only_hour: '%H'
+    only_day: '%d'
+    only_month: '%m'
+    only_year: '%Y'
+
+time:
+  units:
+    second: সেকেন্ড
+    minute: মিনিট
+    hour: ঘন্টা
+    day: দিন
+    week: সপ্তাহ
+    month: মাস
+    year: বছর
+    seconds: সেকেন্ড
+    minutes: মিনিট
+    hours: ঘন্টা
+    days: দিন
+    weeks: সপ্তাহ
+    months: মাস
+    years: বছর

@@ -4,17 +4,22 @@ type: post
 ---
 
 <div class="post">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <div class="post-tags">
-        {% for tag in page.tags %}
-        {% assign tag_slug = tag | slugify: "raw" %}
-        <a class="tag-link" href="{{ site.baseurl | append: '/tags/' | append: tag_slug | append: '/' }}"
-            rel="category tag">
-            {{ tag }}
-        </a>
-        {% endfor %}
-    </div>
-    <span class="post-date">{{ page.date | i18n_date_to_string: site.lang }}</span>
+    <header>
+        <h1 class="post-title">{{ page.title }}</h1>
+        <div class="post-tags">
+            {% for tag in page.tags %}
+            {% assign tag_slug = tag | slugify: "raw" %}
+            <a class="tag-link" href="{{ site.baseurl | append: '/tags/' | append: tag_slug | append: '/' }}"
+                rel="category tag">
+                {{ tag }}
+            </a>
+            {% endfor %}
+        </div>
+        <div class="post-info">
+            <span class="post-read-time">{{ page.content | i18n_reading_time }}</span>
+            <span class="post-date">{{ page.date | i18n_date_to_string }}</span>
+        </div>
+    </header>
     <article class="post-content">
         {{ page.content }}
     </article>
@@ -29,7 +34,7 @@ type: post
             <h3>
                 <a href="{{ site.baseurl }}{{ post.url }}">
                     {{ post.title }}
-                    <small>{{ post.date | i18n_date_to_string: site.lang }}</small>
+                    <small>{{ post.date | i18n_date_to_string }}</small>
                 </a>
             </h3>
         </li>

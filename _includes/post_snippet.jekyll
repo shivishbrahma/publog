@@ -13,6 +13,9 @@
 		</a>
 		{% endfor %}
 	</div>
-	<span class="post-date">{{ post.date | i18n_date_to_string: site.lang }}</span>
+    <div class="post-info">
+        <span class="post-read-time">{{ post.content | i18n_reading_time }}</span>
+        <span class="post-date">{{ post.date | i18n_date_to_string }}</span>
+    </div>
 	<span> {{ post.content | strip_html | truncatewords: 50 }} </span>
 </div>

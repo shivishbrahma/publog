@@ -5,7 +5,7 @@
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
     <div class="sidebar-item">
-        <p>{{ site.description }}</p>
+        <p>{% t description %}</p>
     </div>
 
     <nav class="sidebar-nav">
@@ -25,16 +25,18 @@
             {% endif %} 
         {% endfor %}
 
-        <span class="sidebar-nav-item">
+        <span class="sidebar-nav-item">{% t currently %} v{{ site.version | i18n_number }}</span>
+    </nav>
+
+
+    <div class="sidebar-item">
+        <p>
             {% capture link1 %}{{ site.baseurl_root }}{{ page.url}}{% endcapture %}
             <a href="{{ link1 }}" class="">{% t global.english %}</a> | 
             {% capture link2 %}{{ site.baseurl_root }}/bn{{ page.url  }}{% endcapture %}
             <a href="{{ link2 }}">{% t global.bengali %}</a>
-        </span>
-        <span class="sidebar-nav-item">{% t currently %} v{{ site.version | i18n_number: site.lang }}</span>
-    </nav>
-
-    <div class="sidebar-item">
+        </p>
+   
         <p>
            {% t author %} &copy; {{ site.time | i18n_date: '%Y', site.lang }} | {% t all_rights_reserved %}
         </p>

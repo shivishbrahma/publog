@@ -5,6 +5,7 @@ global:
 
 title: Publog
 tagline: Developer Blog of Shivishbrahma
+description: Developer Blog of Shivishbrahma
 author: Purbayan Chowdhury
 
 older: Older
@@ -66,3 +67,32 @@ date:
     - October
     - November
     - December
+  am: AM
+  pm: PM
+  formats:
+    default: "%d %b %Y"
+    short: '%d %b %H:%M'
+    long: '%d %B %Y %H:%M'
+    full: '%A, %d %B %Y %H:%M:%S %z'
+    only_second: '%S'
+    only_minute: '%M'
+    only_hour: '%H'
+    only_day: '%d'
+    only_month: '%m'
+    only_year: '%Y'
+time:
+  units:
+    second: second
+    minute: minute
+    hour: hour
+    day: day
+    week: week
+    month: month
+    year: year
+    seconds: seconds
+    minutes: minutes
+    hours: hours
+    days: days
+    weeks: weeks
+    months: months
+    years: years
