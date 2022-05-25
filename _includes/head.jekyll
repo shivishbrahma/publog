@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="{{ '/public/css/poole.css' | relative_url }}" />
     <link rel="stylesheet" href="{{ '/public/css/dracula.css' | relative_url }}" />
     <link rel="stylesheet" href="{{ '/public/css/lanyon.css' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/public/css/style.css' | relative_url }}" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&family=Noto+Serif+Bengali&display=swap" />
 

@@ -1,5 +1,0 @@
-<aside class="table-of-contents">
-  <h4 class="toc_title">{% t toc %}</h4>
-  1. TOC
-  {:toc}
-</aside>

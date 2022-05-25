@@ -31,12 +31,14 @@ gems:
     - jekyll-multiple-languages-plugin
     - jekyll-paginate
     - jekyll-gist
+    - jekyll-toc
 
 # Plugins
 plugins:
     - jekyll-multiple-languages-plugin
     - jekyll-paginate
     - jekyll-gist
+    - jekyll-toc
 
 # About/contact
 author:
@@ -70,7 +72,20 @@ exclude:
   - _sass
   - '*.gem'
 
+# Read time config
 reading_time:
   words_per_minute: 180
   format: "%d %s"
 
+# Table of Contents
+toc:
+  ordered_list: true
+  list_class: toc__list
+  item_class: post-toc-item
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      toc: true

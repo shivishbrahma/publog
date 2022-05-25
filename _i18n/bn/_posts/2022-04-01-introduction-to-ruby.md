@@ -5,8 +5,6 @@ date: '2022-04-01 16:13:06 +0530'
 tags: ruby programming
 ---
 
-{% include toc.jekyll %}
-
 ## Numbers : Chapter 1
 
 Ruby Hello World Program

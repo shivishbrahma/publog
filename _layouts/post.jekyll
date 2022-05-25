@@ -3,8 +3,19 @@ layout: default
 type: post
 ---
 
+
+<aside class="post-toc">
+    <h3 class="toc-title">
+        {% t toc %}
+        <span class="close-toc" title="{% t close %}"></span>
+    </h3>
+    <div class="toc">
+        {{ page.content | toc_only }}
+    </div>
+</aside>
+
 <div class="post">
-    <header>
+    <header class="post-header">
         <h1 class="post-title">{{ page.title }}</h1>
         <div class="post-tags">
             {% for tag in page.tags %}
@@ -23,6 +34,12 @@ type: post
     <article class="post-content">
         {{ page.content }}
     </article>
+    <footer>
+        <div class="footer-iconbar">
+            <span class="toc-icon" title="{% t toc %}"></span>
+            <a href="#" class="go-to-top" title="{% t go_to_top %}"></a>
+        </div>
+    </footer>
 </div>
 
 {% if site.related_posts.size >= 1 %}
