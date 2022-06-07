@@ -5,6 +5,7 @@ permalink: /:title/
 url: http://shivishbrahma.github.io/publog
 paginate: 1
 baseurl: '/publog'
+google_analytics_id: 'G-Y33HYSK8XN'
 
 # Assets
 #
