@@ -1,38 +1,37 @@
-name: 'Automatic build'
+name: "Automatic build"
 on:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - .gitignore
-      - README.md
-      - LICENSE
+    push:
+        branches:
+            - main
+        paths-ignore:
+            - .gitignore
+            - README.md
+            - LICENSE
 
 jobs:
-  continuous-delivery:
+    continuous-delivery:
+        runs-on: ubuntu-latest
 
-    runs-on: ubuntu-latest
+        steps:
+            - name: Check for token
+              run: |
+                  if ! [[ -z "${{ secrets.GH_TOKEN }}" ]]; then
+                    echo ::set-output has_token=true
+                  else
+                    echo ::set-output has_token=false
+                  fi
 
-    steps:
-      - name: Check for token
-        run: |
-          if ! [[ -z "${{ secrets.GH_TOKEN }}" ]]; then
-            echo ::set-output has_token=true
-          else
-            echo ::set-output has_token=false
-          fi
+            - name: Checkout
+              uses: actions/checkout@v2
+              with:
+                  fetch-depth: 0 # for posts's lastmod
+                  token: ${{ secrets.GH_TOKEN || github.token }}
 
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0  # for posts's lastmod
-          token: ${{ secrets.GH_TOKEN || github.token }}
+            - name: Setup Ruby
+              uses: ruby/setup-ruby@v1
+              with:
+                  ruby-version: 3.1
+                  bundler-cache: true
 
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 2.7
-          bundler-cache: true
-
-      - name: Deploy
-        run: bash tools/deploy.sh
+            - name: Deploy
+              run: bash tools/deploy.sh
