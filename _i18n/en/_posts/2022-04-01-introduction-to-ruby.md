@@ -3,6 +3,7 @@ layout: post
 title: Introduction To Ruby
 date: '2022-04-01 16:13:06 +0530'
 tags: ruby programming
+cover: 0001_cover.webp
 ---
 
 ## Numbers : Chapter 1
