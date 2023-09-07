@@ -3,6 +3,7 @@ layout: post
 title: Custom WAMMP Setup in Windows
 date: '2023-04-30 22:55:06 +0530'
 tags: windows apache php
+cover: 0002_cover.webp
 ---
 
 ## Apache server installation
