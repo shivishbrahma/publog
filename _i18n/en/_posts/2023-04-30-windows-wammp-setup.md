@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom WAMMP Setup in Windows
+title: Custom WAMMP Setup in Windows (mod_wsgi support)
 date: '2023-04-30 22:55:06 +0530'
 tags: windows apache php
 cover: 0002_cover.webp
@@ -29,13 +29,13 @@ or
 
 - Set `ChocolateyToolsLocation` to `C:\Apps`
 - Install php using choco
-  
+
   ```bash
   choco install php --version=8.1.22 --package-parameters='"/ThreadSafe"'
   ```
 
 - Set extension directory
-  
+
    ```apache
   extension_dir = "ext"
    ```
@@ -56,6 +56,7 @@ or
   extension=pdo_mysql
   extension=pdo_sqlite
   extension=soap
+  extension=xsl
    ```
 
 ### Configuring in httpd server
@@ -122,17 +123,27 @@ set root password
 /* Authentication type and info */
 $cfg['Servers'][$i]['auth_type'] = 'config';
 $cfg['Servers'][$i]['user'] = 'root';
-$cfg['Servers'][$i]['password'] = 'Anit@1999';
+$cfg['Servers'][$i]['password'] = '<mysql_password>';
 $cfg['Servers'][$i]['extension'] = 'mysqli';
 $cfg['Servers'][$i]['AllowNoPassword'] = false;
 $cfg['Lang'] = 'en';
 
 /* User for advanced features */
 $cfg['Servers'][$i]['controluser'] = 'pma';
-$cfg['Servers'][$i]['controlpass'] = 'Oracle@Delphi2021';
+$cfg['Servers'][$i]['controlpass'] = '<control_password>';
 ```
 
-## Final steps
+## Adding Xdebug for code coverage
+
+- Download xdebug file from <https://xdebug.org/files/php_xdebug-3.3.0alpha2-8.1-vs16-x86_64.dll>
+- Move it to `Apps\php81\ext` and rename it to `php_xdebug.dll`.
+- Update `C:\Apps\php81\php.ini` and add the line:
+
+```apache
+zend_extension=xdebug
+```
+
+## Configuring Virtual Hosts and Symbolic Links
 
 - Create a symbolic directory from project directory
 
@@ -157,5 +168,52 @@ mklink /D C:\Apache24\htdocs\diybdocs C:\Users\purch\Documents\Projects\Github\D
     ServerName diybaazar.xyz
     ErrorLog "logs/diybaazar.xyz-error.log"
     CustomLog "logs/diybaazar.xyz-access.log" common
+</VirtualHost>
+```
+
+## Hosting Flask Service
+
+- Installing mod-wsgi
+
+```bash
+ pip install mod-wsgi
+```
+
+- Run the following the command and copy the output
+
+```bash
+ mod_wsgi-express module-config
+```
+
+Output will look something like this:
+
+```txt
+LoadFile "C:/Python311/python311.dll"
+LoadModule wsgi_module "C:/Python311/Lib/site-packages/mod_wsgi/server/mod_wsgi.cp311-win_amd64.pyd"
+WSGIPythonHome "C:/Python311"
+```
+
+- Paste it in `httpd.conf`.
+
+- Add the following config in `httpd-vhosts.conf`.
+
+```apache
+<VirtualHost *:80>
+    DocumentRoot "${SRVROOT}/htdocs/diybdocs"
+    ServerAdmin webmaster@diybaazar.xyz
+    ServerName docs.diybaazar.xyz
+
+    WSGIScriptAlias / "${SRVROOT}/htdocs/diybdocs/app.wsgi"
+    <Directory "${SRVROOT}/htdocs/diybdocs">
+        WSGIApplicationGroup %{GLOBAL}
+        WSGIScriptReloading On
+        allow from all
+        #Options None
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog "logs/docs.diybaazar.xyz-error.log"
+    CustomLog "logs/docs.diybaazar.xyz-access.log" common
 </VirtualHost>
 ```
