@@ -6,24 +6,10 @@ tags: windows apache php
 cover: 0002_cover.webp
 ---
 
-## Apache server installation
-
-Download httpd from <https://www.apachelounge.com/download/>
-and unzip `httpd-**.zip`
-
-### Go to directory and install as service
-
-```bat
-cd C:\Apache24\bin\
-httpd -k install
-```
-
-Apache2.4 should be available in Services
-
 ## Php installation
 
-- Download php file from <https://windows.php.net/download#php-8.1>
-- Rename the folder to php81 and place it in C:\Apps
+- Download `php-8.1.*-Win32-vs16-x64.zip` file from [https://windows.php.net/download#php-8.1](https://windows.php.net/download#php-8.1)
+- Unzip and rename the folder to `php81` and place it in `C:\Apps`
 
 or
 
@@ -32,6 +18,7 @@ or
 
   ```bash
   choco install php --version=8.1.22 --package-parameters='"/ThreadSafe"'
+  choco install php --version=8.2.15 --package-parameters='"/ThreadSafe"'
   ```
 
 - Set extension directory
@@ -59,20 +46,38 @@ or
   extension=xsl
    ```
 
-### Configuring in httpd server
+### Download ca certificate and replace for curl config
 
-- Prepare a httpd-php.conf in conf/extra and include in conf/httpd.conf
+- Download the cacert.pem from [https://curl.se/ca/cacert.pem](https://curl.se/ca/cacert.pem).
+- Move it to `C:/Apps/php81/extras/ssl` and add uncomment the below line in `php.ini`.
 
-  ```apache
-  Include conf/extra/httpd-php.conf
+  ```ini
+  curl.cainfo = "C:\Apps\php81\extras\ssl\cacert.pem"
   ```
 
+## Apache server installation
+
+- Download `httpd-2.4.*-win64-VS17.zip` from [https://www.apachelounge.com/download/](https://www.apachelounge.com/download/).
+- Unzip the above zip file and move `Apache24` to `C:\Apps\Apache24`.
+
+### Go to directory and install as service
+
+- Open the terminal in administrative mode and run the below commands
+
+```bat
+cd C:\Apache24\bin\
+httpd -k install
+```
+
+- httpd server will be installed and `Apache2.4` should be available in Services.
+
+### Configuring in httpd server
+
+- Prepare a `httpd-php.conf` file with following content in `C:\Apps\Apache24\conf\extra`
+
    ```apache
-
   #
-
   # PHP-Module setup
-
   #
 
   LoadFile "C:/Apps/php81/php8ts.dll"
@@ -106,11 +111,17 @@ or
   </Directory>
    ```
 
+- Include the above file in `C:\Apps\Apache24\conf\httpd.conf`.
+
+  ```apacheconf
+  Include conf/extra/httpd-php.conf
+  ```
+
 ## MySQL installation
 
-Download .msi file from <https://dev.mysql.com/downloads/installer/> and install
+- Download .msi file from <https://dev.mysql.com/downloads/installer/> and install
 
-set root password
+- Set the `root` password
 
 ## phpMyAdmin
 
