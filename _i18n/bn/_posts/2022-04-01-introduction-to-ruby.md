@@ -1,34 +1,35 @@
 ---
 layout: post
-title: রুবির সাথে আলাপন 
+title: রুবি-তে হাতেখড়ি 
 date: '2022-04-01 16:13:06 +0530'
 tags: ruby programming
+cover: 0001_cover.webp
 ---
 
-## Numbers : Chapter 1
+## সংখ্যা : অধ্যায় ১
 
-Ruby Hello World Program
+রুবি "নমস্কার বিশ্ব" প্রোগ্রাম
 
 ```ruby
-puts "Hello World"
+puts "নমস্কার বিশ্ব"
 ```
 
-Save and run the file.
+সংরক্ষণ করে ফাইলটি চালান।
 `ruby calc.rb`
 
-### Introduction to puts
+### puts-এ হাতেখড়ি
 
 ```ruby
 puts 1+2
 ```
 
-puts simply writes onto the screen whatever comes after it.
+*puts* এর পরে যা আসে তা কেবল স্ক্রিনে লেখে।
 
-### Integer and Float
+### পূর্ণসংখ্যা এবং ভগ্নাংশ-সংখ্যা
 
-Numbers without decimal points are called _integers_, and numbers with decimal points are called _floating-point numbers_.
+দশমিক ছাড়া সংখ্যাগুলোকে *পূর্ণসংখ্যা* বলে, আর দশমিক দিয়ে সংখ্যাগুলোকে *ভগ্নাংশ সংখ্যা* বলে।
 
-Here are some integers:
+কয়েকটি পূর্ণসংখ্যা (integers):
 
 ```ruby
 5
@@ -37,7 +38,7 @@ Here are some integers:
 0
 ```
 
-Here are some floats:
+কয়েকটি ভগ্নাংশ সংখ্যা(floats):
 
 ```ruby
 54.321
@@ -46,9 +47,9 @@ Here are some floats:
 0.0
 ```
 
-### Simple Arithmetic
+### সহজ পাটিগণিত
 
-Let's do some simple arithmetic:
+কিছু সহজ পাটিগণিত করা যাক:
 
 ```ruby
 puts 1.0 + 2.0
@@ -57,7 +58,7 @@ puts 5.0 - 8.0
 puts 9.0 / 2.0
 ```
 
-Program result:
+প্রোগ্রামের ফলাফল:
 
 ```text
 3.0
@@ -240,7 +241,7 @@ puts '...you can say that again...'
 ...you can say that again...
 ```
 
-Assigning a value to a variable is called _assignment_.
+Assigning a value to a variable is called *assignment*.
 
 ```ruby
 myString = '...you can say that again...'
@@ -583,9 +584,9 @@ puts str.ljust(lineWidth/2) + str.rjust(lineWidth/2)
 
 #### Problems - 5
 
--   Write an Angry Boss program. It should rudely ask what you want. Whatever you answer, the Angry Boss should yell it back to you, and then fire you. For example, if you type in `I want a raise.`, it should yell back `WHADDAYA MEAN "I WANT A RAISE."?!? YOU'RE FIRED!!`
+- Write an Angry Boss program. It should rudely ask what you want. Whatever you answer, the Angry Boss should yell it back to you, and then fire you. For example, if you type in `I want a raise.`, it should yell back `WHADDAYA MEAN "I WANT A RAISE."?!? YOU'RE FIRED!!`
 
--   So here's something for you to do in order to play around more with center, ljust, and rjust: Write a program which will display a Table of Contents so that it looks like this:
+- So here's something for you to do in order to play around more with center, ljust, and rjust: Write a program which will display a Table of Contents so that it looks like this:
 
 ```text
                     Table of Contents
@@ -1011,17 +1012,17 @@ false
 
 ### A Few Things to Try : Chapter 6
 
--   "99 bottles of beer on the wall..." Write a program which prints out the lyrics to that beloved classic, that field-trip favorite: "99 Bottles of Beer on the Wall."
+- "99 bottles of beer on the wall..." Write a program which prints out the lyrics to that beloved classic, that field-trip favorite: "99 Bottles of Beer on the Wall."
 
--   Write a Deaf Grandma program. Whatever you say to grandma (whatever you type in), she should respond with HUH?! SPEAK UP, SONNY!, unless you shout it (type in all capitals). If you shout, she can hear you (or at least she thinks so) and yells back, NO, NOT SINCE 1938! To make your program really believable, have grandma shout a different year each time; maybe any year at random between 1930 and 1950. (This part is optional, and would be much easier if you read the section on Ruby's random number generator at the end of the methods chapter.) You can't stop talking to grandma until you shout BYE.
+- Write a Deaf Grandma program. Whatever you say to grandma (whatever you type in), she should respond with HUH?! SPEAK UP, SONNY!, unless you shout it (type in all capitals). If you shout, she can hear you (or at least she thinks so) and yells back, NO, NOT SINCE 1938! To make your program really believable, have grandma shout a different year each time; maybe any year at random between 1930 and 1950. (This part is optional, and would be much easier if you read the section on Ruby's random number generator at the end of the methods chapter.) You can't stop talking to grandma until you shout BYE.
 
     **Hint**: Don't forget about chomp! 'BYE'with an Enter is not the same as 'BYE' without one!
 
     **Hint 2**: Try to think about what parts of your program should happen over and over again. All of those should be in your while loop.
 
--   Extend your Deaf Grandma program: What if grandma doesn't want you to leave? When you shout BYE, she could pretend not to hear you. Change your previous program so that you have to shout BYE three times in a row. Make sure to test your program: if you shout BYE three times, but not in a row, you should still be talking to grandma.
+- Extend your Deaf Grandma program: What if grandma doesn't want you to leave? When you shout BYE, she could pretend not to hear you. Change your previous program so that you have to shout BYE three times in a row. Make sure to test your program: if you shout BYE three times, but not in a row, you should still be talking to grandma.
 
--   Leap Years. Write a program which will ask for a starting year and an ending year, and then puts all of the leap years between them (and including them, if they are also leap years). Leap years are years divisible by four (like 1984 and 2004). However, years divisible by 100 are not leap years (such as 1800 and 1900) unless they are divisible by 400 (like 1600 and 2000, which were in fact leap years). (Yes, it's all pretty confusing, but not as confusing as having July in the middle of the winter, which is what would eventually happen.)
+- Leap Years. Write a program which will ask for a starting year and an ending year, and then puts all of the leap years between them (and including them, if they are also leap years). Leap years are years divisible by four (like 1984 and 2004). However, years divisible by 100 are not leap years (such as 1800 and 1900) unless they are divisible by 400 (like 1600 and 2000, which were in fact leap years). (Yes, it's all pretty confusing, but not as confusing as having July in the middle of the winter, which is what would eventually happen.)
 
 ## Arrays and Iterators : Chapter 7
 
@@ -1156,12 +1157,12 @@ raindrops on roses
 
 ### A Few Things to Try : Chapter 7
 
--   Write the program we talked about at the very beginning of this chapter.
+- Write the program we talked about at the very beginning of this chapter.
     Hint: There's a lovely array method which will give you a sorted version of an array: sort. Use it!
 
--   Try writing the above program without using the sort method. A large part of programming is solving problems, so get all the practice you can!
+- Try writing the above program without using the sort method. A large part of programming is solving problems, so get all the practice you can!
 
--   Rewrite your Table of Contents program (from the chapter on methods). Start the program with an array holding all of the information for your Table of Contents (chapter names, page numbers, etc.). Then print out the information from the array in a beautifully formatted Table of Contents.
+- Rewrite your Table of Contents program (from the chapter on methods). Start the program with an array holding all of the information for your Table of Contents (chapter names, page numbers, etc.). Then print out the information from the array in a beautifully formatted Table of Contents.
 
 ## Writing Your Own Methods : Chapter 8
 
@@ -1759,13 +1760,13 @@ I think 'one trillion' would be a nicer return value for that last number, or ev
 
 ### A Few Things to Try : Chapter 8
 
--   Expand upon englishNumber. First, put in thousands. So it should return 'one thousand' instead of 'ten hundred' and 'ten thousand' instead of 'one hundred hundred'.
+- Expand upon englishNumber. First, put in thousands. So it should return 'one thousand' instead of 'ten hundred' and 'ten thousand' instead of 'one hundred hundred'.
 
--   Expand upon englishNumber some more. Now put in millions, so you get 'one million' instead of 'one thousand thousand'. Then try adding billions and trillions. How high can you go?
+- Expand upon englishNumber some more. Now put in millions, so you get 'one million' instead of 'one thousand thousand'. Then try adding billions and trillions. How high can you go?
 
--   How about weddingNumber? It should work almost the same as englishNumber, except that it should insert the word "and" all over the place, returning things like 'nineteen hundred and seventy and two', or however wedding invitations are supposed to look. I'd give you more examples, but I don't fully understand it myself. You might need to contact a wedding coordinator to help you.
+- How about weddingNumber? It should work almost the same as englishNumber, except that it should insert the word "and" all over the place, returning things like 'nineteen hundred and seventy and two', or however wedding invitations are supposed to look. I'd give you more examples, but I don't fully understand it myself. You might need to contact a wedding coordinator to help you.
 
--   "Ninety-nine bottles of beer..." Using englishNumber and your old program, write out the lyrics to this song the right way this time. Punish your computer: have it start at 9999. (Don't pick a number too large, though, because writing all of that to the screen takes your computer quite a while. A hundred thousand bottles of beer takes some time; and if you pick a million, you'll be punishing yourself as well!)
+- "Ninety-nine bottles of beer..." Using englishNumber and your old program, write out the lyrics to this song the right way this time. Punish your computer: have it start at 9999. (Don't pick a number too large, though, because writing all of that to the screen takes your computer quite a while. A hundred thousand bottles of beer takes some time; and if you pick a million, you'll be punishing yourself as well!)
 
 ## Classes : Chapter 9
 
@@ -1822,9 +1823,9 @@ Notice: that's when I was born in Pacific Daylight Savings Time (PDT). When Y2K 
 
 ### A Few Things to Try : Chapter 9
 
--   One billion seconds... Find out the exact second you were born (if you can). Figure out when you will turn (or perhaps when you did turn?) one billion seconds old. Then go mark your calendar.
+- One billion seconds... Find out the exact second you were born (if you can). Figure out when you will turn (or perhaps when you did turn?) one billion seconds old. Then go mark your calendar.
 
--   Happy Birthday! Ask what year a person was born in, then the month, then the day. Figure out how old they are and give them a big SPANK! for each birthday they have had.
+- Happy Birthday! Ask what year a person was born in, then the month, then the day. Figure out how old they are and give them a big SPANK! for each birthday they have had.
 
 ### The Hash Class
 
@@ -2174,9 +2175,9 @@ Norbert is starving!  In desperation, he ate YOU!
 
 ### A Few Things to Try : Chapter 9.1
 
--   Make an OrangeTree class. It should have a height method which returns its height, and a oneYearPasses method, which, when called, ages the tree one year. Each year the tree grows taller (however much you think an orange tree should grow in a year), and after some number of years (again, your call) the tree should die. For the first few years, it should not produce fruit, but after a while it should, and I guess that older trees produce more each year than younger trees... whatever you think makes most sense. And, of course, you should be able to countTheOranges (which returns the number of oranges on the tree), and pickAnOrange (which reduces the @orangeCount by one and returns a string telling you how delicious the orange was, or else it just tells you that there are no more oranges to pick this year). Make sure that any oranges you don't pick one year fall off before the next year.
+- Make an OrangeTree class. It should have a height method which returns its height, and a oneYearPasses method, which, when called, ages the tree one year. Each year the tree grows taller (however much you think an orange tree should grow in a year), and after some number of years (again, your call) the tree should die. For the first few years, it should not produce fruit, but after a while it should, and I guess that older trees produce more each year than younger trees... whatever you think makes most sense. And, of course, you should be able to countTheOranges (which returns the number of oranges on the tree), and pickAnOrange (which reduces the @orangeCount by one and returns a string telling you how delicious the orange was, or else it just tells you that there are no more oranges to pick this year). Make sure that any oranges you don't pick one year fall off before the next year.
 
--   Write a program so that you can interact with your baby dragon. You should be able to enter commands like feed and walk, and have those methods be called on your dragon. Of course, since what you are inputting are just strings, you will have to have some sort of method dispatch, where your program checks which string was entered, and then calls the appropriate method.
+- Write a program so that you can interact with your baby dragon. You should be able to enter commands like feed and walk, and have those methods be called on your dragon. Of course, since what you are inputting are just strings, you will have to have some sort of method dispatch, where your program checks which string was entered, and then calls the appropriate method.
 
 ## Blocks and Procs : Chapter 10
 
@@ -2433,9 +2434,9 @@ count to a million:  0.039258 seconds
 
 ### A Few Things to Try : Chapter 10
 
--   Grandfather Clock. Write a method which takes a block and calls it once for each hour that has passed today. That way, if I were to pass in the block do puts 'DONG!' end, it would chime (sort of) like a grandfather clock. Test your method out with a few different blocks (including the one I just gave you).
+- Grandfather Clock. Write a method which takes a block and calls it once for each hour that has passed today. That way, if I were to pass in the block do puts 'DONG!' end, it would chime (sort of) like a grandfather clock. Test your method out with a few different blocks (including the one I just gave you).
     **Hint**: You can use Time.now.hour to get the current hour. However, this returns a number between 0 and 23, so you will have to alter those numbers in order to get ordinary clock-face numbers (1 to 12).
--   Program Logger. Write a method called log, which takes a string description of a block and, of course, a block. Similar to doSelfImportantly, it should puts a string telling that it has started the block, and another string at the end telling you that it has finished the block, and also telling you what the block returned. Test your method by sending it a code block. Inside the block, put another call to log, passing another block to it. (This is called nesting.) In other words, your output should look something like this:
+- Program Logger. Write a method called log, which takes a string description of a block and, of course, a block. Similar to doSelfImportantly, it should puts a string telling that it has started the block, and another string at the end telling you that it has finished the block, and also telling you what the block returned. Test your method by sending it a code block. Inside the block, put another call to log, passing another block to it. (This is called nesting.) In other words, your output should look something like this:
 
     ```text
     Beginning "outer block"...
@@ -2446,7 +2447,7 @@ count to a million:  0.039258 seconds
     ..."outer block" finished, returning:  false
     ```
 
--  Better Logger. The output from that last logger was kind of hard to read, and it would just get worse the more you used it. It would be so much easier to read if it indented the lines in the inner blocks. To do this, you'll need to keep track of how deeply nested you are every time the logger wants to write something. To do this, use a global variable, a variable you can see from anywhere in your code. To make a global variable, just precede your variable name with $, like these: $global, $nestingDepth, and $bigTopPeeWee. In the end, your logger should output code like this:
+- Better Logger. The output from that last logger was kind of hard to read, and it would just get worse the more you used it. It would be so much easier to read if it indented the lines in the inner blocks. To do this, you'll need to keep track of how deeply nested you are every time the logger wants to write something. To do this, use a global variable, a variable you can see from anywhere in your code. To make a global variable, just precede your variable name with $, like these: $global, $nestingDepth, and $bigTopPeeWee. In the end, your logger should output code like this:
 
     ```text
     Beginning "outer block"...
