@@ -67,7 +67,7 @@ puts 9.0 / 2.0
 4.5
 ```
 
-Let's try it with integers:
+পূর্ণসংখ্যা দিয়ে করে দেখি:
 
 ```ruby
 puts 1+2
@@ -76,7 +76,7 @@ puts 5-8
 puts 9/2
 ```
 
-Program result:
+প্রোগ্রামের ফলাফল:
 
 ```text
 3
@@ -85,7 +85,7 @@ Program result:
 4
 ```
 
-Complex arithmetic expressions can be written using the following operators:
+জটিল গাণিতিক সম্প্রসারণগুলি নিম্নলিখিত অপারেটারের মাধ্যমে লেখা যাক:
 
 ```ruby
 puts 5 * (12-8) + -15
@@ -97,15 +97,15 @@ puts 98 + (59872 / (13*8)) * -52
 -29802
 ```
 
-## Letters : Chapter 2
+## বর্ণসমষ্টি : অধ্যায় ২
 
-Some strings are:
+কিছু স্ট্রিংগুলি হল:
 
 ```ruby
-'Hello.'
-'Ruby rocks.'
-'5 is my favorite number... what is yours?'
-'Snoopy says #%^?&*@! when he stubs his toe.'
+'নমস্কার!'
+'রুবি মাতিয়ে দেয়।'
+'5 আমার প্রিয় সংখ্যা... তোমার কোনটা?'
+'স্নোপি বলল #%^?&*@! যখন সে পায়ের আঙুলে ঠোক্কর খায়।'
 '     '
 ''
 ```
@@ -115,15 +115,15 @@ Strings can have punctuation, digits, symbols, and spaces in them... more than j
 Let's try it with some strings:
 
 ```ruby
-puts 'Hello, world!'
+puts 'নমস্কার, বিশ্ব!'
 puts ''
-puts 'Good-bye.'
+puts 'শুভ বিদায়।'
 ```
 
 ```text
-Hello, world!
+নমস্কার, বিশ্ব!
 
-Good-bye.
+শুভ বিদায়।
 ```
 
 ### String Arithmetic
