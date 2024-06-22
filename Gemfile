@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem 'bundler', '~> 2.3.26'
+gem 'bundler', '~> 2.5'
 
 group :jekyll_plugins do
     gem 'jekyll-multiple-languages-plugin'
@@ -27,7 +27,7 @@ install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
 end
 
 # Performance-booster for watching directories on Windows
-gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
+# gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
 
 # Jekyll <= 4.2.0 compatibility with Ruby 3.0
 gem "webrick", "~> 1.7"

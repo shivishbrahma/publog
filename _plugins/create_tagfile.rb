@@ -1,5 +1,5 @@
 Jekyll::Hooks.register :posts, :post_write do |post|
-    Dir.mkdir("_tags") unless File.exists? "_tags"
+    Dir.mkdir("_tags") unless Dir.exist? "_tags"
     all_existing_tags = Dir.entries("_tags")
       .map { |t| t.match(/(.*).md/) }
       .compact.map { |m| m[1] }
