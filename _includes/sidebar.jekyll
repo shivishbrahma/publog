@@ -9,7 +9,7 @@
     </div>
 
     <nav class="sidebar-nav">
-        <a class="sidebar-nav-item{% if page.url == '/' %} active{% endif %}" href="{{ site.baseurl }}/">
+        <a class="sidebar-nav-item{% if page.url == '/' %} active{% endif %}" href="{{ site.baseurl }}/" title="{% t titles.home %} {% t link %}">
             {% t titles.home %}
         </a>
 
@@ -20,7 +20,7 @@
             {% if node.title != null %} 
                 {% if node.layout == "page" %}
                     <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}"
-                        href="{{ site.baseurl }}{{ node.url }}">{% t node.title %}</a>
+                        href="{{ site.baseurl }}{{ node.url }}" title="{% t node.title %} {% t link %}">{% t node.title %}</a>
                 {% endif %} 
             {% endif %} 
         {% endfor %}
@@ -32,9 +32,9 @@
     <div class="sidebar-item">
         <p>
             {% capture link1 %}{{ site.baseurl_root }}{{ page.url}}{% endcapture %}
-            <a href="{{ link1 }}" class="">{% t global.english %}</a> | 
+            <a href="{{ link1 }}" class="" title="{% t global.english %} Link">{% t global.english %}</a> | 
             {% capture link2 %}{{ site.baseurl_root }}/bn{{ page.url  }}{% endcapture %}
-            <a href="{{ link2 }}">{% t global.bengali %}</a>
+            <a href="{{ link2 }}" class="" title="{% t global.bengali %} লিংক">{% t global.bengali %}</a>
         </p>
    
         <p>
