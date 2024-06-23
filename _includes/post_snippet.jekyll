@@ -1,6 +1,6 @@
 <div class="post">
 	<h3 class="post-title">
-		<a href="{{ site.baseurl | append: post.url }}"> {{ post.title }} </a>
+		<a href="{{ site.baseurl | append: post.url }}" title="{{ post.title }} {% t link %}"> {{ post.title }} </a>
 	</h3>
 	<div class="post-tags">
 		{% for tag in post.tags %} {% assign tag_slug = tag | slugify: "raw" %}
@@ -8,6 +8,7 @@
 			class="tag-link"
 			href="{{ site.baseurl | append: '/tags/' | append: tag_slug | append: '/' }}"
 			rel="category tag"
+            title="{{ tag }} {% t link %}"
 		>
 			{{ tag }}
 		</a>

@@ -9,6 +9,7 @@ group :jekyll_plugins do
     gem 'jekyll-paginate'
     gem 'jekyll-gist'
     gem 'jekyll-toc'
+    # gem 'jekyll-seo-tag'
     # gem 'jekyll-coffeescript'
     # gem 'jekyll-redirect-from'
 end

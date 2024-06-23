@@ -151,10 +151,6 @@ module Jekyll
         end
     end
 
-
-    
-
-
     module I18nFilter
         include Liquid::StandardFilters
 
