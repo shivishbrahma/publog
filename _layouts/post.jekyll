@@ -4,7 +4,7 @@ type: post
 ---
 
 
-<aside class="post-toc">
+<aside class="post-toc hide">
     <h3 class="toc-title">
         {% t toc %}
         <span class="close-toc" title="{% t close %}"></span>

@@ -4,74 +4,74 @@ permalink: /:title/
 # Setup
 url: http://shivishbrahma.github.io/publog
 paginate: 1
-baseurl: '/publog'
-google_analytics_id: 'G-Y33HYSK8XN'
+baseurl: "/publog"
+google_analytics_id: "G-Y33HYSK8XN"
 
 # Assets
 #
 # We specify the directory for Jekyll so we can use @imports.
 sass:
-    sass_dir: _sass
-    style: :compressed
+  sass_dir: _sass
+  style: compressed
 
 # Set tags
 collections:
-    tags:
-        output: true
-        permalink: /tags/:path/
-        sort_order:
-            - published
-            - title
-    posts:
-        output: true
-        sort_order: date
-        sort_reverse: true
+  tags:
+    output: true
+    permalink: /tags/:path/
+    sort_by: published
+  posts:
+    output: true
+    sort_by: date
+    sort_reverse: true
 
 # Gems
 gems:
-    - jekyll-multiple-languages-plugin
-    - jekyll-paginate
-    - jekyll-gist
-    - jekyll-toc
+  - jekyll-multiple-languages-plugin
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-toc
 
 # Plugins
 plugins:
-    - jekyll-multiple-languages-plugin
-    - jekyll-paginate
-    - jekyll-gist
-    - jekyll-toc
+  - jekyll-multiple-languages-plugin
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-toc
 
 # About/contact
 author:
-    name: Purbayan Chowdhury
-    website: https://shivishbrahma.github.io
-    email: pur.cho.99@gmail.com
-    twitter: https://twitter.com/shivishbrahma
+  name: Purbayan Chowdhury
+  website: https://shivishbrahma.github.io
+  url: https://shivishbrahma.github.io
+  email: pur.cho.99@gmail.com
+  twitter: https://twitter.com/shivishbrahma
 
 # Custom vars
 version: 0.1.0
 github:
-    repo: https://github.com/shivishbrahma/publog
+  repo: https://github.com/shivishbrahma/publog
 
 # Languages support
 languages: ["en", "bn"]
 
-exclude_from_localizations: ["javascript", "images", "css", "scripts", "favicon.ico"]
+exclude_from_localizations:
+  ["javascript", "images", "css", "scripts", "favicon.ico"]
 
 # Markdown
 kramdown:
-    syntax_highlighter: rouge
-    parse_block_html: true
-    input: GFM
-    auto_ids: true
-    toc_levels: 1..3
+  syntax_highlighter: rouge
+  parse_block_html: true
+  input: GFM
+  auto_ids: true
+  toc_levels: 1..3
 
 lang: bn
 
 exclude:
   - tools
   - _sass
-  - '*.gem'
+  - "*.gem"
 
 # Read time config
 reading_time:
@@ -85,8 +85,7 @@ toc:
   item_class: post-toc-item
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
     values:
       toc: true
