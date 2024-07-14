@@ -1,3 +1,16 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Noto Serif Bengali", Georgia, "Times New Roman", Times, serif;
+}
+
+html {
+    font-family: "Baloo Da 2", Arial, Helvetica, sans-serif;
+}
+
 .theme-base-10 .post-toc,
 .theme-base-10 .footer-iconbar {
     background-color: #161925;

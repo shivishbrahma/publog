@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="{{ '/public/css/lanyon.css' | relative_url }}" />
     <link rel="stylesheet" href="{{ '/public/css/style.css' | relative_url }}" />
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&family=Noto+Serif+Bengali&display=swap" />
+        href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Noto+Sans+Serif+Bengali&display=swap" />
 
     <link rel="shortcut icon" href="{{ '/public/favicon.ico' | relative_url }}" />
     <link rel="apple-touch-icon" sizes="180x180" href="{{ '/public/apple-touch-icon.png' | relative_url}}" />
