@@ -5,7 +5,7 @@ global:
 
 title: Publog
 tagline: Developer Blog of Shivishbrahma
-description: Developer Blog of Shivishbrahma
+description: Welcome to the official developer blog of Shivishbrahma (Purbayan Chowdhury), a web developer, problem solver, data science enthusiast and number cruncher
 author: Purbayan Chowdhury
 
 older: Older
@@ -17,6 +17,7 @@ recent_posts: Recent Posts
 posts_tagged_with : Posts tagged with
 currently: Currently
 all_rights_reserved: All rights reserved
+link: link
 
 # Title
 titles:
