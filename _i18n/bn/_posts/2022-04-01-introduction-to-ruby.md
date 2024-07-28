@@ -3,7 +3,7 @@ layout: post
 title: রুবি-তে হাতেখড়ি 
 date: '2022-04-01 16:13:06 +0530'
 tags: ruby programming
-cover: 0001_cover_bn.webp
+image: public/images/0001_cover_bn.webp
 ---
 
 ## সংখ্যা : অধ্যায় ১

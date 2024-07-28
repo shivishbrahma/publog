@@ -19,8 +19,8 @@ module Jekyll
         def load_image_tag()
             image = {}
             
-            if @page['cover']
-                image['path'] = relative_url('/public/images/' + @page['cover'])
+            if @page['image']
+                image['path'] = relative_url(@page['image'])
                 image['alt'] = @page['title'] + " cover image"
             else
                 image['path'] = relative_url('/public/android-chrome-512x512.png')
