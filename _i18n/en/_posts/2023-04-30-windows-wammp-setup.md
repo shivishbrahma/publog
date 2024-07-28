@@ -3,7 +3,7 @@ layout: post
 title: Custom WAMMP Setup in Windows (mod_wsgi support)
 date: '2023-04-30 22:55:06 +0530'
 tags: windows apache php
-image: public/images/0002_cover.webp
+image: /public/images/0002_cover.webp
 ---
 
 ## Php installation
