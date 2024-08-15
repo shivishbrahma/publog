@@ -6,6 +6,17 @@ tags: windows apache php
 image: /public/images/0002_cover.webp
 ---
 
+Are you tired of using pre-packaged WAMPP solutions that limit your control and flexibility? Do you need to run Python web applications on Windows using the Apache web server? Look no further! This guide will walk you through the process of setting up a custom WAMPP environment on Windows, complete with mod_wsgi support for running Python web applications.
+
+By following this guide, you'll learn how to:
+
+- Install and configure Apache, MySQL, and PHP/Python on Windows
+- Set up mod_wsgi to run Python web applications using Apache
+- Configure your custom WAMPP environment to meet your specific needs
+- Troubleshoot common issues and optimize performance
+
+Whether you're a developer, system administrator, or simply looking for a more customizable WAMPP solution, this guide has got you covered. Let's get started!
+
 ## Php installation
 
 - Download `php-8.1.*-Win32-vs16-x64.zip` file from [https://windows.php.net/download#php-8.1](https://windows.php.net/download#php-8.1)
