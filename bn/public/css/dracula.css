@@ -1,0 +1,121 @@
+.highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .err {
+  color: #ff5555;
+}
+.highlight .k, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #ff79c6;
+}
+.highlight .kc {
+  color: #ff79c6;
+}
+.highlight .kt {
+  color: #8be9fd;
+  font-style: italic;
+}
+.highlight .n, .highlight .na, .highlight .ni, .highlight .ne, .highlight .py, .highlight .nl, .highlight .nn, .highlight .nx {
+  color: #f8f8f2;
+  font-style: italic;
+}
+.highlight .nb {
+  color: #bd93f9;
+  font-weight: bold;
+}
+.highlight .bp {
+  color: #bd93f9;
+  font-style: italic;
+}
+.highlight .nc {
+  color: #8be9fd;
+  font-weight: bold;
+}
+.highlight .no {
+  color: #bd93f9;
+}
+.highlight .nd {
+  color: #50fa7b;
+  font-style: italic;
+}
+.highlight .nf, .highlight .fm {
+  color: #50fa7b;
+}
+.highlight .nt {
+  color: #ff79c6;
+}
+.highlight .nv, .highlight .vg, .highlight .vi, .highlight .vm {
+  color: #bd93f9;
+  font-weight: bold;
+}
+.highlight .vc {
+  color: #bd93f9;
+  font-style: italic;
+}
+.highlight .ld {
+  color: #ffb86c;
+}
+.highlight .s, .highlight .sa, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1, .highlight .ss {
+  color: #f1fa8c;
+}
+.highlight .se {
+  color: #ff79c6;
+  font-style: italic;
+}
+.highlight .si {
+  color: #ff79c6;
+}
+.highlight .sr {
+  color: #ff5555;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #8be9fd;
+}
+.highlight .o, .highlight .ow {
+  color: #f1fa8c;
+}
+.highlight .p, .highlight .pi {
+  color: #ff79c6;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf, .highlight .c1 {
+  color: #6272a4;
+}
+.highlight .cm {
+  color: #6272a4;
+  font-style: italic;
+}
+.highlight .cp {
+  color: #8be9fd;
+  font-weight: bold;
+}
+.highlight .cs {
+  color: #ff79c6;
+  font-weight: bold;
+  font-style: italic;
+}
+.highlight .gd {
+  color: #ff5555;
+}
+.highlight .ge {
+  color: #f1fa8c;
+  font-style: italic;
+}
+.highlight .gr {
+  color: #ff5555;
+}
+.highlight .gh {
+  color: #bd93f9;
+  font-weight: bold;
+}
+.highlight .gi {
+  color: #50fa7b;
+}
+.highlight .gs {
+  color: #ffb86c;
+  font-weight: bold;
+}
+.highlight {
+  color: #f8f8f2;
+  background-color: #282a36;
+}
+.highlight .w {
+  color: #282a36;
+}
