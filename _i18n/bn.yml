@@ -3,7 +3,7 @@ global:
   bengali: বাংলা
   english: ইরেজি
 
-title: পাব্লগ 
+title: পাব্লগ
 tagline: শিবিশব্রহ্মার ডেভেলপার ব্লগ
 description: শিবিশব্রহ্মার (পূর্বায়ণ চৌধুরী), একজন ওয়েব ডেভেলপর, তথ্য বিজ্ঞান উৎসুক, সমস্যা সমাধানকারি এবং সংখ্যা বিশ্লেষক, অফিসিয়াল ডেভেলপার ব্লগে স্বাগতম
 author: পূর্বায়ণ চৌধুরী
@@ -14,16 +14,17 @@ toc: সূচীপত্র
 go_to_top: উপরে যাও
 close: বন্ধ করুন
 recent_posts: সাম্প্রতিক পোস্ট
-posts_tagged_with : পোস্ট যেগুলো ট্যাগ করা
+posts_tagged_with: পোস্ট যেগুলো ট্যাগ করা
 currently: বর্তমানে
-all_rights_reserved: সর্বস্বত্ব সংরক্ষিত  
+all_rights_reserved: সর্বস্বত্ব সংরক্ষিত
 link: লিঙ্ক
+search: অনুসন্ধান
 
 # Title
 titles:
   home: নীড়
   about: সম্পর্কে
-  404: '৪০৪: পাওয়া যায়নি'
+  404: "৪০৪: পাওয়া যায়নি"
 
 # Numbers
 number:
@@ -57,7 +58,7 @@ date:
     - বৃহ:
     - শুক্র
     - শনি
-  month_names: 
+  month_names:
     - জানুয়ারী
     - ফেব্রুয়ারী
     - মার্চ
@@ -86,16 +87,16 @@ date:
   am: পূর্বাহ্ন
   pm: অপরাহ্ন
   formats:
-    default: '%d %b %Y'
-    short: '%d %b %H:%M'
-    long: '%d %B %Y %H:%M'
-    full: '%A, %d %B %Y %H:%M:%S %z'
-    only_second: '%S'
-    only_minute: '%M'
-    only_hour: '%H'
-    only_day: '%d'
-    only_month: '%m'
-    only_year: '%Y'
+    default: "%d %b %Y"
+    short: "%d %b %H:%M"
+    long: "%d %B %Y %H:%M"
+    full: "%A, %d %B %Y %H:%M:%S %z"
+    only_second: "%S"
+    only_minute: "%M"
+    only_hour: "%H"
+    only_day: "%d"
+    only_month: "%m"
+    only_year: "%Y"
 
 time:
   units:
