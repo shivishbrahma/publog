@@ -96,8 +96,7 @@ html {
     align-items: center;
 }
 
-.toc__list,
-ol {
+.toc__list {
     padding-left: 1.25rem;
     font-size: 0.8rem;
 }

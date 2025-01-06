@@ -1,0 +1,4 @@
+---
+layout: tag
+tag: shortcut
+---

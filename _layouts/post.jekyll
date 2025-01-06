@@ -16,9 +16,15 @@ type: post
 
 <div class="post">
     <header class="post-header">
+        {% if page.image %}
         <div class="post-cover-image">
             <img src="{{ page.image | relative_url }}" alt="{{ page.title | append: ' cover image' }}">
         </div>
+        {% else %}
+        <div class="post-cover-image">
+            <img src="https://placehold.co/940x540/161925/ffffff/webp?text={{ page.title }}" alt="{{ page.title | append: ' cover image' }}">
+        </div>
+        {% endif %}
         <h1 class="post-title">{{ page.title }}</h1>
         <div class="post-tags">
             {% for tag in page.tags %}
