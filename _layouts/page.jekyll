@@ -4,6 +4,6 @@ type: page
 ---
 
 <div class="page">
-  <h1 class="page-title">{% t page.title %}</h1>
+  <h1 class="page-title" id="page-title">{% t page.title %}</h1>
   {{ content }}
 </div>

@@ -14,30 +14,32 @@ toc: Table of Contents
 go_to_top: Go to Top
 close: Close
 recent_posts: Recent Posts
-posts_tagged_with : Posts tagged with
+posts_tagged_with: Posts tagged with
 currently: Currently
 all_rights_reserved: All rights reserved
 link: link
+search: Search
 
 # Title
 titles:
   home: Home
   about: About
-  404: '404: Not Found'
+  search: Search
+  404: "404: Not Found"
 
 # Numbers
 number:
   digits:
-    - '0'
-    - '1'
-    - '2'
-    - '3'
-    - '4'
-    - '5'
-    - '6'
-    - '7'
-    - '8'
-    - '9'
+    - "0"
+    - "1"
+    - "2"
+    - "3"
+    - "4"
+    - "5"
+    - "6"
+    - "7"
+    - "8"
+    - "9"
 
 # Date Time
 date:
@@ -74,15 +76,15 @@ date:
   pm: PM
   formats:
     default: "%d %b %Y"
-    short: '%d %b %H:%M'
-    long: '%d %B %Y %H:%M'
-    full: '%A, %d %B %Y %H:%M:%S %z'
-    only_second: '%S'
-    only_minute: '%M'
-    only_hour: '%H'
-    only_day: '%d'
-    only_month: '%m'
-    only_year: '%Y'
+    short: "%d %b %H:%M"
+    long: "%d %B %Y %H:%M"
+    full: "%A, %d %B %Y %H:%M:%S %z"
+    only_second: "%S"
+    only_minute: "%M"
+    only_hour: "%H"
+    only_day: "%d"
+    only_month: "%m"
+    only_year: "%Y"
 time:
   units:
     second: second
