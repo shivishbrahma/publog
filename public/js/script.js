@@ -73,11 +73,19 @@
 
     function searchEvent (e) {
         e.preventDefault();
-        window.location.href = context.baseurl + "/search/" + searchInput.value;
+        window.location.href = context.baseurl + "/search?q=" + searchInput.value;
     }
 
     searchButton.addEventListener("click", (e) => searchEvent(e));
     searchInput.addEventListener("keyup", (e) => {
         if (e.keyCode === 13) searchEvent(e);
     });
+
+    if(context.title == "titles.search") {
+        const url = new URL(window.location.href);
+        const query = url.searchParams.get('q');
+        document.querySelector("#search").value = query;
+        document.querySelector("#page-title").innerText = `Search Results for: "${query}"`;
+        lunr_search(query);
+    }
 })(document);

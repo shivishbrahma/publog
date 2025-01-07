@@ -24,6 +24,7 @@ search: Search
 titles:
   home: Home
   about: About
+  search: Search
   404: "404: Not Found"
 
 # Numbers

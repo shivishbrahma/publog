@@ -1,0 +1,83 @@
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+
+<script>
+    {% assign counter = 0 %}
+    var documents = [
+    {% for page in site.posts %}{
+    "id": {{ counter }},
+    "url": "{{ site.baseurl }}{{ page.url }}",
+    "title": "{{ page.title }}",
+    "tags": "{{ page.tags | join: '||' }}",
+    "date": "{{ page.date | i18n_date_to_string }}",
+    "reading_time": "{{ page.content | i18n_reading_time }}",
+    "content": "{{ page.content | strip_html | truncatewords: 50 }}",
+    "body": "{{ page.date | date: "%Y/%m/%d" }} - {{ page.content | markdownify | replace: '.', '. ' |  replace: '\', '' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' |  truncate: 500 }}"{% assign counter = counter | plus: 1 %}
+    }{% if forloop.last %}{% else %}, {% endif %}{% endfor %}
+    ];
+
+    var idx = lunr(function () {
+        this.ref('id')
+        this.field('title')
+        this.field('body')
+
+        documents.forEach(function (doc) {
+            this.add(doc)
+        }, this)
+    });
+
+    function slugify(text) {
+        return text
+            .toString()
+            .toLowerCase()
+            .replace(/\s+/g, '-') // Replace spaces with -
+            .replace(/[^\w-]+/g, '') // Remove all non-word chars
+            .replace(/--+/g, '-') // Replace multiple - with single -
+            .replace(/^-+/, '') // Trim - from start of text
+            .replace(/-+$/, ''); // Trim - from end of text
+        ;
+    }
+
+    function lunr_search(term) {
+        if(term) {
+            var results = idx.search(term);
+            if(results.length>0){
+                for (var i = 0; i < results.length; i++) {
+                    var ref = results[i]['ref'];
+                    var post = documents[ref];
+                    post.tags = post.tags.split('||');
+
+                    var tagHtml = '';
+                    for(var j = 0; j < post.tags.length; j++){
+                        var tag = post.tags[j];
+                        tagHtml += `
+<a
+			class="tag-link"
+			href="{{ site.baseurl | append: '/tags/' }}${slugify(tag)}"
+			rel="category tag"
+            title="${tag} {% t link %}"
+		>
+			${tag}
+		</a>            
+                        `;
+                    }
+                    var postHtml = `
+<div class="post">
+	<h3 class="post-title">
+		<a href="${post.url}" title="${post.title} {% t link %}"> ${post.title} </a>
+	</h3>
+	<div class="post-tags">
+		${tagHtml}
+	</div>
+    <div class="post-info">
+        <span class="post-read-time">${post.reading_time}</span>
+        <span class="post-date">${post.date}</span>
+    </div>
+	<span> ${post.content} </span>
+</div>
+                    `;
+                    document.querySelector('#search-results').innerHTML = postHtml;
+                }
+            }
+        }
+    }
+</script>
