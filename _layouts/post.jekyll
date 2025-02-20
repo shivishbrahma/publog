@@ -39,6 +39,12 @@ type: post
             <span class="post-read-time">{{ page.content | i18n_reading_time }}</span>
             <span class="post-date">{{ page.date | i18n_date_to_string }}</span>
         </div>
+        <div class="post-share">
+            <span class="facebook-share"></span>
+            <span class="twitter-share"></span>
+            <span class="linkedin-share"></span>
+            <span class="reddit-share"></span>
+        </div>
     </header>
     <article class="post-content">
         {{ page.content }}

@@ -88,4 +88,33 @@
         document.querySelector("#page-title").innerText = `Search Results for: "${query}"`;
         lunr_search(query);
     }
+
+    // Share button functionality
+    const facebookShareBtn = document.querySelector(".facebook-share");
+    if(facebookShareBtn) {
+        facebookShareBtn.addEventListener("click", () => {
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}&quote=${context.title}`, "_blank");
+        });
+    }
+
+    const twitterShareBtn = document.querySelector(".twitter-share");
+    if(twitterShareBtn) {
+        twitterShareBtn.addEventListener("click", () => {
+            window.open(`https://twitter.com/intent/tweet?url=${window.location.href}&text=${context.title}`, "_blank");
+        });
+    }
+
+    const linkedinShareBtn = document.querySelector(".linkedin-share");
+    if(linkedinShareBtn) {
+        linkedinShareBtn.addEventListener("click", () => {
+            window.open(`https://www.linkedin.com/shareArticle?title=${context.title}&summary=${context.description}&url=${window.location.href}`, "_blank");
+        });
+    }
+
+    const redditShareBtn = document.querySelector(".reddit-share");
+    if(redditShareBtn) {
+        redditShareBtn.addEventListener("click", () => {
+            window.open(`https://www.reddit.com/submit?title=${context.title}&url=${window.location.href}`, "_blank");
+        });
+    }
 })(document);
