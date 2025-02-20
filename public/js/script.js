@@ -93,7 +93,7 @@
     const facebookShareBtn = document.querySelector(".facebook-share");
     if(facebookShareBtn) {
         facebookShareBtn.addEventListener("click", () => {
-            window.open(`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}&quote=${context.title}`, "_blank");
+            window.open(`https://www.facebook.com/sharer/sharer.php?quote=${context.title}&u=${window.location.href}`, "_blank");
         });
     }
 
@@ -107,7 +107,7 @@
     const linkedinShareBtn = document.querySelector(".linkedin-share");
     if(linkedinShareBtn) {
         linkedinShareBtn.addEventListener("click", () => {
-            window.open(`https://www.linkedin.com/shareArticle?title=${context.title}&summary=${context.description}&url=${window.location.href}`, "_blank");
+            window.open(`https://www.linkedin.com/shareArticle?title=${context.title}&url=${window.location.href}`, "_blank");
         });
     }
 
