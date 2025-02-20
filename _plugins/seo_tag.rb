@@ -22,6 +22,9 @@ module Jekyll
             if @page['image']
                 image['path'] = relative_url(@page['image'])
                 image['alt'] = @page['title'] + " cover image"
+            elsif @page['type'] == "post"
+                image['path'] = "https://placehold.co/940x540/161925/ffffff/webp?text=" + @page['title']
+                image['alt'] = @page['title'] + " cover image"
             else
                 image['path'] = relative_url('/public/android-chrome-512x512.png')
                 image['alt'] = @page['title'] + " cover image"
@@ -58,7 +61,7 @@ module Jekyll
                 seo['author'] = translate("author")
             end
             seo['image'] = load_image_tag()
-            seo['canonical_url'] = relative_url(@page['url'])
+            seo['canonical_url'] = absolute_url(@page['url'])
             
             template_content = File.read(File.join(@site.source, '_includes', 'seo_tag.jekyll'))
             Liquid::Template.parse(template_content).render!('page' => @page.to_liquid, 'site' => @site.to_liquid, 'seo_tag' => seo.to_liquid)
