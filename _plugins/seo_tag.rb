@@ -16,6 +16,10 @@ module Jekyll
             @context.registers[:site].config['baseurl'] + url.sub(site_url, '')
         end
 
+        def absolute_url(url)
+            @context.registers[:site].config['url'] + relative_url(url)
+        end
+
         def load_image_tag()
             image = {}
             
