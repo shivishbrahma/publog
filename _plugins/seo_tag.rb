@@ -23,7 +23,7 @@ module Jekyll
         def load_image_tag()
             image = {}
 
-            puts "Type" + @page['type']
+            puts "Type #{ @page['type'] || 'undefined' }"
             
             if @page['image']
                 image['path'] = relative_url(@page['image'])
