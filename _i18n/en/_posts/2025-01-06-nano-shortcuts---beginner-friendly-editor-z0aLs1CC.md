@@ -3,6 +3,7 @@ layout: post
 title: "Nano Shortcuts - Beginner Friendly Editor"
 date: '2025-01-06 10:24:09 +05:30'
 tags: nano shortcut editor text
+image: /public/images/0003_cover_en.webp
 ---
 
 When it comes to text editing in the terminal, Nano stands out. It is user-friendly and simple. Nano's straightforward interface makes it an excellent choice for anyone from novice to expert. In this blog post, we will explore essential Nano shortcuts. These will help you navigate and use this powerful text editor with ease.

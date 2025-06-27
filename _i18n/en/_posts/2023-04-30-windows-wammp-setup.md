@@ -3,7 +3,7 @@ layout: post
 title: Custom WAMMP Setup in Windows (mod_wsgi support)
 date: '2023-04-30 22:55:06 +0530'
 tags: windows apache php
-image: /public/images/0002_cover.webp
+image: /public/images/0002_cover_en.webp
 ---
 
 Are you tired of using pre-packaged WAMPP solutions that limit your control and flexibility? Do you need to run Python web applications on Windows using the Apache web server? Look no further! This guide will walk you through the process of setting up a custom WAMPP environment on Windows, complete with mod_wsgi support for running Python web applications.
