@@ -22,6 +22,8 @@ module Jekyll
 
         def load_image_tag()
             image = {}
+
+            puts "Type" + @page['type']
             
             if @page['image']
                 image['path'] = relative_url(@page['image'])
@@ -65,7 +67,7 @@ module Jekyll
                 seo['author'] = translate("author")
             end
             seo['image'] = load_image_tag()
-            seo['canonical_url'] = absolute_url(@page['url'])
+            seo['canonical_url'] = relative_url(@page['url'])
             
             template_content = File.read(File.join(@site.source, '_includes', 'seo_tag.jekyll'))
             Liquid::Template.parse(template_content).render!('page' => @page.to_liquid, 'site' => @site.to_liquid, 'seo_tag' => seo.to_liquid)
