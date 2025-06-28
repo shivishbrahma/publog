@@ -22,7 +22,7 @@ end
 puts 'Enter the post tags: '
 post_tags = gets.chomp
 
-post_file_name = "#{post_date.strftime('%Y-%m-%d')}-#{post_title.downcase.gsub(' ', '-')}-#{SecureRandom.alphanumeric[0..7]}.md"
+post_file_name = "#{post_date.strftime('%Y-%m-%d')}-#{post_title.downcase.gsub('-', '').gsub(' ', '-')}-#{SecureRandom.alphanumeric[0..7]}.md"
 puts "Creating post: #{post_file_name}"
 
 # Create the post file

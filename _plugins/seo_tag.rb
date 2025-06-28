@@ -23,17 +23,21 @@ module Jekyll
         def load_image_tag()
             image = {}
 
-            puts "Type #{ @page['type'] || 'undefined' }"
+            page_type = @page['type'] || @page['layout']
+            page_title = @page['title']
+            if page_type == "default" || page_type == "page"
+                page_title = translate(page_title)
+            end
             
             if @page['image']
                 image['path'] = relative_url(@page['image'])
-                image['alt'] = @page['title'] + " cover image"
+                image['alt'] = page_title + " cover image"
             elsif @page['type'] == "post"
-                image['path'] = "https://placehold.co/940x540/161925/ffffff/webp?text=" + @page['title']
-                image['alt'] = @page['title'] + " cover image"
+                image['path'] = "https://placehold.co/940x540/161925/ffffff/webp?text=" + page_title
+                image['alt'] = page_title + " cover image"
             else
                 image['path'] = relative_url('/public/android-chrome-512x512.png')
-                image['alt'] = @page['title'] + " cover image"
+                image['alt'] = page_title + " cover image"
             end
             image
         end
