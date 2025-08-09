@@ -16,6 +16,10 @@ html {
     background-color: #161925;
 }
 
+.post {
+    border-bottom: 1px solid #e5e5e5;
+}
+
 /* Blog post table of contents*/
 .post-toc {
     position: fixed;
