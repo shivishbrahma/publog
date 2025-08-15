@@ -209,9 +209,14 @@ tags: sql interview mysql postgresql
 19. Write an SQL query to find the employees with the highest salary in each department.
 
     ```sql
-    SELECT department, MAX(salary) AS HighestSalary
-    FROM employees
-    GROUP BY department;
+    SELECT id, name, department, salary
+    FROM (
+        SELECT
+            e.*,
+            RANK() OVER (PARTITION BY department ORDER BY salary DESC) as rnk
+        FROM employees e
+    ) sub
+    WHERE rnk = 1;
     ```
 
 20. Write a query to find customers who made multiple purchases on the same day.
