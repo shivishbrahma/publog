@@ -109,7 +109,7 @@ tags: python cheatsheet
 |`dict.copy()`|Return shallow copy of dictionary|`{"a": 1, "b": 2}.copy()` → `{"a": 1, "b": 2}`|
 |`dict.fromkeys(keys, value)`|Create dictionary with keys and value|`dict.fromkeys(["a", "b"], 0)` → `{"a": 0, "b": 0}`|
 |`key in dict`|Check if key exists|`"a" in {"a": 1, "b": 2}` → `True`|
-|`dict.setdefault(key, default)`|Get value or set default if key not exists|`{"a": 1}.setdefault("b", 2)` → `1`|
+|`dict.setdefault(key, default)`|Get value or set default if key not exists|`{"a": 1}.setdefault("b", 2)` → `2`|
 |`dict1 \| dict2` | Merge two dictionaries | `{"a": 1} \| {"b": 2}` → `{"a": 1, "b": 2}` |
 
 ## Set
