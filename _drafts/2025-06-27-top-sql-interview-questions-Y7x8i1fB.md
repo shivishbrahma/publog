@@ -5,8 +5,6 @@ date: '2025-06-27 11:09:04 +05:30'
 tags: sql interview mysql
 ---
 
-## Basic SQL Coding Questions
-
 1. Write an SQL query to fetch the second-highest salary from an `employees` table.
 
 ```sql

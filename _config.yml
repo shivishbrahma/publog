@@ -3,7 +3,7 @@ permalink: /:title/
 
 # Setup
 url: http://shivishbrahma.github.io
-paginate: 1
+paginate: 5
 baseurl: "/publog"
 google_analytics_id: "G-Y33HYSK8XN"
 
