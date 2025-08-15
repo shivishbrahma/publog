@@ -145,12 +145,12 @@ SELECT
 FROM employees;
 
 -- LAST_VALUE() usage
-SELECT
-    employee_id,
-    first_name,
-    last_name,
-    LAST_VALUE(salary) OVER (PARTITION BY department_id ORDER BY salary ASC) AS highest_salary
-FROM employees;
+    SELECT
+        employee_id,
+        first_name,
+        last_name,
+        LAST_VALUE(salary) OVER (PARTITION BY department_id ORDER BY salary ASC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS highest_salary
+    FROM employees;
 
 -- LAG() usage
 SELECT
