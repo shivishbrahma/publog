@@ -81,16 +81,16 @@ tags: python cheatsheet
 |`list.copy()`|Return shallow copy of list|`[1, 2, 3].copy()` → `[1, 2, 3]`|
 |`list.index(item, start, end)`|Return index of item in range|`[1, 2, 3].index(2, 0, 3)` → `1`|
 |`list.sort(key=None, reverse=False)`|Sort list with optional key and reverse|`[3, 1, 2].sort(key=lambda x: -x)` → `[3, 2, 1]`|
-|a_list[0] | Access first element of list | `[1, 2, 3][0]` → `1` |
-|`a_list[-1]` | Access last element of list | `[1, 2, 3][-1]` → `3` |
-|`a_list[1:3]` | Slice list from index 1 to 2 | `[1, 2, 3][1:3]` → `[2, 3]` |
-|`a_list[:2]` | Slice list from start to index 1 | `[1, 2, 3][:2]` → `[1, 2]` |
-|`a_list[1:]` | Slice list from index 1 to end | `[1, 2, 3][1:]` → `[2, 3]` |
-|`a_list[::2]` | Slice list with step 2 | `[1, 2, 3, 4][::2]` → `[1, 3]` |
-|`a_list[::-1]` | Reverse list | `[1, 2, 3][::-1]` → `[3, 2, 1]` |
-|`a_list * 2` | Repeat list | `[1, 2] * 2` → `[1, 2, 1, 2]` |
-|`a_list + b_list` | Concatenate lists | `[1, 2] + [3, 4]` → `[1, 2, 3, 4]` |
-|`len(a_list)` | Get length of list | `len([1, 2, 3])` → `3` |
+|`a_list[0]`|Access first element of list|`[1, 2, 3][0]` → `1`|
+|`a_list[-1]`|Access last element of list|`[1, 2, 3][-1]` → `3`|
+|`a_list[1:3]`|Slice list from index 1 to 2|`[1, 2, 3][1:3]` → `[2, 3]`|
+|`a_list[:2]`|Slice list from start to index 1|`[1, 2, 3][:2]` → `[1, 2]`|
+|`a_list[1:]`|Slice list from index 1 to end|`[1, 2, 3][1:]` → `[2, 3]`|
+|`a_list[::2]`|Slice list with step 2|`[1, 2, 3, 4][::2]` → `[1, 3]`|
+|`a_list[::-1]`|Reverse list|`[1, 2, 3][::-1]` → `[3, 2, 1]`|
+|`a_list * 2`|Repeat list|`[1, 2] * 2` → `[1, 2, 1, 2]`|
+|`a_list + b_list`|Concatenate lists|`[1, 2] + [3, 4]` → `[1, 2, 3, 4]`|
+|`len(a_list)`|Get length of list|`len([1, 2, 3])` → `3`|
 
 ## Dictionary
 
