@@ -273,12 +273,9 @@ tags: sql interview mysql postgresql
 
     ```sql
     SELECT *
-    FROM TableA
-    WHERE NOT EXISTS (
-        SELECT 1
-        FROM TableB
-        WHERE TableA.id = TableB.id
-    );
+    FROM TableA a
+    FULL OUTER JOIN TableB b ON a.id = b.id
+    WHERE a.id IS NULL OR b.id IS NULL;
     ```
 
 26. Write an SQL query to calculate the difference between consecutive rows.
