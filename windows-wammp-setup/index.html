@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="http://gmpg.org/xfn/11" rel="profile" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+    <!-- SEO Tags --> 
+
+<title>Custom WAMMP Setup in Windows (mod_wsgi support) &middot; Publog</title>
+<meta property="og:title" content="Custom WAMMP Setup in Windows (mod_wsgi support) &middot; Publog" />
+
+
+
+  <meta name="description" content="Welcome to the official developer blog of Shivishbrahma (Purbayan Chowdhury), a web developer, problem solver, data science enthusiast and number cruncher" />
+  <meta property="og:description" content="Welcome to the official developer blog of Shivishbrahma (Purbayan Chowdhury), a web developer, problem solver, data science enthusiast and number cruncher" />
+  <meta property="twitter:description" content="Welcome to the official developer blog of Shivishbrahma (Purbayan Chowdhury), a web developer, problem solver, data science enthusiast and number cruncher" />
+
+
+<meta property="og:locale" content="en" />
+
+
+  <link rel="canonical" href="/publog/windows-wammp-setup/" />
+  <meta property="og:url" content="/publog/windows-wammp-setup/" />
+
+
+
+  <meta name="author" content="Purbayan Chowdhury" />
+
+
+
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2023-04-30T17:25:06+00:00" />
+
+
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:image" content="/publog/public/images/0002_cover_en.webp" />
+  <meta property="twitter:image" content="/publog/public/images/0002_cover_en.webp" />
+  
+  
+  
+    <meta property="og:image:alt" content="Custom WAMMP Setup in Windows (mod_wsgi support) cover image" />
+  
+
+<!-- /SEO Tags --> 
+
+    <link rel="stylesheet" href="/publog/public/css/poole.css" />
+    <link rel="stylesheet" href="/publog/public/css/dracula.css" />
+    <link rel="stylesheet" href="/publog/public/css/lanyon.css" />
+    <link rel="stylesheet" href="/publog/public/css/style.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Noto+Sans+Serif+Bengali&display=swap" />
+
+    <link rel="shortcut icon" href="/publog/public/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/publog/public/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/publog/public/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/publog/public/favicon-16x16.png" />
+    <link rel="manifest" href="/publog/public/site.webmanifest">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/publog/atom.xml" />
+
+    <meta name="google-site-verification" content="du2PIAAAw_DV4AiAM7Hw4UqkUC-9_xyHauRF5O5ElvE" />
+    
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            (i[r] =
+                i[r] ||
+                function () {
+                    (i[r].q = i[r].q || []).push(arguments);
+                }),
+                (i[r].l = 1 * new Date());
+            (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'G-Y33HYSK8XN', 'auto');
+        ga('send', 'pageview');
+    </script>
+    
+</head>
+
+
+    <body class="layout-reverse sidebar-overlay theme-base-10">
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" />
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-item">
+        <p>Welcome to the official developer blog of Shivishbrahma (Purbayan Chowdhury), a web developer, problem solver, data science enthusiast and number cruncher</p>
+    </div>
+
+    <nav class="sidebar-nav">
+        <a class="sidebar-nav-item" href="/publog/" title="Home link">
+            Home
+        </a>
+
+         
+         
+         
+             
+                 
+             
+         
+             
+                 
+             
+         
+             
+                
+                    <a class="sidebar-nav-item"
+                        href="/publog/about/" title="About link">About</a>
+                 
+             
+         
+             
+         
+             
+         
+             
+                 
+             
+         
+             
+         
+             
+         
+             
+        
+
+        <span class="sidebar-nav-item">Currently v0.1.0</span>
+    </nav>
+
+
+    <div class="sidebar-item">
+        <p>
+            
+            <a href="/publog/windows-wammp-setup/" class="" title="English Link">English</a> | 
+            
+            <a href="/publog/bn/windows-wammp-setup/" class="" title="Bengali লিংক">Bengali</a>
+        </p>
+   
+        <p>
+           Purbayan Chowdhury &copy; 2025 | All rights reserved
+        </p>
+    </div>
+</div>
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+      content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/publog/" title="Home">
+              Publog
+            </a>
+            <small>
+              Developer Blog of Shivishbrahma
+            </small>
+          </h3>
+        </div>
+        <div class="search-form">
+          <a href="#" class="search-button">
+            <img
+              src="data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%3Csvg%20width%3D%22512px%22%20height%3D%22512px%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M15.7955%2015.8111L21%2021M18%2010.5C18%2014.6421%2014.6421%2018%2010.5%2018C6.35786%2018%203%2014.6421%203%2010.5C3%206.35786%206.35786%203%2010.5%203C14.6421%203%2018%206.35786%2018%2010.5Z%22%20stroke%3D%22%23555%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E"
+              width="24"
+              height="24"
+              alt="" />
+          </a>
+          <input
+            type="search"
+            id="search"
+            placeholder="Search">
+        </div>
+      </div>
+
+      <div class="container content"><aside class="post-toc hide">
+    <h3 class="toc-title">
+        Table of Contents
+        <span class="close-toc" title="Close"></span>
+    </h3>
+    <div class="toc">
+        <ol id="toc" class="toc__list">
+<li class="post-toc-item toc-h2"><a href="#php-installation">Php installation</a>
+<ol>
+<li class="post-toc-item toc-h3"><a href="#download-ca-certificate-and-replace-for-curl-config">Download ca certificate and replace for curl config</a></li>
+</ol>
+</li>
+<li class="post-toc-item toc-h2"><a href="#apache-server-installation">Apache server installation</a>
+<ol>
+<li class="post-toc-item toc-h3"><a href="#go-to-directory-and-install-as-service">Go to directory and install as service</a></li>
+<li class="post-toc-item toc-h3"><a href="#configuring-in-httpd-server">Configuring in httpd server</a></li>
+</ol>
+</li>
+<li class="post-toc-item toc-h2"><a href="#mysql-installation">MySQL installation</a></li>
+<li class="post-toc-item toc-h2"><a href="#phpmyadmin">phpMyAdmin</a></li>
+<li class="post-toc-item toc-h2"><a href="#adding-xdebug-for-code-coverage">Adding Xdebug for code coverage</a></li>
+<li class="post-toc-item toc-h2"><a href="#configuring-virtual-hosts-and-symbolic-links">Configuring Virtual Hosts and Symbolic Links</a></li>
+<li class="post-toc-item toc-h2"><a href="#hosting-flask-service">Hosting Flask Service</a></li>
+</ol>
+    </div>
+</aside>
+
+<div class="post">
+    <header class="post-header">
+        
+        <div class="post-cover-image">
+            <img src="/publog/public/images/0002_cover_en.webp" alt="Custom WAMMP Setup in Windows (mod_wsgi support) cover image">
+        </div>
+        
+        <h1 class="post-title">Custom WAMMP Setup in Windows (mod_wsgi support)</h1>
+        <div class="post-tags">
+            
+            
+            <a class="tag-link" href="/publog/tags/windows/"
+                rel="category tag" title="windows link">
+                windows
+            </a>
+            
+            
+            <a class="tag-link" href="/publog/tags/apache/"
+                rel="category tag" title="apache link">
+                apache
+            </a>
+            
+            
+            <a class="tag-link" href="/publog/tags/php/"
+                rel="category tag" title="php link">
+                php
+            </a>
+            
+        </div>
+        <div class="post-info">
+            <span class="post-read-time">2 minutes</span>
+            <span class="post-date">30 April 2023</span>
+        </div>
+        <div class="post-share">
+            <span class="facebook-share"></span>
+            <span class="twitter-share"></span>
+            <span class="linkedin-share"></span>
+            <span class="reddit-share"></span>
+        </div>
+    </header>
+    <article class="post-content">
+        <p>Are you tired of using pre-packaged WAMPP solutions that limit your control and flexibility? Do you need to run Python web applications on Windows using the Apache web server? Look no further! This guide will walk you through the process of setting up a custom WAMPP environment on Windows, complete with mod_wsgi support for running Python web applications.</p>
+
+<p>By following this guide, you’ll learn how to:</p>
+
+<ul>
+  <li>Install and configure Apache, MySQL, and PHP/Python on Windows</li>
+  <li>Set up mod_wsgi to run Python web applications using Apache</li>
+  <li>Configure your custom WAMPP environment to meet your specific needs</li>
+  <li>Troubleshoot common issues and optimize performance</li>
+</ul>
+
+<p>Whether you’re a developer, system administrator, or simply looking for a more customizable WAMPP solution, this guide has got you covered. Let’s get started!</p>
+
+<h2 id="php-installation">Php installation</h2>
+
+<ul>
+  <li>Download <code class="language-plaintext highlighter-rouge">php-8.1.*-Win32-vs16-x64.zip</code> file from <a href="https://windows.php.net/download#php-8.1">https://windows.php.net/download#php-8.1</a></li>
+  <li>Unzip and rename the folder to <code class="language-plaintext highlighter-rouge">php81</code> and place it in <code class="language-plaintext highlighter-rouge">C:\Apps</code></li>
+</ul>
+
+<p>or</p>
+
+<ul>
+  <li>Set <code class="language-plaintext highlighter-rouge">ChocolateyToolsLocation</code> to <code class="language-plaintext highlighter-rouge">C:\Apps</code></li>
+  <li>
+    <p>Install php using choco</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>choco <span class="nb">install </span>php <span class="nt">--version</span><span class="o">=</span>8.1.22 <span class="nt">--package-parameters</span><span class="o">=</span><span class="s1">'"/ThreadSafe"'</span>
+choco <span class="nb">install </span>php <span class="nt">--version</span><span class="o">=</span>8.2.15 <span class="nt">--package-parameters</span><span class="o">=</span><span class="s1">'"/ThreadSafe"'</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Set extension directory</p>
+
+    <div class="language-apache highlighter-rouge"><div class="highlight"><pre class="highlight"><code>extension_dir = "ext"
+</code></pre></div>    </div>
+  </li>
+  <li>Copy <code class="language-plaintext highlighter-rouge">C:\Apps\php81\php.ini-production</code> into <code class="language-plaintext highlighter-rouge">C:\Apps\php81\php.ini</code></li>
+  <li>
+    <p>Enable the extensions by commenting following lines</p>
+
+    <div class="language-apache highlighter-rouge"><div class="highlight"><pre class="highlight"><code>extension=curl
+extension=ftp
+extension=fileinfo
+extension=gd
+extension=gettext
+extension=mbstring
+extension=exif      ; Must be after mbstring as it depends <span class="ss">on</span> it
+extension=mysqli
+extension=openssl
+extension=pdo_mysql
+extension=pdo_sqlite
+extension=soap
+extension=xsl
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="download-ca-certificate-and-replace-for-curl-config">Download ca certificate and replace for curl config</h3>
+
+<ul>
+  <li>Download the cacert.pem from <a href="https://curl.se/ca/cacert.pem">https://curl.se/ca/cacert.pem</a>.</li>
+  <li>
+    <p>Move it to <code class="language-plaintext highlighter-rouge">C:/Apps/php81/extras/ssl</code> and add uncomment the below line in <code class="language-plaintext highlighter-rouge">php.ini</code>.</p>
+
+    <div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="py">curl.cainfo</span> <span class="p">=</span> <span class="s">"C:</span><span class="se">\A</span><span class="s">pps</span><span class="se">\p</span><span class="s">hp81</span><span class="se">\e</span><span class="s">xtras</span><span class="se">\s</span><span class="s">sl</span><span class="se">\c</span><span class="s">acert.pem"</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="apache-server-installation">Apache server installation</h2>
+
+<ul>
+  <li>Download <code class="language-plaintext highlighter-rouge">httpd-2.4.*-win64-VS17.zip</code> from <a href="https://www.apachelounge.com/download/">https://www.apachelounge.com/download/</a>.</li>
+  <li>Unzip the above zip file and move <code class="language-plaintext highlighter-rouge">Apache24</code> to <code class="language-plaintext highlighter-rouge">C:\Apps\Apache24</code>.</li>
+</ul>
+
+<h3 id="go-to-directory-and-install-as-service">Go to directory and install as service</h3>
+
+<ul>
+  <li>Open the terminal in administrative mode and run the below commands</li>
+</ul>
+
+<div class="language-bat highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> <span class="kd">C</span>:\Apache24\bin\
+<span class="kd">httpd</span> <span class="na">-k </span><span class="kd">install</span>
+</code></pre></div></div>
+
+<ul>
+  <li>httpd server will be installed and <code class="language-plaintext highlighter-rouge">Apache2.4</code> should be available in Services.</li>
+</ul>
+
+<h3 id="configuring-in-httpd-server">Configuring in httpd server</h3>
+
+<ul>
+  <li>
+    <p>Prepare a <code class="language-plaintext highlighter-rouge">httpd-php.conf</code> file with following content in <code class="language-plaintext highlighter-rouge">C:\Apps\Apache24\conf\extra</code></p>
+
+    <div class="language-apache highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#</span>
+<span class="c"># PHP-Module setup</span>
+<span class="c">#</span>
+
+<span class="nc">LoadFile</span> "C:/Apps/php81/php8ts.dll"
+<span class="nc">LoadFile</span> "C:/Apps/php81/libpq.dll"
+<span class="nc">LoadFile</span> "C:/Apps/php81/libsqlite3.dll"
+<span class="nc">LoadModule</span> php_module "C:/Apps/php81/php8apache2_4.dll"
+
+<span class="p">&lt;</span><span class="nl">FilesMatch</span><span class="sr"> "\.php$"</span><span class="p">&gt;
+</span>    <span class="nc">SetHandler</span> application/x-httpd-php
+<span class="p">&lt;/</span><span class="nl">FilesMatch</span><span class="p">&gt;
+&lt;</span><span class="nl">FilesMatch</span><span class="sr"> "\.phps$"</span><span class="p">&gt;
+</span>    <span class="nc">SetHandler</span> application/x-httpd-php-source
+<span class="p">&lt;/</span><span class="nl">FilesMatch</span><span class="p">&gt;
+</span>
+<span class="p">&lt;</span><span class="nl">IfModule</span><span class="sr"> php_module</span><span class="p">&gt;
+</span>    PHPINIDir "C:/Apps/php8"
+<span class="p">&lt;/</span><span class="nl">IfModule</span><span class="p">&gt;
+</span>
+<span class="p">&lt;</span><span class="nl">IfModule</span><span class="sr"> mime_module</span><span class="p">&gt;
+</span>    <span class="nc">AddType</span> text/html .php .phps
+<span class="p">&lt;/</span><span class="nl">IfModule</span><span class="p">&gt;
+</span>
+<span class="nc">ScriptAlias</span> /php-cgi/ "C:/Apps/php8/"
+<span class="p">&lt;</span><span class="nl">Directory</span><span class="sr"> "C:/Apps/php8"</span><span class="p">&gt;
+</span>    <span class="nc">AllowOverride</span> <span class="ss">None</span>
+    <span class="nc">Options</span> <span class="ss">None</span>
+    <span class="nc">Require</span> <span class="ss">all</span> denied
+    <span class="p">&lt;</span><span class="nl">Files</span><span class="sr"> "php-cgi.exe"</span><span class="p">&gt;
+</span>          <span class="nc">Require</span> <span class="ss">all</span> granted
+    <span class="p">&lt;/</span><span class="nl">Files</span><span class="p">&gt;
+&lt;/</span><span class="nl">Directory</span><span class="p">&gt;
+</span></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Include the above file in <code class="language-plaintext highlighter-rouge">C:\Apps\Apache24\conf\httpd.conf</code>.</p>
+
+    <pre><code class="language-apacheconf">Include conf/extra/httpd-php.conf
+</code></pre>
+  </li>
+</ul>
+
+<h2 id="mysql-installation">MySQL installation</h2>
+
+<ul>
+  <li>
+    <p>Download .msi file from <a href="https://dev.mysql.com/downloads/installer/">https://dev.mysql.com/downloads/installer/</a> and install</p>
+  </li>
+  <li>
+    <p>Set the <code class="language-plaintext highlighter-rouge">root</code> password</p>
+  </li>
+</ul>
+
+<h2 id="phpmyadmin">phpMyAdmin</h2>
+
+<ul>
+  <li>Download zip phpmyadmin - <a href="https://files.phpmyadmin.net/phpMyAdmin/5.2.1/phpMyAdmin-5.2.1-all-languages.zip">https://files.phpmyadmin.net/phpMyAdmin/5.2.1/phpMyAdmin-5.2.1-all-languages.zip</a></li>
+  <li>Unzip and copy the <code class="language-plaintext highlighter-rouge">phpmyadmin</code> folder into <code class="language-plaintext highlighter-rouge">C:/Apache24/htdocs</code></li>
+  <li>Create a phpmyadmin user <code class="language-plaintext highlighter-rouge">pma</code></li>
+  <li>Edit config in <code class="language-plaintext highlighter-rouge">C:\Apache24\htdocs\phpmyadmin\config.inc.php</code> (Copy from <code class="language-plaintext highlighter-rouge">config.sample.inc.php</code>)</li>
+</ul>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/* Authentication type and info */</span>
+<span class="nv">$cfg</span><span class="p">[</span><span class="s1">'Servers'</span><span class="p">][</span><span class="nv">$i</span><span class="p">][</span><span class="s1">'auth_type'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'config'</span><span class="p">;</span>
+<span class="nv">$cfg</span><span class="p">[</span><span class="s1">'Servers'</span><span class="p">][</span><span class="nv">$i</span><span class="p">][</span><span class="s1">'user'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'root'</span><span class="p">;</span>
+<span class="nv">$cfg</span><span class="p">[</span><span class="s1">'Servers'</span><span class="p">][</span><span class="nv">$i</span><span class="p">][</span><span class="s1">'password'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'&lt;mysql_password&gt;'</span><span class="p">;</span>
+<span class="nv">$cfg</span><span class="p">[</span><span class="s1">'Servers'</span><span class="p">][</span><span class="nv">$i</span><span class="p">][</span><span class="s1">'extension'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'mysqli'</span><span class="p">;</span>
+<span class="nv">$cfg</span><span class="p">[</span><span class="s1">'Servers'</span><span class="p">][</span><span class="nv">$i</span><span class="p">][</span><span class="s1">'AllowNoPassword'</span><span class="p">]</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="nv">$cfg</span><span class="p">[</span><span class="s1">'Lang'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'en'</span><span class="p">;</span>
+
+<span class="cm">/* User for advanced features */</span>
+<span class="nv">$cfg</span><span class="p">[</span><span class="s1">'Servers'</span><span class="p">][</span><span class="nv">$i</span><span class="p">][</span><span class="s1">'controluser'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'pma'</span><span class="p">;</span>
+<span class="nv">$cfg</span><span class="p">[</span><span class="s1">'Servers'</span><span class="p">][</span><span class="nv">$i</span><span class="p">][</span><span class="s1">'controlpass'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'&lt;control_password&gt;'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="adding-xdebug-for-code-coverage">Adding Xdebug for code coverage</h2>
+
+<ul>
+  <li>Download xdebug file from <a href="https://xdebug.org/files/php_xdebug-3.3.0alpha2-8.1-vs16-x86_64.dll">https://xdebug.org/files/php_xdebug-3.3.0alpha2-8.1-vs16-x86_64.dll</a></li>
+  <li>Move it to <code class="language-plaintext highlighter-rouge">Apps\php81\ext</code> and rename it to <code class="language-plaintext highlighter-rouge">php_xdebug.dll</code>.</li>
+  <li>Update <code class="language-plaintext highlighter-rouge">C:\Apps\php81\php.ini</code> and add the line:</li>
+</ul>
+
+<div class="language-apache highlighter-rouge"><div class="highlight"><pre class="highlight"><code>zend_extension=xdebug
+</code></pre></div></div>
+
+<h2 id="configuring-virtual-hosts-and-symbolic-links">Configuring Virtual Hosts and Symbolic Links</h2>
+
+<ul>
+  <li>Create a symbolic directory from project directory</li>
+</ul>
+
+<div class="language-bat highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mklink</span> <span class="na">/D </span><span class="kd">C</span>:\Apache24\htdocs\diybaazar <span class="kd">C</span>:\Users\purch\Documents\Projects\Github\DIY<span class="na">-Baazar</span>\diybaazar<span class="na">-main
+
+</span><span class="nb">mklink</span> <span class="na">/D </span><span class="kd">C</span>:\Apache24\htdocs\diybaazar<span class="na">-admin </span><span class="kd">C</span>:\Users\purch\Documents\Projects\Github\DIY<span class="na">-Baazar</span>\diybaazar<span class="na">-admin
+
+</span><span class="nb">mklink</span> <span class="na">/D </span><span class="kd">C</span>:\Apache24\htdocs\diybdocs <span class="kd">C</span>:\Users\purch\Documents\Projects\Github\DIY<span class="na">-Baazar</span>\diybaazar<span class="na">-docs
+</span></code></pre></div></div>
+
+<ul>
+  <li>Add virtual host config in <code class="language-plaintext highlighter-rouge">httpd-vhosts.conf</code></li>
+</ul>
+
+<div class="language-apache highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">&lt;</span><span class="nl">VirtualHost</span><span class="sr"> *:80</span><span class="p">&gt;
+</span>    <span class="nc">ServerAdmin</span> webmaster@localhost
+<span class="p">&lt;/</span><span class="nl">VirtualHost</span><span class="p">&gt;
+</span>
+<span class="p">&lt;</span><span class="nl">VirtualHost</span><span class="sr"> *:80</span><span class="p">&gt;
+</span>    <span class="nc">ServerAdmin</span> webmaster@diybaazar.xyz
+    <span class="nc">DocumentRoot</span> "${SRVROOT}/htdocs/diybaazar"
+    <span class="nc">ServerName</span> diybaazar.xyz
+    <span class="nc">ErrorLog</span> "logs/diybaazar.xyz-error.log"
+    <span class="nc">CustomLog</span> "logs/diybaazar.xyz-access.log" common
+<span class="p">&lt;/</span><span class="nl">VirtualHost</span><span class="p">&gt;
+</span></code></pre></div></div>
+
+<h2 id="hosting-flask-service">Hosting Flask Service</h2>
+
+<ul>
+  <li>Installing mod-wsgi</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> pip <span class="nb">install </span>mod-wsgi
+</code></pre></div></div>
+
+<ul>
+  <li>Run the following the command and copy the output</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> mod_wsgi-express module-config
+</code></pre></div></div>
+
+<p>Output will look something like this:</p>
+
+<pre><code class="language-txt">LoadFile "C:/Python311/python311.dll"
+LoadModule wsgi_module "C:/Python311/Lib/site-packages/mod_wsgi/server/mod_wsgi.cp311-win_amd64.pyd"
+WSGIPythonHome "C:/Python311"
+</code></pre>
+
+<ul>
+  <li>
+    <p>Paste it in <code class="language-plaintext highlighter-rouge">httpd.conf</code>.</p>
+  </li>
+  <li>
+    <p>Add the following config in <code class="language-plaintext highlighter-rouge">httpd-vhosts.conf</code>.</p>
+  </li>
+</ul>
+
+<div class="language-apache highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">&lt;</span><span class="nl">VirtualHost</span><span class="sr"> *:80</span><span class="p">&gt;
+</span>    <span class="nc">DocumentRoot</span> "${SRVROOT}/htdocs/diybdocs"
+    <span class="nc">ServerAdmin</span> webmaster@diybaazar.xyz
+    <span class="nc">ServerName</span> docs.diybaazar.xyz
+
+    WSGIScriptAlias / "${SRVROOT}/htdocs/diybdocs/app.wsgi"
+    <span class="p">&lt;</span><span class="nl">Directory</span><span class="sr"> "${SRVROOT}/htdocs/diybdocs"</span><span class="p">&gt;
+</span>        WSGIApplicationGroup %{GLOBAL}
+        WSGIScriptReloading <span class="ss">On</span>
+        <span class="nc">allow</span> <span class="ss">from</span> <span class="ss">all</span>
+        <span class="c">#Options None</span>
+        <span class="nc">AllowOverride</span> <span class="ss">All</span>
+        <span class="nc">Require</span> <span class="ss">all</span> granted
+    <span class="p">&lt;/</span><span class="nl">Directory</span><span class="p">&gt;
+</span>
+    <span class="nc">ErrorLog</span> "logs/docs.diybaazar.xyz-error.log"
+    <span class="nc">CustomLog</span> "logs/docs.diybaazar.xyz-access.log" common
+<span class="p">&lt;/</span><span class="nl">VirtualHost</span><span class="p">&gt;
+</span></code></pre></div></div>
+
+    </article>
+    <footer>
+        <div class="footer-iconbar">
+            <span class="toc-icon" title="Table of Contents"></span>
+            <a href="#" class="go-to-top" title="Go to Top"></a>
+        </div>
+    </footer>
+</div>
+
+
+<div class="related">
+    <h2>Related Posts</h2>
+    <ul class="related-posts">
+        
+        <li>
+            <h3>
+                <a href="/publog/snowflake-sql-cheatsheet-VniOxVHf/" title="Snowflake SQL Cheatsheet link">
+                    Snowflake SQL Cheatsheet
+                    <small>07 August 2025</small>
+                </a>
+            </h3>
+        </li>
+        
+        <li>
+            <h3>
+                <a href="/publog/python-core-cheatsheet-3KV1r9AN/" title="Python Core Cheatsheet link">
+                    Python Core Cheatsheet
+                    <small>25 July 2025</small>
+                </a>
+            </h3>
+        </li>
+        
+        <li>
+            <h3>
+                <a href="/publog/top-sql-interview-questions-Y7x8i1fB/" title="Top SQL Interview Questions link">
+                    Top SQL Interview Questions
+                    <small>27 June 2025</small>
+                </a>
+            </h3>
+        </li>
+        
+    </ul>
+</div>
+</div>
+    </div>
+
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+            var context = {
+                baseurl: '/publog',
+                lang: 'en',
+                title: 'Custom WAMMP Setup in Windows (mod_wsgi support)',
+                description: '',
+                type: ''
+            };
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+
+<script>
+    
+    var documents = [
+    {
+    "id": 0,
+    "url": "/publog/snowflake-sql-cheatsheet-VniOxVHf/",
+    "title": "Snowflake SQL Cheatsheet",
+    "tags": "snowflake||sql||cheatsheet",
+    "date": "07 August 2025",
+    "reading_time": "4 minutes",
+    "content": "## SQL Essentials ### Joins |Join Type|Description|Syntax| |-|-|-| |INNER|Returns rows that match on both sides of the join|`SELECT * FROM table1 INNER JOIN table2 ON table1.column = table2.column`| |LEFT|Returns all rows from the left table, and the matched rows from the right table|`SELECT * FROM table1 LEFT JOIN table2 ON...",
+    "body": "2025/08/07 - SQL Essentials: Joins:       Join Type   Description   Syntax         INNER   Returns rows that match on both sides of the join   SELECT * FROM table1 INNER JOIN table2 ON table1. column = table2. column       LEFT   Returns all rows from the left table, and the matched rows from the right table   SELECT * FROM table1 LEFT JOIN table2 ON table1. column = table2. column       RIGHT   Returns all rows from the right table, and the matched rows from the left table   SELECT * FROM table1 RIGHT JO..."
+    }, {
+    "id": 1,
+    "url": "/publog/python-core-cheatsheet-3KV1r9AN/",
+    "title": "Python Core Cheatsheet",
+    "tags": "python||cheatsheet",
+    "date": "25 July 2025",
+    "reading_time": "7 minutes",
+    "content": "## Date and Time ### Date Directives | Format | Meaning | Example | | ------ | --------------------------------- | ---------- | | `%Y` | Year (4 digits) | `2025` | | `%y` | Year (2 digits) | `25` | | `%m` | Month (01-12) | `07` | | `%B` |...",
+    "body": "2025/07/25 - Date and Time: Date Directives:       Format   Meaning   Example         %Y   Year (4 digits)   2025       %y   Year (2 digits)   25       %m   Month (01-12)   07       %B   Full month name   July       %b   Abbreviated month name   Jul       %d   Day of the month (01–31)   17       %j   Day of year (001–366)   198       %A   Full weekday name   Thursday       %a   Abbreviated weekday name   Thu       %w   Weekday as decimal (0=Sunday)   4       %U   Week number (Sunday as first day)   28    ..."
+    }, {
+    "id": 2,
+    "url": "/publog/top-sql-interview-questions-Y7x8i1fB/",
+    "title": "Top SQL Interview Questions",
+    "tags": "sql||interview||mysql||postgresql",
+    "date": "27 June 2025",
+    "reading_time": "7 minutes",
+    "content": "1. Write an SQL query to fetch the second-highest salary from an `employees` table. ```sql SELECT MAX(salary) AS SecondHighestSalary FROM employees WHERE salary 1; ``` 3. Write a query to find the employees who earn more than their managers. ```sql SELECT e1.* FROM employees e1 JOIN employees e2 ON e1.manager_id...",
+    "body": "2025/06/27 -    Write an SQL query to fetch the second-highest salary from an employees table.    SELECT MAX(salary) AS SecondHighestSalary FROM employees WHERE salary &lt; (SELECT MAX(salary) FROM employees);     SELECT salary AS SecondHighestSalary FROM employees ORDER BY salary DESC LIMIT 1 OFFSET 1;     SELECT salary AS SecondHighestSalary FROM (   SELECT salary, row_number() OVER (ORDER BY salary DESC) AS rank   FROM employees ) AS RankedSalaries WHERE rank = 2;      Write an SQL query to get the dup..."
+    }, {
+    "id": 3,
+    "url": "/publog/nano-shortcuts-beginner-friendly-editor-z0aLs1CC/",
+    "title": "Nano Shortcuts - Beginner Friendly Editor",
+    "tags": "nano||shortcut||editor||text",
+    "date": "06 January 2025",
+    "reading_time": "3 minutes",
+    "content": "When it comes to text editing in the terminal, Nano stands out. It is user-friendly and simple. Nano's straightforward interface makes it an excellent choice for anyone from novice to expert. In this blog post, we will explore essential Nano shortcuts. These will help you navigate and use this powerful...",
+    "body": "2025/01/06 - When it comes to text editing in the terminal, Nano stands out. It is user-friendly and simple. Nano’s straightforward interface makes it an excellent choice for anyone from novice to expert. In this blog post, we will explore essential Nano shortcuts. These will help you navigate and use this powerful text editor with ease. What is Nano?: Nano is a command-line text editor, found in most Unix-like operating systems. It is simple in design and easy to use, which makes it an ideal choice for b..."
+    }, {
+    "id": 4,
+    "url": "/publog/windows-wammp-setup/",
+    "title": "Custom WAMMP Setup in Windows (mod_wsgi support)",
+    "tags": "windows||apache||php",
+    "date": "30 April 2023",
+    "reading_time": "2 minutes",
+    "content": "Are you tired of using pre-packaged WAMPP solutions that limit your control and flexibility? Do you need to run Python web applications on Windows using the Apache web server? Look no further! This guide will walk you through the process of setting up a custom WAMPP environment on Windows, complete...",
+    "body": "2023/04/30 - Are you tired of using pre-packaged WAMPP solutions that limit your control and flexibility? Do you need to run Python web applications on Windows using the Apache web server? Look no further! This guide will walk you through the process of setting up a custom WAMPP environment on Windows, complete with mod_wsgi support for running Python web applications. By following this guide, you’ll learn how to:  Install and configure Apache, MySQL, and PHP/Python on Windows Set up mod_wsgi to run Pytho..."
+    }, {
+    "id": 5,
+    "url": "/publog/introduction-to-ruby/",
+    "title": "Introduction To Ruby",
+    "tags": "ruby||programming",
+    "date": "01 April 2022",
+    "reading_time": "21 minutes",
+    "content": "Welcome to the world of Ruby, a dynamic and versatile programming language that’s been delighting developers and powering innovative applications for over two decades. Known for its simplicity, readability, and ease of use, Ruby has become a favorite among beginners and experienced programmers alike. In this introduction to Ruby, we’ll...",
+    "body": "2022/04/01 - Welcome to the world of Ruby, a dynamic and versatile programming language that’s been delighting developers and powering innovative applications for over two decades. Known for its simplicity, readability, and ease of use, Ruby has become a favorite among beginners and experienced programmers alike. In this introduction to Ruby, we’ll take you on a journey through the basics of the language, covering its syntax, features, and ecosystem. You’ll learn how to write Ruby code, work with data str..."
+    }
+    ];
+
+    var idx = lunr(function () {
+        this.ref('id')
+        this.field('title')
+        this.field('body')
+
+        documents.forEach(function (doc) {
+            this.add(doc)
+        }, this)
+    });
+
+    function slugify(text) {
+        return text
+            .toString()
+            .toLowerCase()
+            .replace(/\s+/g, '-') // Replace spaces with -
+            .replace(/[^\w-]+/g, '') // Remove all non-word chars
+            .replace(/--+/g, '-') // Replace multiple - with single -
+            .replace(/^-+/, '') // Trim - from start of text
+            .replace(/-+$/, ''); // Trim - from end of text
+        ;
+    }
+
+    function lunr_search(term) {
+        if(term) {
+            var results = idx.search(term);
+            if(results.length>0){
+                for (var i = 0; i < results.length; i++) {
+                    var ref = results[i]['ref'];
+                    var post = documents[ref];
+                    post.tags = post.tags.split('||');
+
+                    var tagHtml = '';
+                    for(var j = 0; j < post.tags.length; j++){
+                        var tag = post.tags[j];
+                        tagHtml += `
+<a
+			class="tag-link"
+			href="/publog/tags/${slugify(tag)}"
+			rel="category tag"
+            title="${tag} link"
+		>
+			${tag}
+		</a>            
+                        `;
+                    }
+                    var postHtml = `
+<div class="post">
+	<h3 class="post-title">
+		<a href="${post.url}" title="${post.title} link"> ${post.title} </a>
+	</h3>
+	<div class="post-tags">
+		${tagHtml}
+	</div>
+    <div class="post-info">
+        <span class="post-read-time">${post.reading_time}</span>
+        <span class="post-date">${post.date}</span>
+    </div>
+	<span> ${post.content} </span>
+</div>
+                    `;
+                    document.querySelector('#search-results').innerHTML = postHtml;
+                }
+            }
+        }
+    }
+</script>
+    <script src="/publog/public/js/script.js"></script>
+  </body>
+</html>

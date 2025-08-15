@@ -1,0 +1,2731 @@
+<!DOCTYPE html>
+<html lang="bn">
+  <head>
+    <link href="http://gmpg.org/xfn/11" rel="profile" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+    <!-- SEO Tags --> 
+
+<title>রুবি-তে হাতেখড়ি &middot; পাব্লগ</title>
+<meta property="og:title" content="রুবি-তে হাতেখড়ি &middot; পাব্লগ" />
+
+
+
+  <meta name="description" content="শিবিশব্রহ্মার (পূর্বায়ণ চৌধুরী), একজন ওয়েব ডেভেলপর, তথ্য বিজ্ঞান উৎসুক, সমস্যা সমাধানকারি এবং সংখ্যা বিশ্লেষক, অফিসিয়াল ডেভেলপার ব্লগে স্বাগতম" />
+  <meta property="og:description" content="শিবিশব্রহ্মার (পূর্বায়ণ চৌধুরী), একজন ওয়েব ডেভেলপর, তথ্য বিজ্ঞান উৎসুক, সমস্যা সমাধানকারি এবং সংখ্যা বিশ্লেষক, অফিসিয়াল ডেভেলপার ব্লগে স্বাগতম" />
+  <meta property="twitter:description" content="শিবিশব্রহ্মার (পূর্বায়ণ চৌধুরী), একজন ওয়েব ডেভেলপর, তথ্য বিজ্ঞান উৎসুক, সমস্যা সমাধানকারি এবং সংখ্যা বিশ্লেষক, অফিসিয়াল ডেভেলপার ব্লগে স্বাগতম" />
+
+
+<meta property="og:locale" content="bn" />
+
+
+  <link rel="canonical" href="/publog/bn/introduction-to-ruby/" />
+  <meta property="og:url" content="/publog/bn/introduction-to-ruby/" />
+
+
+
+  <meta name="author" content="পূর্বায়ণ চৌধুরী" />
+
+
+
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2022-04-01T10:43:06+00:00" />
+
+
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:image" content="/publog/bn/public/images/0001_cover_bn.webp" />
+  <meta property="twitter:image" content="/publog/bn/public/images/0001_cover_bn.webp" />
+  
+  
+  
+    <meta property="og:image:alt" content="রুবি-তে হাতেখড়ি cover image" />
+  
+
+<!-- /SEO Tags --> 
+
+    <link rel="stylesheet" href="/publog/public/css/poole.css" />
+    <link rel="stylesheet" href="/publog/public/css/dracula.css" />
+    <link rel="stylesheet" href="/publog/public/css/lanyon.css" />
+    <link rel="stylesheet" href="/publog/public/css/style.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Noto+Sans+Serif+Bengali&display=swap" />
+
+    <link rel="shortcut icon" href="/publog/public/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/publog/public/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/publog/public/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/publog/public/favicon-16x16.png" />
+    <link rel="manifest" href="/publog/public/site.webmanifest">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/publog/atom.xml" />
+
+    <meta name="google-site-verification" content="du2PIAAAw_DV4AiAM7Hw4UqkUC-9_xyHauRF5O5ElvE" />
+    
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            (i[r] =
+                i[r] ||
+                function () {
+                    (i[r].q = i[r].q || []).push(arguments);
+                }),
+                (i[r].l = 1 * new Date());
+            (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'G-Y33HYSK8XN', 'auto');
+        ga('send', 'pageview');
+    </script>
+    
+</head>
+
+
+    <body class="layout-reverse sidebar-overlay theme-base-10">
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" />
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-item">
+        <p>শিবিশব্রহ্মার (পূর্বায়ণ চৌধুরী), একজন ওয়েব ডেভেলপর, তথ্য বিজ্ঞান উৎসুক, সমস্যা সমাধানকারি এবং সংখ্যা বিশ্লেষক, অফিসিয়াল ডেভেলপার ব্লগে স্বাগতম</p>
+    </div>
+
+    <nav class="sidebar-nav">
+        <a class="sidebar-nav-item" href="/publog/bn/" title="নীড় লিঙ্ক">
+            নীড়
+        </a>
+
+         
+         
+         
+             
+                 
+             
+         
+             
+                 
+             
+         
+             
+                
+                    <a class="sidebar-nav-item"
+                        href="/publog/bn/about/" title="সম্পর্কে লিঙ্ক">সম্পর্কে</a>
+                 
+             
+         
+             
+         
+             
+         
+             
+         
+             
+         
+             
+        
+
+        <span class="sidebar-nav-item">বর্তমানে v0.1.0</span>
+    </nav>
+
+
+    <div class="sidebar-item">
+        <p>
+            
+            <a href="/publog/introduction-to-ruby/" class="" title="ইরেজি Link">ইরেজি</a> | 
+            
+            <a href="/publog/bn/introduction-to-ruby/" class="" title="বাংলা লিংক">বাংলা</a>
+        </p>
+   
+        <p>
+           পূর্বায়ণ চৌধুরী &copy; ২০২৫ | সর্বস্বত্ব সংরক্ষিত
+        </p>
+    </div>
+</div>
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+      content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/publog/bn/" title="নীড়">
+              পাব্লগ
+            </a>
+            <small>
+              শিবিশব্রহ্মার ডেভেলপার ব্লগ
+            </small>
+          </h3>
+        </div>
+        <div class="search-form">
+          <a href="#" class="search-button">
+            <img
+              src="data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%3Csvg%20width%3D%22512px%22%20height%3D%22512px%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M15.7955%2015.8111L21%2021M18%2010.5C18%2014.6421%2014.6421%2018%2010.5%2018C6.35786%2018%203%2014.6421%203%2010.5C3%206.35786%206.35786%203%2010.5%203C14.6421%203%2018%206.35786%2018%2010.5Z%22%20stroke%3D%22%23555%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E"
+              width="24"
+              height="24"
+              alt="" />
+          </a>
+          <input
+            type="search"
+            id="search"
+            placeholder="অনুসন্ধান">
+        </div>
+      </div>
+
+      <div class="container content"><aside class="post-toc hide">
+    <h3 class="toc-title">
+        সূচীপত্র
+        <span class="close-toc" title="বন্ধ করুন"></span>
+    </h3>
+    <div class="toc">
+        <ol id="toc" class="toc__list">
+<li class="post-toc-item toc-h2"><a href="#সংখ্যা--অধ্যায়-১">সংখ্যা : অধ্যায় ১</a>
+<ol>
+<li class="post-toc-item toc-h3"><a href="#puts-এ-হাতেখড়ি">puts-এ হাতেখড়ি</a></li>
+<li class="post-toc-item toc-h3"><a href="#পূর্ণসংখ্যা-এবং-ভগ্নাংশ-সংখ্যা">পূর্ণসংখ্যা এবং ভগ্নাংশ-সংখ্যা</a></li>
+<li class="post-toc-item toc-h3"><a href="#সহজ-পাটিগণিত">সহজ পাটিগণিত</a></li>
+</ol>
+</li>
+<li class="post-toc-item toc-h2"><a href="#বর্ণসমষ্টি--অধ্যায়-২">বর্ণসমষ্টি : অধ্যায় ২</a>
+<ol>
+<li class="post-toc-item toc-h3"><a href="#string-arithmetic">String Arithmetic</a></li>
+<li class="post-toc-item toc-h3"><a href="#12-vs-12">12 vs ‘12’</a></li>
+<li class="post-toc-item toc-h3"><a href="#problems">Problems</a></li>
+</ol>
+</li>
+<li class="post-toc-item toc-h2"><a href="#variables-and-assignment--chapter-3">Variables and Assignment : Chapter 3</a></li>
+<li class="post-toc-item toc-h2"><a href="#mixing-it-all-up--chapter-4">Mixing it all up : Chapter 4</a>
+<ol>
+<li class="post-toc-item toc-h3"><a href="#conversions">Conversions</a></li>
+<li class="post-toc-item toc-h3"><a href="#another-look-at-puts">Another Look at puts</a></li>
+<li class="post-toc-item toc-h3"><a href="#the-methods-gets-and-chomp">The Methods gets and chomp</a></li>
+</ol>
+</li>
+<li class="post-toc-item toc-h2"><a href="#more-about-methods--chapter-5">More About Methods : Chapter 5</a>
+<ol>
+<li class="post-toc-item toc-h3"><a href="#fancy-string-methods">Fancy String Methods</a>
+<ol>
+<li class="post-toc-item toc-h4"><a href="#problems---5">Problems - 5</a></li>
+</ol>
+</li>
+<li class="post-toc-item toc-h3"><a href="#higher-math">Higher Math</a></li>
+<li class="post-toc-item toc-h3"><a href="#random-numbers">Random Numbers</a></li>
+<li class="post-toc-item toc-h3"><a href="#the-math-object">The Math Object</a></li>
+</ol>
+</li>
+<li class="post-toc-item toc-h2"><a href="#flow-control--chapter-6">Flow Control : Chapter 6</a>
+<ol>
+<li class="post-toc-item toc-h3"><a href="#comparison-methods">Comparison Methods</a></li>
+<li class="post-toc-item toc-h3"><a href="#branching">Branching</a></li>
+<li class="post-toc-item toc-h3"><a href="#looping">Looping</a></li>
+<li class="post-toc-item toc-h3"><a href="#a-little-bit-of-logic">A Little Bit of Logic</a></li>
+<li class="post-toc-item toc-h3"><a href="#a-few-things-to-try--chapter-6">A Few Things to Try : Chapter 6</a></li>
+</ol>
+</li>
+<li class="post-toc-item toc-h2"><a href="#arrays-and-iterators--chapter-7">Arrays and Iterators : Chapter 7</a>
+<ol>
+<li class="post-toc-item toc-h3"><a href="#the-method-each">The Method each</a></li>
+<li class="post-toc-item toc-h3"><a href="#more-array-methods">More Array Methods</a></li>
+<li class="post-toc-item toc-h3"><a href="#a-few-things-to-try--chapter-7">A Few Things to Try : Chapter 7</a></li>
+</ol>
+</li>
+<li class="post-toc-item toc-h2"><a href="#writing-your-own-methods--chapter-8">Writing Your Own Methods : Chapter 8</a>
+<ol>
+<li class="post-toc-item toc-h3"><a href="#method-parameters">Method Parameters</a></li>
+<li class="post-toc-item toc-h3"><a href="#local-variables">Local Variables</a></li>
+<li class="post-toc-item toc-h3"><a href="#return-values">Return Values</a></li>
+<li class="post-toc-item toc-h3"><a href="#one-more-big-example">One More Big Example</a></li>
+<li class="post-toc-item toc-h3"><a href="#a-few-things-to-try--chapter-8">A Few Things to Try : Chapter 8</a></li>
+</ol>
+</li>
+<li class="post-toc-item toc-h2"><a href="#classes--chapter-9">Classes : Chapter 9</a>
+<ol>
+<li class="post-toc-item toc-h3"><a href="#the-time-class">The Time Class</a></li>
+<li class="post-toc-item toc-h3"><a href="#a-few-things-to-try--chapter-9">A Few Things to Try : Chapter 9</a></li>
+<li class="post-toc-item toc-h3"><a href="#the-hash-class">The Hash Class</a></li>
+<li class="post-toc-item toc-h3"><a href="#extending-classes">Extending Classes</a></li>
+<li class="post-toc-item toc-h3"><a href="#creating-classes">Creating Classes</a></li>
+<li class="post-toc-item toc-h3"><a href="#instance-variables">Instance Variables</a></li>
+<li class="post-toc-item toc-h3"><a href="#a-few-things-to-try--chapter-91">A Few Things to Try : Chapter 9.1</a></li>
+</ol>
+</li>
+<li class="post-toc-item toc-h2"><a href="#blocks-and-procs--chapter-10">Blocks and Procs : Chapter 10</a>
+<ol>
+<li class="post-toc-item toc-h3"><a href="#methods-which-take-procs">Methods Which Take Procs</a></li>
+<li class="post-toc-item toc-h3"><a href="#methods-which-return-procs">Methods Which Return Procs</a></li>
+<li class="post-toc-item toc-h3"><a href="#passing-blocks-not-procs-into-methods">Passing Blocks (Not Procs) into Methods</a></li>
+<li class="post-toc-item toc-h3"><a href="#a-few-things-to-try--chapter-10">A Few Things to Try : Chapter 10</a></li>
+</ol>
+</li>
+<li class="post-toc-item toc-h2"><a href="#references">References</a></li>
+</ol>
+    </div>
+</aside>
+
+<div class="post">
+    <header class="post-header">
+        
+        <div class="post-cover-image">
+            <img src="/publog/bn/public/images/0001_cover_bn.webp" alt="রুবি-তে হাতেখড়ি cover image">
+        </div>
+        
+        <h1 class="post-title">রুবি-তে হাতেখড়ি</h1>
+        <div class="post-tags">
+            
+            
+            <a class="tag-link" href="/publog/bn/tags/ruby/"
+                rel="category tag" title="ruby লিঙ্ক">
+                ruby
+            </a>
+            
+            
+            <a class="tag-link" href="/publog/bn/tags/programming/"
+                rel="category tag" title="programming লিঙ্ক">
+                programming
+            </a>
+            
+        </div>
+        <div class="post-info">
+            <span class="post-read-time">২০ মিনিট</span>
+            <span class="post-date">০১ এপ্রিল ২০২২</span>
+        </div>
+        <div class="post-share">
+            <span class="facebook-share"></span>
+            <span class="twitter-share"></span>
+            <span class="linkedin-share"></span>
+            <span class="reddit-share"></span>
+        </div>
+    </header>
+    <article class="post-content">
+        <h2 id="সংখ্যা--অধ্যায়-১">সংখ্যা : অধ্যায় ১</h2>
+
+<p>রুবি “নমস্কার বিশ্ব” প্রোগ্রাম</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="s2">"নমস্কার বিশ্ব"</span>
+</code></pre></div></div>
+
+<p>সংরক্ষণ করে ফাইলটি চালান।
+<code class="language-plaintext highlighter-rouge">ruby calc.rb</code></p>
+
+<h3 id="puts-এ-হাতেখড়ি">puts-এ হাতেখড়ি</h3>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="mi">1</span><span class="o">+</span><span class="mi">2</span>
+</code></pre></div></div>
+
+<p><em>puts</em> এর পরে যা আসে তা কেবল স্ক্রিনে লেখে।</p>
+
+<h3 id="পূর্ণসংখ্যা-এবং-ভগ্নাংশ-সংখ্যা">পূর্ণসংখ্যা এবং ভগ্নাংশ-সংখ্যা</h3>
+
+<p>দশমিক ছাড়া সংখ্যাগুলোকে <em>পূর্ণসংখ্যা</em> বলে, আর দশমিক দিয়ে সংখ্যাগুলোকে <em>ভগ্নাংশ সংখ্যা</em> বলে।</p>
+
+<p>কয়েকটি পূর্ণসংখ্যা (integers):</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">5</span>
+<span class="o">-</span><span class="mi">205</span>
+<span class="mi">9999999999999999999999999</span>
+<span class="mi">0</span>
+</code></pre></div></div>
+
+<p>কয়েকটি ভগ্নাংশ সংখ্যা(floats):</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mf">54.321</span>
+<span class="mf">0.001</span>
+<span class="o">-</span><span class="mf">205.3884</span>
+<span class="mf">0.0</span>
+</code></pre></div></div>
+
+<h3 id="সহজ-পাটিগণিত">সহজ পাটিগণিত</h3>
+
+<p>কিছু সহজ পাটিগণিত করা যাক:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="mf">1.0</span> <span class="o">+</span> <span class="mf">2.0</span>
+<span class="nb">puts</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="mf">3.0</span>
+<span class="nb">puts</span> <span class="mf">5.0</span> <span class="o">-</span> <span class="mf">8.0</span>
+<span class="nb">puts</span> <span class="mf">9.0</span> <span class="o">/</span> <span class="mf">2.0</span>
+</code></pre></div></div>
+
+<p>প্রোগ্রামের ফলাফল:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3.0
+6.0
+-3.0
+4.5
+</code></pre></div></div>
+
+<p>পূর্ণসংখ্যা দিয়ে করে দেখি:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="mi">1</span><span class="o">+</span><span class="mi">2</span>
+<span class="nb">puts</span> <span class="mi">2</span><span class="o">*</span><span class="mi">3</span>
+<span class="nb">puts</span> <span class="mi">5</span><span class="o">-</span><span class="mi">8</span>
+<span class="nb">puts</span> <span class="mi">9</span><span class="o">/</span><span class="mi">2</span>
+</code></pre></div></div>
+
+<p>প্রোগ্রামের ফলাফল:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3
+6
+-3
+4
+</code></pre></div></div>
+
+<p>জটিল গাণিতিক সম্প্রসারণগুলি নিম্নলিখিত অপারেটারের মাধ্যমে লেখা যাক:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="mi">5</span> <span class="o">*</span> <span class="p">(</span><span class="mi">12</span><span class="o">-</span><span class="mi">8</span><span class="p">)</span> <span class="o">+</span> <span class="o">-</span><span class="mi">15</span>
+<span class="nb">puts</span> <span class="mi">98</span> <span class="o">+</span> <span class="p">(</span><span class="mi">59872</span> <span class="o">/</span> <span class="p">(</span><span class="mi">13</span><span class="o">*</span><span class="mi">8</span><span class="p">))</span> <span class="o">*</span> <span class="o">-</span><span class="mi">52</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>5
+-29802
+</code></pre></div></div>
+
+<h2 id="বর্ণসমষ্টি--অধ্যায়-২">বর্ণসমষ্টি : অধ্যায় ২</h2>
+
+<p>কিছু স্ট্রিংগুলি হল:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s1">'নমস্কার!'</span>
+<span class="s1">'রুবি মাতিয়ে দেয়।'</span>
+<span class="s1">'5 আমার প্রিয় সংখ্যা... তোমার কোনটা?'</span>
+<span class="s1">'স্নোপি বলল #%^?&amp;*@! যখন সে পায়ের আঙুলে ঠোক্কর খায়।'</span>
+<span class="s1">'     '</span>
+<span class="s1">''</span>
+</code></pre></div></div>
+
+<p>Strings can have punctuation, digits, symbols, and spaces in them… more than just letters.</p>
+
+<p>Let’s try it with some strings:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="s1">'নমস্কার, বিশ্ব!'</span>
+<span class="nb">puts</span> <span class="s1">''</span>
+<span class="nb">puts</span> <span class="s1">'শুভ বিদায়।'</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>নমস্কার, বিশ্ব!
+
+শুভ বিদায়।
+</code></pre></div></div>
+
+<h3 id="string-arithmetic">String Arithmetic</h3>
+
+<p>Adding or concatenating strings is easy:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="s1">'I like'</span> <span class="o">+</span> <span class="s1">'apple pie.'</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I likeapple pie.
+</code></pre></div></div>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="s1">'I like '</span> <span class="o">+</span> <span class="s1">'apple pie.'</span>
+<span class="nb">puts</span> <span class="s1">'I like'</span> <span class="o">+</span> <span class="s1">' apple pie.'</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I like apple pie.
+I like apple pie.
+</code></pre></div></div>
+
+<p>We can multiply them</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="s1">'blink '</span> <span class="o">*</span> <span class="mi">4</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>blink blink blink blink
+</code></pre></div></div>
+
+<h3 id="12-vs-12">12 vs ‘12’</h3>
+
+<p>12 is a number, but ‘12’ is a string of two digits.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span>  <span class="mi">12</span>  <span class="o">+</span>  <span class="mi">12</span>
+<span class="nb">puts</span> <span class="s1">'12'</span> <span class="o">+</span> <span class="s1">'12'</span>
+<span class="nb">puts</span> <span class="s1">'12  +  12'</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>24
+1212
+12  +  12
+</code></pre></div></div>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span>  <span class="mi">2</span>  <span class="o">*</span>  <span class="mi">5</span>
+<span class="nb">puts</span> <span class="s1">'2'</span> <span class="o">*</span>  <span class="mi">5</span>
+<span class="nb">puts</span> <span class="s1">'2  *  5'</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>10
+22222
+2  *  5
+</code></pre></div></div>
+
+<h3 id="problems">Problems</h3>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="s1">'12'</span> <span class="o">+</span> <span class="mi">12</span>
+<span class="nb">puts</span> <span class="s1">'2'</span> <span class="o">*</span> <span class="s1">'5'</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#&lt;TypeError: no implicit conversion of Integer into String&gt;
+</code></pre></div></div>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="s1">'You'</span><span class="n">re</span> <span class="n">swell!</span><span class="err">'</span>
+</code></pre></div></div>
+
+<p>The computer thought we were done with the string. (This is why it’s nice to have a text editor which does syntax coloring for you.)</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="s1">'You\'re swell!'</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You're swell!
+</code></pre></div></div>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="s1">'You\'re swell!'</span>
+<span class="nb">puts</span> <span class="s1">'backslash at the end of a string:  \\'</span>
+<span class="nb">puts</span> <span class="s1">'up\\down'</span>
+<span class="nb">puts</span> <span class="s1">'up\down'</span>
+</code></pre></div></div>
+
+<p>The backslash is the escape character. In other words, if you have a backslash and another character, they are sometimes translated into a new character.</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You're swell!
+backslash at the end of a string:  \
+up\down
+up\down
+</code></pre></div></div>
+
+<h2 id="variables-and-assignment--chapter-3">Variables and Assignment : Chapter 3</h2>
+
+<p>We wanted to print something out twice, we would have to type it in twice:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="s1">'...you can say that again...'</span>
+<span class="nb">puts</span> <span class="s1">'...you can say that again...'</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...you can say that again...
+...you can say that again...
+</code></pre></div></div>
+
+<p>Assigning a value to a variable is called <em>assignment</em>.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myString</span> <span class="o">=</span> <span class="s1">'...you can say that again...'</span>
+<span class="nb">puts</span> <span class="n">myString</span>
+<span class="nb">puts</span> <span class="n">myString</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...you can say that again...
+...you can say that again...
+</code></pre></div></div>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">name</span> <span class="o">=</span> <span class="s1">'Patricia Rosanna Jessica Mildred Oppenheimer'</span>
+<span class="nb">puts</span> <span class="s1">'My name is '</span> <span class="o">+</span> <span class="nb">name</span> <span class="o">+</span> <span class="s1">'.'</span>
+<span class="nb">puts</span> <span class="s1">'Wow!  '</span> <span class="o">+</span> <span class="nb">name</span> <span class="o">+</span> <span class="s1">' is a really long name!'</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>My name is Patricia Rosanna Jessica Mildred Oppenheimer.
+Wow!  Patricia Rosanna Jessica Mildred Oppenheimer is a really long name!
+</code></pre></div></div>
+
+<p>We can assign an object to a variable, we can reassign a different object to that variable.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">composer</span> <span class="o">=</span> <span class="s1">'Mozart'</span>
+<span class="nb">puts</span> <span class="n">composer</span> <span class="o">+</span> <span class="s1">' was "da bomb", in his day.'</span>
+
+<span class="n">composer</span> <span class="o">=</span> <span class="s1">'Beethoven'</span>
+<span class="nb">puts</span> <span class="s1">'But I prefer '</span> <span class="o">+</span> <span class="n">composer</span> <span class="o">+</span> <span class="s1">', personally.'</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Mozart was "da bomb", in his day.
+But I prefer Beethoven, personally.
+</code></pre></div></div>
+
+<p>Variables can point to any kind of object, not just strings:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">var</span> <span class="o">=</span> <span class="s1">'just another '</span> <span class="o">+</span> <span class="s1">'string'</span>
+<span class="nb">puts</span> <span class="n">var</span>
+
+<span class="n">var</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">var</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>just another string
+15
+</code></pre></div></div>
+
+<p>Variables can point to just about anything… except other variables.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">var1</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">var2</span> <span class="o">=</span> <span class="n">var1</span>
+<span class="nb">puts</span> <span class="n">var1</span>
+<span class="nb">puts</span> <span class="n">var2</span>
+
+<span class="nb">puts</span> <span class="s1">''</span>
+
+<span class="n">var1</span> <span class="o">=</span> <span class="s1">'eight'</span>
+<span class="nb">puts</span> <span class="n">var1</span>
+<span class="nb">puts</span> <span class="n">var2</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>8
+8
+
+eight
+8
+</code></pre></div></div>
+
+<h2 id="mixing-it-all-up--chapter-4">Mixing it all up : Chapter 4</h2>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">var1</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">var2</span> <span class="o">=</span> <span class="s1">'5'</span>
+
+<span class="nb">puts</span> <span class="n">var1</span> <span class="o">+</span> <span class="n">var2</span>
+</code></pre></div></div>
+
+<p>If you were trying to get 7 (2 + 5), or if you wanted to get 25 (‘2’ + ‘5’).</p>
+
+<h3 id="conversions">Conversions</h3>
+
+<p>To get the string version of an object, we simply write .<code class="language-plaintext highlighter-rouge">to_s</code> after it:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">var1</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">var2</span> <span class="o">=</span> <span class="s1">'5'</span>
+
+<span class="nb">puts</span> <span class="n">var1</span><span class="p">.</span><span class="nf">to_s</span> <span class="o">+</span> <span class="n">var2</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>25
+</code></pre></div></div>
+
+<p>Similarly, <code class="language-plaintext highlighter-rouge">to_i</code> gives the integer version of an object, and <code class="language-plaintext highlighter-rouge">to_f</code> gives the float version.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">var1</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">var2</span> <span class="o">=</span> <span class="s1">'5'</span>
+
+<span class="nb">puts</span> <span class="n">var1</span><span class="p">.</span><span class="nf">to_s</span> <span class="o">+</span> <span class="n">var2</span>
+<span class="nb">puts</span> <span class="n">var1</span> <span class="o">+</span> <span class="n">var2</span><span class="p">.</span><span class="nf">to_i</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>25
+7
+</code></pre></div></div>
+
+<p>Other conversions:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="s1">'15'</span><span class="p">.</span><span class="nf">to_f</span>
+<span class="nb">puts</span> <span class="s1">'99.999'</span><span class="p">.</span><span class="nf">to_f</span>
+<span class="nb">puts</span> <span class="s1">'99.999'</span><span class="p">.</span><span class="nf">to_i</span>
+<span class="nb">puts</span> <span class="s1">''</span>
+<span class="nb">puts</span> <span class="s1">'5 is my favorite number!'</span><span class="p">.</span><span class="nf">to_i</span>
+<span class="nb">puts</span> <span class="s1">'Who asked you about 5 or whatever?'</span><span class="p">.</span><span class="nf">to_i</span>
+<span class="nb">puts</span> <span class="s1">'Your momma did.'</span><span class="p">.</span><span class="nf">to_f</span>
+<span class="nb">puts</span> <span class="s1">''</span>
+<span class="nb">puts</span> <span class="s1">'stringy'</span><span class="p">.</span><span class="nf">to_s</span>
+<span class="nb">puts</span> <span class="mi">3</span><span class="p">.</span><span class="nf">to_i</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>15.0
+99.999
+99
+
+5
+0
+0.0
+
+stringy
+3
+</code></pre></div></div>
+
+<p>The first one is pretty standard, giving 15.0. After that, we converted the string ‘99.999’ to a float and to an integer.</p>
+
+<h3 id="another-look-at-puts">Another Look at puts</h3>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="mi">20</span>
+<span class="nb">puts</span> <span class="mi">20</span><span class="p">.</span><span class="nf">to_s</span>
+<span class="nb">puts</span> <span class="s1">'20'</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>20
+20
+20
+</code></pre></div></div>
+
+<p>Before puts tries to write out an object, it uses to_s to get the string version of that object. In fact, the s in puts stands for string; puts really means put string.</p>
+
+<h3 id="the-methods-gets-and-chomp">The Methods gets and chomp</h3>
+
+<p>Since our keyboard only makes strings, that works out beautifully. What actually happens is that gets just sits there, reading what we type until we press Enter.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="nb">gets</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Is there an echo in here?
+Is there an echo in here?
+</code></pre></div></div>
+
+<p>In this one, type in your name and it will greet you:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="s1">'Hello there, and what\'s your name?'</span>
+<span class="nb">name</span> <span class="o">=</span> <span class="nb">gets</span>
+<span class="nb">puts</span> <span class="s1">'Your name is '</span> <span class="o">+</span> <span class="nb">name</span> <span class="o">+</span> <span class="s1">'?  What a lovely name!'</span>
+<span class="nb">puts</span> <span class="s1">'Pleased to meet you, '</span> <span class="o">+</span> <span class="nb">name</span> <span class="o">+</span> <span class="s1">'.  :)'</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello there, and what's your name?
+Chris
+Your name is Chris
+?  What a lovely name!
+Pleased to meet you, Chris
+.  :)
+</code></pre></div></div>
+
+<p>When I typed in the letters C, h, r, i, s, and then pressed Enter, gets got all of the letters in my name and the Enter! Let’s try that program again, but with chomp to help us this time:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="s1">'Hello there, and what\'s your name?'</span>
+<span class="nb">name</span> <span class="o">=</span> <span class="nb">gets</span><span class="p">.</span><span class="nf">chomp</span>
+<span class="nb">puts</span> <span class="s1">'Your name is '</span> <span class="o">+</span> <span class="nb">name</span> <span class="o">+</span> <span class="s1">'?  What a lovely name!'</span>
+<span class="nb">puts</span> <span class="s1">'Pleased to meet you, '</span> <span class="o">+</span> <span class="nb">name</span> <span class="o">+</span> <span class="s1">'.  :)'</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello there, and what's your name?
+Chris
+Your name is Chris?  What a lovely name!
+Pleased to meet you, Chris.  :)
+</code></pre></div></div>
+
+<h2 id="more-about-methods--chapter-5">More About Methods : Chapter 5</h2>
+
+<p>As it turns out, 5 + 5 is really just a shortcut way of writing 5.+ 5.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="s1">'hello '</span><span class="p">.</span><span class="nf">+</span> <span class="s1">'world'</span>
+<span class="nb">puts</span> <span class="p">(</span><span class="mi">10</span><span class="p">.</span><span class="nf">*</span> <span class="mi">9</span><span class="p">).</span><span class="nf">+</span> <span class="mi">9</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hello world
+99
+</code></pre></div></div>
+
+<p>On older versions of Ruby, this code might also give a warning: warning: parenthesize argument(s) for future version. It would still run the code just fine, though.</p>
+
+<p>So what is self? It’s a special variable which points to whatever object you are in.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">iCantBelieveIMadeAVariableNameThisLongJustToPointToA3</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="nb">puts</span> <span class="n">iCantBelieveIMadeAVariableNameThisLongJustToPointToA3</span>
+<span class="nb">self</span><span class="p">.</span><span class="nf">puts</span> <span class="n">iCantBelieveIMadeAVariableNameThisLongJustToPointToA3</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3
+3
+</code></pre></div></div>
+
+<h3 id="fancy-string-methods">Fancy String Methods</h3>
+
+<p>So, our first string method is reverse, which gives a backwards version of a string:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">var1</span> <span class="o">=</span> <span class="s1">'stop'</span>
+<span class="n">var2</span> <span class="o">=</span> <span class="s1">'stressed'</span>
+<span class="n">var3</span> <span class="o">=</span> <span class="s1">'Can you pronounce this sentence backwards?'</span>
+
+<span class="nb">puts</span> <span class="n">var1</span><span class="p">.</span><span class="nf">reverse</span>
+<span class="nb">puts</span> <span class="n">var2</span><span class="p">.</span><span class="nf">reverse</span>
+<span class="nb">puts</span> <span class="n">var3</span><span class="p">.</span><span class="nf">reverse</span>
+<span class="nb">puts</span> <span class="n">var1</span>
+<span class="nb">puts</span> <span class="n">var2</span>
+<span class="nb">puts</span> <span class="n">var3</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pots
+desserts
+?sdrawkcab ecnetnes siht ecnuonorp uoy naC
+stop
+stressed
+Can you pronounce this sentence backwards?
+</code></pre></div></div>
+
+<p>Another string method is length, which tells us the number of characters (including spaces) in the string:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="s1">'What is your full name?'</span>
+<span class="nb">name</span> <span class="o">=</span> <span class="nb">gets</span><span class="p">.</span><span class="nf">chomp</span>
+<span class="nb">puts</span> <span class="s1">'Did you know there are '</span> <span class="o">+</span> <span class="nb">name</span><span class="p">.</span><span class="nf">length</span> <span class="o">+</span>
+     <span class="s1">' characters in your name, '</span> <span class="o">+</span> <span class="nb">name</span> <span class="o">+</span> <span class="s1">'?'</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>What is your full name?
+Christopher David Pine
+#&lt;TypeError: no implicit conversion of Integer into String&gt;
+</code></pre></div></div>
+
+<p>swapcase switches the case of every letter in the string, and finally, capitalize is just like downcase, except that it switches the first character to uppercase (if it is a letter).</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">letters</span> <span class="o">=</span> <span class="s1">'aAbBcCdDeE'</span>
+<span class="nb">puts</span> <span class="n">letters</span><span class="p">.</span><span class="nf">upcase</span>
+<span class="nb">puts</span> <span class="n">letters</span><span class="p">.</span><span class="nf">downcase</span>
+<span class="nb">puts</span> <span class="n">letters</span><span class="p">.</span><span class="nf">swapcase</span>
+<span class="nb">puts</span> <span class="n">letters</span><span class="p">.</span><span class="nf">capitalize</span>
+<span class="nb">puts</span> <span class="s1">' a'</span><span class="p">.</span><span class="nf">capitalize</span>
+<span class="nb">puts</span> <span class="n">letters</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AABBCCDDEE
+aabbccddee
+AaBbCcDdEe
+Aabbccddee
+ a
+aAbBcCdDeE
+</code></pre></div></div>
+
+<p>So if I wanted to center the lines of a poem, I would do it like this:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">lineWidth</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="nb">puts</span><span class="p">(</span>                <span class="s1">'Old Mother Hubbard'</span><span class="p">.</span><span class="nf">center</span><span class="p">(</span><span class="n">lineWidth</span><span class="p">))</span>
+<span class="nb">puts</span><span class="p">(</span>               <span class="s1">'Sat in her cupboard'</span><span class="p">.</span><span class="nf">center</span><span class="p">(</span><span class="n">lineWidth</span><span class="p">))</span>
+<span class="nb">puts</span><span class="p">(</span>         <span class="s1">'Eating her curds an whey,'</span><span class="p">.</span><span class="nf">center</span><span class="p">(</span><span class="n">lineWidth</span><span class="p">))</span>
+<span class="nb">puts</span><span class="p">(</span>          <span class="s1">'When along came a spider'</span><span class="p">.</span><span class="nf">center</span><span class="p">(</span><span class="n">lineWidth</span><span class="p">))</span>
+<span class="nb">puts</span><span class="p">(</span>         <span class="s1">'Which sat down beside her'</span><span class="p">.</span><span class="nf">center</span><span class="p">(</span><span class="n">lineWidth</span><span class="p">))</span>
+<span class="nb">puts</span><span class="p">(</span><span class="s1">'And scared her poor shoe dog away.'</span><span class="p">.</span><span class="nf">center</span><span class="p">(</span><span class="n">lineWidth</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                Old Mother Hubbard
+               Sat in her cupboard
+            Eating her curds an whey,
+             When along came a spider
+            Which sat down beside her
+        And scared her poor shoe dog away.
+</code></pre></div></div>
+
+<p>The other two string formatting methods are ljust and rjust, which stand for left justify and right justify. They are similar to center, except that they pad the string with spaces on the right and left sides, respectively.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">lineWidth</span> <span class="o">=</span> <span class="mi">40</span>
+<span class="n">str</span> <span class="o">=</span> <span class="s1">'--&gt; text &lt;--'</span>
+<span class="nb">puts</span> <span class="n">str</span><span class="p">.</span><span class="nf">ljust</span>  <span class="n">lineWidth</span>
+<span class="nb">puts</span> <span class="n">str</span><span class="p">.</span><span class="nf">center</span> <span class="n">lineWidth</span>
+<span class="nb">puts</span> <span class="n">str</span><span class="p">.</span><span class="nf">rjust</span>  <span class="n">lineWidth</span>
+<span class="nb">puts</span> <span class="n">str</span><span class="p">.</span><span class="nf">ljust</span><span class="p">(</span><span class="n">lineWidth</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">str</span><span class="p">.</span><span class="nf">rjust</span><span class="p">(</span><span class="n">lineWidth</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--&gt; text &lt;--
+              --&gt; text &lt;--
+                            --&gt; text &lt;--
+--&gt; text &lt;--                --&gt; text &lt;--
+</code></pre></div></div>
+
+<h4 id="problems---5">Problems - 5</h4>
+
+<ul>
+  <li>
+    <p>Write an Angry Boss program. It should rudely ask what you want. Whatever you answer, the Angry Boss should yell it back to you, and then fire you. For example, if you type in <code class="language-plaintext highlighter-rouge">I want a raise.</code>, it should yell back <code class="language-plaintext highlighter-rouge">WHADDAYA MEAN "I WANT A RAISE."?!? YOU'RE FIRED!!</code></p>
+  </li>
+  <li>
+    <p>So here’s something for you to do in order to play around more with center, ljust, and rjust: Write a program which will display a Table of Contents so that it looks like this:</p>
+  </li>
+</ul>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                    Table of Contents
+
+    Chapter 1:  Numbers                        page 1
+    Chapter 2:  Letters                       page 72
+    Chapter 3:  Variables                    page 118
+</code></pre></div></div>
+
+<h3 id="higher-math">Higher Math</h3>
+
+<p>We’ll look at the rest of the arithmetic methods, a random number generator, and the Math object, with its trigonometric and transcendental methods.</p>
+
+<p>The other two arithmetic methods are ** (exponentiation) and % (modulus).</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="mi">5</span><span class="o">**</span><span class="mi">2</span>
+<span class="nb">puts</span> <span class="mi">5</span><span class="o">**</span><span class="mf">0.5</span>
+<span class="nb">puts</span> <span class="mi">7</span><span class="o">/</span><span class="mi">3</span>
+<span class="nb">puts</span> <span class="mi">7</span><span class="o">%</span><span class="mi">3</span>
+<span class="nb">puts</span> <span class="mi">365</span><span class="o">%</span><span class="mi">7</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>25
+2.23606797749979
+2
+1
+1
+</code></pre></div></div>
+
+<p>It just takes the absolute value of the number:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span><span class="p">((</span><span class="mi">5</span><span class="o">-</span><span class="mi">2</span><span class="p">).</span><span class="nf">abs</span><span class="p">)</span>
+<span class="nb">puts</span><span class="p">((</span><span class="mi">2</span><span class="o">-</span><span class="mi">5</span><span class="p">).</span><span class="nf">abs</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3
+3
+</code></pre></div></div>
+
+<h3 id="random-numbers">Random Numbers</h3>
+
+<p>If we call rand just like that, we’ll get a float greater than or equal to 0.0 and less than 1.0. If we give rand an integer (5 for example), it will give we an integer greater than or equal to 0 and less than 5 (so five possible numbers, from 0 to 4).</p>
+
+<p>Let’s see rand in action.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="nb">rand</span>
+<span class="nb">puts</span> <span class="nb">rand</span>
+<span class="nb">puts</span> <span class="nb">rand</span>
+<span class="nb">puts</span><span class="p">(</span><span class="nb">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+<span class="nb">puts</span><span class="p">(</span><span class="nb">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+<span class="nb">puts</span><span class="p">(</span><span class="nb">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+<span class="nb">puts</span><span class="p">(</span><span class="nb">rand</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="nb">puts</span><span class="p">(</span><span class="nb">rand</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="nb">puts</span><span class="p">(</span><span class="nb">rand</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="nb">puts</span><span class="p">(</span><span class="nb">rand</span><span class="p">(</span><span class="mi">99999999999999999999999999999999999999999999999999999999999</span><span class="p">))</span>
+<span class="nb">puts</span><span class="p">(</span><span class="s1">'The weatherman said there is a '</span><span class="o">+</span><span class="nb">rand</span><span class="p">(</span><span class="mi">101</span><span class="p">).</span><span class="nf">to_s</span><span class="o">+</span><span class="s1">'% chance of rain,'</span><span class="p">)</span>
+<span class="nb">puts</span><span class="p">(</span><span class="s1">'but you can never trust a weatherman.'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0.17429261270690644
+0.6038796470847551
+0.5357456897902644
+82
+63
+21
+0
+0
+0
+93717128025224525218060865578711367433735357080012377789690
+The weatherman said there is a 9% chance of rain,
+but you can never trust a weatherman.
+</code></pre></div></div>
+
+<p>In order to do this, you need to set the seed, which you can do with srand. Like this:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">srand</span> <span class="mi">1776</span>
+<span class="nb">puts</span><span class="p">(</span><span class="nb">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+<span class="nb">puts</span><span class="p">(</span><span class="nb">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+<span class="nb">puts</span><span class="p">(</span><span class="nb">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+<span class="nb">puts</span><span class="p">(</span><span class="nb">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+<span class="nb">puts</span><span class="p">(</span><span class="nb">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+<span class="nb">puts</span> <span class="s1">''</span>
+<span class="nb">srand</span> <span class="mi">1776</span>
+<span class="nb">puts</span><span class="p">(</span><span class="nb">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+<span class="nb">puts</span><span class="p">(</span><span class="nb">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+<span class="nb">puts</span><span class="p">(</span><span class="nb">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+<span class="nb">puts</span><span class="p">(</span><span class="nb">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+<span class="nb">puts</span><span class="p">(</span><span class="nb">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>24
+35
+36
+58
+70
+
+24
+35
+36
+58
+70
+</code></pre></div></div>
+
+<h3 id="the-math-object">The Math Object</h3>
+
+<p>Finally, let’s look at the Math object. We might as well jump right in:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span><span class="p">(</span><span class="no">Math</span><span class="o">::</span><span class="no">PI</span><span class="p">)</span>
+<span class="nb">puts</span><span class="p">(</span><span class="no">Math</span><span class="o">::</span><span class="no">E</span><span class="p">)</span>
+<span class="nb">puts</span><span class="p">(</span><span class="no">Math</span><span class="p">.</span><span class="nf">cos</span><span class="p">(</span><span class="no">Math</span><span class="o">::</span><span class="no">PI</span><span class="o">/</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">puts</span><span class="p">(</span><span class="no">Math</span><span class="p">.</span><span class="nf">tan</span><span class="p">(</span><span class="no">Math</span><span class="o">::</span><span class="no">PI</span><span class="o">/</span><span class="mi">4</span><span class="p">))</span>
+<span class="nb">puts</span><span class="p">(</span><span class="no">Math</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="no">Math</span><span class="o">::</span><span class="no">E</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">puts</span><span class="p">((</span><span class="mi">1</span> <span class="o">+</span> <span class="no">Math</span><span class="p">.</span><span class="nf">sqrt</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3.141592653589793
+2.718281828459045
+0.5000000000000001
+0.9999999999999999
+2.0
+1.618033988749895
+</code></pre></div></div>
+
+<h2 id="flow-control--chapter-6">Flow Control : Chapter 6</h2>
+
+<h3 id="comparison-methods">Comparison Methods</h3>
+
+<p>So, to see if one object is greater than or less than another, we use the methods &gt; and &lt;, like this:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">2</span>
+<span class="nb">puts</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">2</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>false
+true
+</code></pre></div></div>
+
+<p>Likewise, we can find out if an object is greater-than-or-equal-to another (or less-than-or-equal-to) with the methods &gt;= and &lt;=</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="mi">5</span> <span class="o">&gt;=</span> <span class="mi">5</span>
+<span class="nb">puts</span> <span class="mi">5</span> <span class="o">&lt;=</span> <span class="mi">4</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>true
+false
+</code></pre></div></div>
+
+<p>It’s important not to confuse = with ==. = is for telling a variable to point at an object (assignment), and == is for asking the question: “Are these two objects equal?”</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span>
+<span class="nb">puts</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">1</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>true
+true
+</code></pre></div></div>
+
+<p>When strings get compared, they compare their lexicographical ordering, which basically means their dictionary ordering. cat comes before dog in the dictionary, so:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="s1">'cat'</span> <span class="o">&lt;</span> <span class="s1">'dog'</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>true
+</code></pre></div></div>
+
+<p>One last note before Branching: The comparison methods aren’t giving us the strings ‘true’ and ‘false’; they are giving us the special objects true and false.</p>
+
+<h3 id="branching">Branching</h3>
+
+<p>Branching is a simple concept, but powerful.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="s1">'Hello, what\'s your name?'</span>
+<span class="nb">name</span> <span class="o">=</span> <span class="nb">gets</span><span class="p">.</span><span class="nf">chomp</span>
+<span class="nb">puts</span> <span class="s1">'Hello, '</span> <span class="o">+</span> <span class="nb">name</span> <span class="o">+</span> <span class="s1">'.'</span>
+<span class="k">if</span> <span class="nb">name</span> <span class="o">==</span> <span class="s1">'Chris'</span>
+  <span class="nb">puts</span> <span class="s1">'What a lovely name!'</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello, what's your name?
+Chris
+Hello, Chris.
+What a lovely name!
+</code></pre></div></div>
+
+<p>We put in a different name</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello, what's your name?
+Chewbacca
+Hello, Chewbacca.
+</code></pre></div></div>
+
+<p>If what comes after the if is true, we run the code between the if and the end. If what comes after the if is false, we don’t.</p>
+
+<p>Often, we would like a program to do one thing if an expression is true, and another if it is false. That’s what else is for:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="s1">'I am a fortune-teller.  Tell me your name:'</span>
+<span class="nb">name</span> <span class="o">=</span> <span class="nb">gets</span><span class="p">.</span><span class="nf">chomp</span>
+<span class="k">if</span> <span class="nb">name</span> <span class="o">==</span> <span class="s1">'Chris'</span>
+  <span class="nb">puts</span> <span class="s1">'I see great things in your future.'</span>
+<span class="k">else</span>
+  <span class="nb">puts</span> <span class="s1">'Your future is... Oh my!  Look at the time!'</span>
+  <span class="nb">puts</span> <span class="s1">'I really have to go, sorry!'</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I am a fortune-teller.  Tell me your name:
+Chris
+I see great things in your future.
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I am a fortune-teller.  Tell me your name:
+Ringo
+Your future is... Oh my!  Look at the time!
+I really have to go, sorry!
+</code></pre></div></div>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="s1">'Hello, and welcome to 7th grade English.'</span>
+<span class="nb">puts</span> <span class="s1">'My name is Mrs. Gabbard.  And your name is...?'</span>
+<span class="nb">name</span> <span class="o">=</span> <span class="nb">gets</span><span class="p">.</span><span class="nf">chomp</span>
+
+<span class="k">if</span> <span class="nb">name</span> <span class="o">==</span> <span class="nb">name</span><span class="p">.</span><span class="nf">capitalize</span>
+  <span class="nb">puts</span> <span class="s1">'Please take a seat, '</span> <span class="o">+</span> <span class="nb">name</span> <span class="o">+</span> <span class="s1">'.'</span>
+<span class="k">else</span>
+  <span class="nb">puts</span> <span class="nb">name</span> <span class="o">+</span> <span class="s1">'?  You mean '</span> <span class="o">+</span> <span class="nb">name</span><span class="p">.</span><span class="nf">capitalize</span> <span class="o">+</span> <span class="s1">', right?'</span>
+  <span class="nb">puts</span> <span class="s1">'Don\'t you even know how to spell your name??'</span>
+  <span class="n">reply</span> <span class="o">=</span> <span class="nb">gets</span><span class="p">.</span><span class="nf">chomp</span>
+
+  <span class="k">if</span> <span class="n">reply</span><span class="p">.</span><span class="nf">downcase</span> <span class="o">==</span> <span class="s1">'yes'</span>
+    <span class="nb">puts</span> <span class="s1">'Hmmph!  Well, sit down!'</span>
+  <span class="k">else</span>
+    <span class="nb">puts</span> <span class="s1">'GET OUT!!'</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello, and welcome to 7th grade English.
+My name is Mrs. Gabbard.  And your name is...?
+chris
+chris?  You mean Chris, right?
+Don't you even know how to spell your name??
+yes
+Hmmph!  Well, sit down!
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello, and welcome to 7th grade English.
+My name is Mrs. Gabbard.  And your name is...?
+Chris
+Please take a seat, Chris.
+</code></pre></div></div>
+
+<p>Sometimes it might get confusing trying to figure out where all of the ifs, elses, and ends go.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="s1">'Hello, and welcome to 7th grade English.'</span>
+<span class="nb">puts</span> <span class="s1">'My name is Mrs. Gabbard.  And your name is...?'</span>
+<span class="nb">name</span> <span class="o">=</span> <span class="nb">gets</span><span class="p">.</span><span class="nf">chomp</span>
+
+<span class="k">if</span> <span class="nb">name</span> <span class="o">==</span> <span class="nb">name</span><span class="p">.</span><span class="nf">capitalize</span>
+<span class="k">else</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="s1">'Hello, and welcome to 7th grade English.'</span>
+<span class="nb">puts</span> <span class="s1">'My name is Mrs. Gabbard.  And your name is...?'</span>
+<span class="nb">name</span> <span class="o">=</span> <span class="nb">gets</span><span class="p">.</span><span class="nf">chomp</span>
+
+<span class="k">if</span> <span class="nb">name</span> <span class="o">==</span> <span class="nb">name</span><span class="p">.</span><span class="nf">capitalize</span>
+  <span class="c1"># She's civil.</span>
+<span class="k">else</span>
+  <span class="c1"># She gets mad.</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="s1">'Hello, and welcome to 7th grade English.'</span>
+<span class="nb">puts</span> <span class="s1">'My name is Mrs. Gabbard.  And your name is...?'</span>
+<span class="nb">name</span> <span class="o">=</span> <span class="nb">gets</span><span class="p">.</span><span class="nf">chomp</span>
+
+<span class="k">if</span> <span class="nb">name</span> <span class="o">==</span> <span class="nb">name</span><span class="p">.</span><span class="nf">capitalize</span>
+  <span class="nb">puts</span> <span class="s1">'Please take a seat, '</span> <span class="o">+</span> <span class="nb">name</span> <span class="o">+</span> <span class="s1">'.'</span>
+<span class="k">else</span>
+  <span class="nb">puts</span> <span class="nb">name</span> <span class="o">+</span> <span class="s1">'?  You mean '</span> <span class="o">+</span> <span class="nb">name</span><span class="p">.</span><span class="nf">capitalize</span> <span class="o">+</span> <span class="s1">', right?'</span>
+  <span class="nb">puts</span> <span class="s1">'Don\'t you even know how to spell your name??'</span>
+  <span class="n">reply</span> <span class="o">=</span> <span class="nb">gets</span><span class="p">.</span><span class="nf">chomp</span>
+
+  <span class="k">if</span> <span class="n">reply</span><span class="p">.</span><span class="nf">downcase</span> <span class="o">==</span> <span class="s1">'yes'</span>
+  <span class="k">else</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<h3 id="looping">Looping</h3>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">command</span> <span class="o">=</span> <span class="s1">''</span>
+
+<span class="k">while</span> <span class="n">command</span> <span class="o">!=</span> <span class="s1">'bye'</span>
+  <span class="nb">puts</span> <span class="n">command</span>
+  <span class="n">command</span> <span class="o">=</span> <span class="nb">gets</span><span class="p">.</span><span class="nf">chomp</span>
+<span class="k">end</span>
+
+<span class="nb">puts</span> <span class="s1">'Come again soon!'</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello?
+Hello?
+Hi!
+Hi!
+Very nice to meet you.
+Very nice to meet you.
+Oh... how sweet!
+Oh... how sweet!
+bye
+Come again soon!
+</code></pre></div></div>
+
+<h3 id="a-little-bit-of-logic">A Little Bit of Logic</h3>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="s1">'Hello, what\'s your name?'</span>
+<span class="nb">name</span> <span class="o">=</span> <span class="nb">gets</span><span class="p">.</span><span class="nf">chomp</span>
+<span class="nb">puts</span> <span class="s1">'Hello, '</span> <span class="o">+</span> <span class="nb">name</span> <span class="o">+</span> <span class="s1">'.'</span>
+<span class="k">if</span> <span class="nb">name</span> <span class="o">==</span> <span class="s1">'Chris'</span>
+  <span class="nb">puts</span> <span class="s1">'What a lovely name!'</span>
+<span class="k">else</span>
+  <span class="k">if</span> <span class="nb">name</span> <span class="o">==</span> <span class="s1">'Katy'</span>
+    <span class="nb">puts</span> <span class="s1">'What a lovely name!'</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello, what's your name?
+Katy
+Hello, Katy.
+What a lovely name!
+</code></pre></div></div>
+
+<p>The DRY rule is Don’t Repeat Yourself</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="s1">'Hello, what\'s your name?'</span>
+<span class="nb">name</span> <span class="o">=</span> <span class="nb">gets</span><span class="p">.</span><span class="nf">chomp</span>
+<span class="nb">puts</span> <span class="s1">'Hello, '</span> <span class="o">+</span> <span class="nb">name</span> <span class="o">+</span> <span class="s1">'.'</span>
+<span class="k">if</span> <span class="p">(</span><span class="nb">name</span> <span class="o">==</span> <span class="s1">'Chris'</span> <span class="ow">or</span> <span class="nb">name</span> <span class="o">==</span> <span class="s1">'Katy'</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s1">'What a lovely name!'</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello, what's your name?
+Katy
+Hello, Katy.
+What a lovely name!
+</code></pre></div></div>
+
+<p>The other logical operators are and and not.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">iAmChris</span>  <span class="o">=</span> <span class="kp">true</span>
+<span class="n">iAmPurple</span> <span class="o">=</span> <span class="kp">false</span>
+<span class="n">iLikeFood</span> <span class="o">=</span> <span class="kp">true</span>
+<span class="n">iEatRocks</span> <span class="o">=</span> <span class="kp">false</span>
+
+<span class="nb">puts</span> <span class="p">(</span><span class="n">iAmChris</span>  <span class="ow">and</span> <span class="n">iLikeFood</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="p">(</span><span class="n">iLikeFood</span> <span class="ow">and</span> <span class="n">iEatRocks</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="p">(</span><span class="n">iAmPurple</span> <span class="ow">and</span> <span class="n">iLikeFood</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="p">(</span><span class="n">iAmPurple</span> <span class="ow">and</span> <span class="n">iEatRocks</span><span class="p">)</span>
+<span class="nb">puts</span>
+<span class="nb">puts</span> <span class="p">(</span><span class="n">iAmChris</span>  <span class="ow">or</span> <span class="n">iLikeFood</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="p">(</span><span class="n">iLikeFood</span> <span class="ow">or</span> <span class="n">iEatRocks</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="p">(</span><span class="n">iAmPurple</span> <span class="ow">or</span> <span class="n">iLikeFood</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="p">(</span><span class="n">iAmPurple</span> <span class="ow">or</span> <span class="n">iEatRocks</span><span class="p">)</span>
+<span class="nb">puts</span>
+<span class="nb">puts</span> <span class="p">(</span><span class="ow">not</span> <span class="n">iAmPurple</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="p">(</span><span class="ow">not</span> <span class="n">iAmChris</span> <span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>true
+false
+false
+false
+
+true
+true
+true
+false
+
+true
+false
+</code></pre></div></div>
+
+<h3 id="a-few-things-to-try--chapter-6">A Few Things to Try : Chapter 6</h3>
+
+<ul>
+  <li>
+    <p>“99 bottles of beer on the wall…” Write a program which prints out the lyrics to that beloved classic, that field-trip favorite: “99 Bottles of Beer on the Wall.”</p>
+  </li>
+  <li>
+    <p>Write a Deaf Grandma program. Whatever you say to grandma (whatever you type in), she should respond with HUH?! SPEAK UP, SONNY!, unless you shout it (type in all capitals). If you shout, she can hear you (or at least she thinks so) and yells back, NO, NOT SINCE 1938! To make your program really believable, have grandma shout a different year each time; maybe any year at random between 1930 and 1950. (This part is optional, and would be much easier if you read the section on Ruby’s random number generator at the end of the methods chapter.) You can’t stop talking to grandma until you shout BYE.</p>
+
+    <p><strong>Hint</strong>: Don’t forget about chomp! ‘BYE’with an Enter is not the same as ‘BYE’ without one!</p>
+
+    <p><strong>Hint 2</strong>: Try to think about what parts of your program should happen over and over again. All of those should be in your while loop.</p>
+  </li>
+  <li>
+    <p>Extend your Deaf Grandma program: What if grandma doesn’t want you to leave? When you shout BYE, she could pretend not to hear you. Change your previous program so that you have to shout BYE three times in a row. Make sure to test your program: if you shout BYE three times, but not in a row, you should still be talking to grandma.</p>
+  </li>
+  <li>
+    <p>Leap Years. Write a program which will ask for a starting year and an ending year, and then puts all of the leap years between them (and including them, if they are also leap years). Leap years are years divisible by four (like 1984 and 2004). However, years divisible by 100 are not leap years (such as 1800 and 1900) unless they are divisible by 400 (like 1600 and 2000, which were in fact leap years). (Yes, it’s all pretty confusing, but not as confusing as having July in the middle of the winter, which is what would eventually happen.)</p>
+  </li>
+</ul>
+
+<h2 id="arrays-and-iterators--chapter-7">Arrays and Iterators : Chapter 7</h2>
+
+<p>An array is just a list in your computer. Every slot in the list acts like a variable: you can see what object a particular slot points to, and you can make it point to a different object. Let’s take a look at some arrays:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[]</span>
+<span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">'Hello'</span><span class="p">,</span> <span class="s1">'Goodbye'</span><span class="p">]</span>
+
+<span class="n">flavor</span> <span class="o">=</span> <span class="s1">'vanilla'</span>             <span class="c1"># This is not an array, of course...</span>
+<span class="p">[</span><span class="mf">89.9</span><span class="p">,</span> <span class="n">flavor</span><span class="p">,</span> <span class="p">[</span><span class="kp">true</span><span class="p">,</span> <span class="kp">false</span><span class="p">]]</span>  <span class="c1"># ...but this is.</span>
+</code></pre></div></div>
+
+<p>We would reference the objects in an array:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Ada'</span><span class="p">,</span> <span class="s1">'Belle'</span><span class="p">,</span> <span class="s1">'Chris'</span><span class="p">]</span>
+
+<span class="nb">puts</span> <span class="n">names</span>
+<span class="nb">puts</span> <span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">puts</span> <span class="n">names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">puts</span> <span class="n">names</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="nb">puts</span> <span class="n">names</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>  <span class="c1"># This is out of range.</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ada
+Belle
+Chris
+Ada
+Belle
+Chris
+</code></pre></div></div>
+
+<h3 id="the-method-each">The Method each</h3>
+
+<p>If we want to say something nice about each language in the array below, we’d do this:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">languages</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'English'</span><span class="p">,</span> <span class="s1">'German'</span><span class="p">,</span> <span class="s1">'Ruby'</span><span class="p">]</span>
+
+<span class="n">languages</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">lang</span><span class="o">|</span>
+  <span class="nb">puts</span> <span class="s1">'I love '</span> <span class="o">+</span> <span class="n">lang</span> <span class="o">+</span> <span class="s1">'!'</span>
+  <span class="nb">puts</span> <span class="s1">'Don\'t you?'</span>
+<span class="k">end</span>
+
+<span class="nb">puts</span> <span class="s1">'And let\'s hear it for C++!'</span>
+<span class="nb">puts</span> <span class="s1">'...'</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I love English!
+Don't you?
+I love German!
+Don't you?
+I love Ruby!
+Don't you?
+And let's hear it for C++!
+</code></pre></div></div>
+
+<p>They are always followed by do…end. while and if never had a do near them; we only use do with iterators.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">3</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span>
+  <span class="nb">puts</span> <span class="s1">'Hip-Hip-Hooray!'</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hip-Hip-Hooray!
+Hip-Hip-Hooray!
+Hip-Hip-Hooray!
+</code></pre></div></div>
+
+<h3 id="more-array-methods">More Array Methods</h3>
+
+<p>Let’s look at to_s and join. join works much like to_s does, except that it adds a string in between the array’s objects. Let’s take a look:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">foods</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'artichoke'</span><span class="p">,</span> <span class="s1">'brioche'</span><span class="p">,</span> <span class="s1">'caramel'</span><span class="p">]</span>
+
+<span class="nb">puts</span> <span class="n">foods</span>
+<span class="nb">puts</span>
+<span class="nb">puts</span> <span class="n">foods</span><span class="p">.</span><span class="nf">to_s</span>
+<span class="nb">puts</span>
+<span class="nb">puts</span> <span class="n">foods</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="s1">', '</span><span class="p">)</span>
+<span class="nb">puts</span>
+<span class="nb">puts</span> <span class="n">foods</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="s1">'  :)  '</span><span class="p">)</span> <span class="o">+</span> <span class="s1">'  8)'</span>
+
+<span class="mi">200</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span>
+  <span class="nb">puts</span> <span class="p">[]</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>artichoke
+brioche
+caramel
+
+["artichoke", "brioche", "caramel"]
+
+artichoke, brioche, caramel
+
+artichoke  :)  brioche  :)  caramel  8)
+</code></pre></div></div>
+
+<p>Let’s take a look at push, pop, and last. The methods push and pop are sort of opposites, like + and - are. push adds an object to the end of your array, and pop removes the last object from the array (and tell you what it was). last is similar to pop in that it tells you what’s at the end of the array, except that it leaves the array alone. Again, push and pop actually change the array:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">favorites</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">favorites</span><span class="p">.</span><span class="nf">push</span> <span class="s1">'raindrops on roses'</span>
+<span class="n">favorites</span><span class="p">.</span><span class="nf">push</span> <span class="s1">'whiskey on kittens'</span>
+
+<span class="nb">puts</span> <span class="n">favorites</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">puts</span> <span class="n">favorites</span><span class="p">.</span><span class="nf">last</span>
+<span class="nb">puts</span> <span class="n">favorites</span><span class="p">.</span><span class="nf">length</span>
+
+<span class="nb">puts</span> <span class="n">favorites</span><span class="p">.</span><span class="nf">pop</span>
+<span class="nb">puts</span> <span class="n">favorites</span>
+<span class="nb">puts</span> <span class="n">favorites</span><span class="p">.</span><span class="nf">length</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>raindrops on roses
+whiskey on kittens
+2
+whiskey on kittens
+raindrops on roses
+1
+</code></pre></div></div>
+
+<h3 id="a-few-things-to-try--chapter-7">A Few Things to Try : Chapter 7</h3>
+
+<ul>
+  <li>
+    <p>Write the program we talked about at the very beginning of this chapter.
+  Hint: There’s a lovely array method which will give you a sorted version of an array: sort. Use it!</p>
+  </li>
+  <li>
+    <p>Try writing the above program without using the sort method. A large part of programming is solving problems, so get all the practice you can!</p>
+  </li>
+  <li>
+    <p>Rewrite your Table of Contents program (from the chapter on methods). Start the program with an array holding all of the information for your Table of Contents (chapter names, page numbers, etc.). Then print out the information from the array in a beautifully formatted Table of Contents.</p>
+  </li>
+</ul>
+
+<h2 id="writing-your-own-methods--chapter-8">Writing Your Own Methods : Chapter 8</h2>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="s1">'Hello, and thank you for taking the time to'</span>
+<span class="nb">puts</span> <span class="s1">'help me with this experiment.  My experiment'</span>
+<span class="nb">puts</span> <span class="s1">'has to do with the way people feel about'</span>
+<span class="nb">puts</span> <span class="s1">'Mexican food.  Just think about Mexican food'</span>
+<span class="nb">puts</span> <span class="s1">'and try to answer every question honestly,'</span>
+<span class="nb">puts</span> <span class="s1">'with either a "yes" or a "no".  My experiment'</span>
+<span class="nb">puts</span> <span class="s1">'has nothing to do with bed-wetting.'</span>
+<span class="nb">puts</span>
+
+<span class="c1"># We ask these questions, but we ignore their answers.</span>
+
+<span class="n">goodAnswer</span> <span class="o">=</span> <span class="kp">false</span>
+<span class="k">while</span> <span class="p">(</span><span class="ow">not</span> <span class="n">goodAnswer</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s1">'Do you like eating tacos?'</span>
+  <span class="n">answer</span> <span class="o">=</span> <span class="nb">gets</span><span class="p">.</span><span class="nf">chomp</span><span class="p">.</span><span class="nf">downcase</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">answer</span> <span class="o">==</span> <span class="s1">'yes'</span> <span class="ow">or</span> <span class="n">answer</span> <span class="o">==</span> <span class="s1">'no'</span><span class="p">)</span>
+    <span class="n">goodAnswer</span> <span class="o">=</span> <span class="kp">true</span>
+  <span class="k">else</span>
+    <span class="nb">puts</span> <span class="s1">'Please answer "yes" or "no".'</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">goodAnswer</span> <span class="o">=</span> <span class="kp">false</span>
+<span class="k">while</span> <span class="p">(</span><span class="ow">not</span> <span class="n">goodAnswer</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s1">'Do you like eating burritos?'</span>
+  <span class="n">answer</span> <span class="o">=</span> <span class="nb">gets</span><span class="p">.</span><span class="nf">chomp</span><span class="p">.</span><span class="nf">downcase</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">answer</span> <span class="o">==</span> <span class="s1">'yes'</span> <span class="ow">or</span> <span class="n">answer</span> <span class="o">==</span> <span class="s1">'no'</span><span class="p">)</span>
+    <span class="n">goodAnswer</span> <span class="o">=</span> <span class="kp">true</span>
+  <span class="k">else</span>
+    <span class="nb">puts</span> <span class="s1">'Please answer "yes" or "no".'</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c1"># We pay attention to *this* answer, though.</span>
+<span class="n">goodAnswer</span> <span class="o">=</span> <span class="kp">false</span>
+<span class="k">while</span> <span class="p">(</span><span class="ow">not</span> <span class="n">goodAnswer</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s1">'Do you wet the bed?'</span>
+  <span class="n">answer</span> <span class="o">=</span> <span class="nb">gets</span><span class="p">.</span><span class="nf">chomp</span><span class="p">.</span><span class="nf">downcase</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">answer</span> <span class="o">==</span> <span class="s1">'yes'</span> <span class="ow">or</span> <span class="n">answer</span> <span class="o">==</span> <span class="s1">'no'</span><span class="p">)</span>
+    <span class="n">goodAnswer</span> <span class="o">=</span> <span class="kp">true</span>
+    <span class="k">if</span> <span class="n">answer</span> <span class="o">==</span> <span class="s1">'yes'</span>
+      <span class="n">wetsBed</span> <span class="o">=</span> <span class="kp">true</span>
+    <span class="k">else</span>
+      <span class="n">wetsBed</span> <span class="o">=</span> <span class="kp">false</span>
+    <span class="k">end</span>
+  <span class="k">else</span>
+    <span class="nb">puts</span> <span class="s1">'Please answer "yes" or "no".'</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">goodAnswer</span> <span class="o">=</span> <span class="kp">false</span>
+<span class="k">while</span> <span class="p">(</span><span class="ow">not</span> <span class="n">goodAnswer</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s1">'Do you like eating chimichangas?'</span>
+  <span class="n">answer</span> <span class="o">=</span> <span class="nb">gets</span><span class="p">.</span><span class="nf">chomp</span><span class="p">.</span><span class="nf">downcase</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">answer</span> <span class="o">==</span> <span class="s1">'yes'</span> <span class="ow">or</span> <span class="n">answer</span> <span class="o">==</span> <span class="s1">'no'</span><span class="p">)</span>
+    <span class="n">goodAnswer</span> <span class="o">=</span> <span class="kp">true</span>
+  <span class="k">else</span>
+    <span class="nb">puts</span> <span class="s1">'Please answer "yes" or "no".'</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="nb">puts</span> <span class="s1">'Just a few more questions...'</span>
+
+<span class="n">goodAnswer</span> <span class="o">=</span> <span class="kp">false</span>
+<span class="k">while</span> <span class="p">(</span><span class="ow">not</span> <span class="n">goodAnswer</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s1">'Do you like eating sopapillas?'</span>
+  <span class="n">answer</span> <span class="o">=</span> <span class="nb">gets</span><span class="p">.</span><span class="nf">chomp</span><span class="p">.</span><span class="nf">downcase</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">answer</span> <span class="o">==</span> <span class="s1">'yes'</span> <span class="ow">or</span> <span class="n">answer</span> <span class="o">==</span> <span class="s1">'no'</span><span class="p">)</span>
+    <span class="n">goodAnswer</span> <span class="o">=</span> <span class="kp">true</span>
+  <span class="k">else</span>
+    <span class="nb">puts</span> <span class="s1">'Please answer "yes" or "no".'</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c1"># Ask lots of other questions about Mexican food.</span>
+
+<span class="nb">puts</span>
+<span class="nb">puts</span> <span class="s1">'DEBRIEFING:'</span>
+<span class="nb">puts</span> <span class="s1">'Thank you for taking the time to help with'</span>
+<span class="nb">puts</span> <span class="s1">'this experiment.  In fact, this experiment'</span>
+<span class="nb">puts</span> <span class="s1">'has nothing to do with Mexican food.  It is'</span>
+<span class="nb">puts</span> <span class="s1">'an experiment about bed-wetting.  The Mexican'</span>
+<span class="nb">puts</span> <span class="s1">'food was just there to catch you off guard'</span>
+<span class="nb">puts</span> <span class="s1">'in the hopes that you would answer more'</span>
+<span class="nb">puts</span> <span class="s1">'honestly.  Thanks again.'</span>
+<span class="nb">puts</span>
+<span class="nb">puts</span> <span class="n">wetsBed</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello, and thank you for taking the time to
+help me with this experiment.  My experiment
+has to do with the way people feel about
+Mexican food.  Just think about Mexican food
+and try to answer every question honestly,
+with either a "yes" or a "no".  My experiment
+has nothing to do with bed-wetting.
+
+Do you like eating tacos?
+yes
+Do you like eating burritos?
+yes
+Do you wet the bed?
+no way!
+Please answer "yes" or "no".
+Do you wet the bed?
+NO
+Do you like eating chimichangas?
+yes
+Just a few more questions...
+Do you like eating sopapillas?
+yes
+
+DEBRIEFING:
+Thank you for taking the time to help with
+this experiment.  In fact, this experiment
+has nothing to do with Mexican food.  It is
+an experiment about bed-wetting.  The Mexican
+food was just there to catch you off guard
+in the hopes that you would answer more
+honestly.  Thanks again.
+
+false
+</code></pre></div></div>
+
+<p>In situations like these, it’s best to write a method. Here’s how:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">sayMoo</span>
+  <span class="nb">puts</span> <span class="s1">'mooooooo...'</span>
+<span class="k">end</span>
+
+<span class="n">sayMoo</span>
+<span class="n">sayMoo</span>
+<span class="nb">puts</span> <span class="s1">'coin-coin'</span>
+<span class="n">sayMoo</span>
+<span class="n">sayMoo</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mooooooo...
+mooooooo...
+coin-coin
+mooooooo...
+mooooooo...
+</code></pre></div></div>
+
+<h3 id="method-parameters">Method Parameters</h3>
+
+<p>To add a parameter to sayMoo (let’s say, the number of moos), we would do this:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">sayMoo</span> <span class="n">numberOfMoos</span>
+  <span class="nb">puts</span> <span class="s1">'mooooooo...'</span><span class="o">*</span><span class="n">numberOfMoos</span>
+<span class="k">end</span>
+
+<span class="n">sayMoo</span> <span class="mi">3</span>
+<span class="nb">puts</span> <span class="s1">'oink-oink'</span>
+<span class="n">sayMoo</span>  <span class="c1"># This should give an error because the parameter is missing.</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mooooooo...mooooooo...mooooooo...
+oink-oink
+#&lt;ArgumentError: wrong number of arguments (given 0, expected 1)&gt;
+</code></pre></div></div>
+
+<p>numberOfMoos is a variable which points to the parameter passed in. numberOfMoos is a variable which points to the parameter passed in. So if I type in sayMoo 3, then the parameter is 3, and the variable numberOfMoos points to 3.</p>
+
+<h3 id="local-variables">Local Variables</h3>
+
+<p>In the following program, there are two variables:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">doubleThis</span> <span class="n">num</span>
+  <span class="n">numTimes2</span> <span class="o">=</span> <span class="n">num</span><span class="o">*</span><span class="mi">2</span>
+  <span class="nb">puts</span> <span class="n">num</span><span class="p">.</span><span class="nf">to_s</span><span class="o">+</span><span class="s1">' doubled is '</span><span class="o">+</span><span class="n">numTimes2</span><span class="p">.</span><span class="nf">to_s</span>
+<span class="k">end</span>
+
+<span class="n">doubleThis</span> <span class="mi">44</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>44 doubled is 88
+</code></pre></div></div>
+
+<p>The variables are num and numTimes2. They both sit inside the method doubleThis.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">doubleThis</span> <span class="n">num</span>
+  <span class="n">numTimes2</span> <span class="o">=</span> <span class="n">num</span><span class="o">*</span><span class="mi">2</span>
+  <span class="nb">puts</span> <span class="n">num</span><span class="p">.</span><span class="nf">to_s</span><span class="o">+</span><span class="s1">' doubled is '</span><span class="o">+</span><span class="n">numTimes2</span><span class="p">.</span><span class="nf">to_s</span>
+<span class="k">end</span>
+
+<span class="n">doubleThis</span> <span class="mi">44</span>
+<span class="nb">puts</span> <span class="n">numTimes2</span><span class="p">.</span><span class="nf">to_s</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>44 doubled is 88
+#&lt;NameError: undefined local variable or method `numTimes2' for #&lt;StringIO:0x00007fc89a08a880&gt;&gt;
+</code></pre></div></div>
+
+<p>While it does mean that you have no access to variables inside methods, it also means that they have no access to your variables, and thus can’t screw them up:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">littlePest</span> <span class="n">var</span>
+  <span class="n">var</span> <span class="o">=</span> <span class="kp">nil</span>
+  <span class="nb">puts</span> <span class="s1">'HAHA!  I ruined your variable!'</span>
+<span class="k">end</span>
+
+<span class="n">var</span> <span class="o">=</span> <span class="s1">'You can\'t even touch my variable!'</span>
+<span class="n">littlePest</span> <span class="n">var</span>
+<span class="nb">puts</span> <span class="n">var</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HAHA!  I ruined your variable!
+You can't even touch my variable!
+</code></pre></div></div>
+
+<p>There are actually two variables in that little program named var: one inside littlePest, and one outside of it.</p>
+
+<h3 id="return-values">Return Values</h3>
+
+<p>gets returns a string (the string you typed in), and the + method in 5+3, (which is really 5.+(3)) returns 8. The arithmetic methods for numbers return numbers, and the arithmetic methods for strings return strings.</p>
+
+<p>We never cared before, but let’s look at it now:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">returnVal</span> <span class="o">=</span> <span class="nb">puts</span> <span class="s1">'This puts returned:'</span>
+<span class="nb">puts</span> <span class="n">returnVal</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This puts returned:
+</code></pre></div></div>
+
+<p>If we wanted all of our methods to return the string ‘yellow submarine’, we would just need to put that at the end of them:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">sayMoo</span> <span class="n">numberOfMoos</span>
+<span class="nb">puts</span> <span class="s1">'mooooooo...'</span><span class="p">\</span><span class="o">*</span><span class="n">numberOfMoos</span>
+<span class="s1">'yellow submarine'</span>
+<span class="k">end</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">sayMoo</span> <span class="mi">2</span>
+<span class="nb">puts</span> <span class="n">x</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mooooooo...mooooooo...
+yellow submarine
+</code></pre></div></div>
+
+<p>It will need to take the question as a parameter, and return true if they answered yes and false if they answered no.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">ask</span> <span class="n">question</span>
+  <span class="n">goodAnswer</span> <span class="o">=</span> <span class="kp">false</span>
+  <span class="k">while</span> <span class="p">(</span><span class="ow">not</span> <span class="n">goodAnswer</span><span class="p">)</span>
+    <span class="nb">puts</span> <span class="n">question</span>
+    <span class="n">reply</span> <span class="o">=</span> <span class="nb">gets</span><span class="p">.</span><span class="nf">chomp</span><span class="p">.</span><span class="nf">downcase</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">reply</span> <span class="o">==</span> <span class="s1">'yes'</span> <span class="ow">or</span> <span class="n">reply</span> <span class="o">==</span> <span class="s1">'no'</span><span class="p">)</span>
+      <span class="n">goodAnswer</span> <span class="o">=</span> <span class="kp">true</span>
+      <span class="k">if</span> <span class="n">reply</span> <span class="o">==</span> <span class="s1">'yes'</span>
+        <span class="n">answer</span> <span class="o">=</span> <span class="kp">true</span>
+      <span class="k">else</span>
+        <span class="n">answer</span> <span class="o">=</span> <span class="kp">false</span>
+      <span class="k">end</span>
+    <span class="k">else</span>
+      <span class="nb">puts</span> <span class="s1">'Please answer "yes" or "no".'</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="n">answer</span>  <span class="c1"># This is what we return (true or false).</span>
+<span class="k">end</span>
+
+<span class="nb">puts</span> <span class="s1">'Hello, and thank you for...'</span>
+<span class="nb">puts</span>
+
+<span class="n">ask</span> <span class="s1">'Do you like eating tacos?'</span>      <span class="c1"># We ignore this return value.</span>
+<span class="n">ask</span> <span class="s1">'Do you like eating burritos?'</span>
+<span class="n">wetsBed</span> <span class="o">=</span> <span class="n">ask</span> <span class="s1">'Do you wet the bed?'</span>  <span class="c1"># We save this return value.</span>
+<span class="n">ask</span> <span class="s1">'Do you like eating chimichangas?'</span>
+<span class="n">ask</span> <span class="s1">'Do you like eating sopapillas?'</span>
+<span class="n">ask</span> <span class="s1">'Do you like eating tamales?'</span>
+<span class="nb">puts</span> <span class="s1">'Just a few more questions...'</span>
+<span class="n">ask</span> <span class="s1">'Do you like drinking horchata?'</span>
+<span class="n">ask</span> <span class="s1">'Do you like eating flautas?'</span>
+
+<span class="nb">puts</span>
+<span class="nb">puts</span> <span class="s1">'DEBRIEFING:'</span>
+<span class="nb">puts</span> <span class="s1">'Thank you for...'</span>
+<span class="nb">puts</span>
+<span class="nb">puts</span> <span class="n">wetsBed</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello, and thank you for...
+
+Do you like eating tacos?
+yes
+Do you like eating burritos?
+yes
+Do you wet the bed?
+no way!
+Please answer "yes" or "no".
+Do you wet the bed?
+NO
+Do you like eating chimichangas?
+yes
+Do you like eating sopapillas?
+yes
+Do you like eating tamales?
+yes
+Just a few more questions...
+Do you like drinking horchata?
+yes
+Do you like eating flautas?
+yes
+
+DEBRIEFING:
+Thank you for...
+
+false
+</code></pre></div></div>
+
+<h3 id="one-more-big-example">One More Big Example</h3>
+
+<p>It will take a number, like 22, and return the english version of it (in this case, the string ‘twenty-two’). For now, let’s have it only work on integers from 0 to 100.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">englishNumber</span> <span class="n">number</span>
+  <span class="c1"># We only want numbers from 0-100.</span>
+  <span class="k">if</span> <span class="n">number</span> <span class="o">&lt;</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="s1">'Please enter a number zero or greater.'</span>
+  <span class="k">end</span>
+  <span class="k">if</span> <span class="n">number</span> <span class="o">&gt;</span> <span class="mi">100</span>
+    <span class="k">return</span> <span class="s1">'Please enter a number 100 or lesser.'</span>
+  <span class="k">end</span>
+
+  <span class="n">numString</span> <span class="o">=</span> <span class="s1">''</span>  <span class="c1"># This is the string we will return.</span>
+
+  <span class="c1"># "left" is how much of the number we still have left to write out.</span>
+  <span class="c1"># "write" is the part we are writing out right now.</span>
+  <span class="c1"># write and left... get it?  :)</span>
+  <span class="n">left</span>  <span class="o">=</span> <span class="n">number</span>
+  <span class="n">write</span> <span class="o">=</span> <span class="n">left</span><span class="o">/</span><span class="mi">100</span>          <span class="c1"># How many hundreds left to write out?</span>
+  <span class="n">left</span>  <span class="o">=</span> <span class="n">left</span> <span class="o">-</span> <span class="n">write</span><span class="o">*</span><span class="mi">100</span>  <span class="c1"># Subtract off those hundreds.</span>
+
+  <span class="k">if</span> <span class="n">write</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="s1">'one hundred'</span>
+  <span class="k">end</span>
+
+  <span class="n">write</span> <span class="o">=</span> <span class="n">left</span><span class="o">/</span><span class="mi">10</span>          <span class="c1"># How many tens left to write out?</span>
+  <span class="n">left</span>  <span class="o">=</span> <span class="n">left</span> <span class="o">-</span> <span class="n">write</span><span class="o">*</span><span class="mi">10</span>  <span class="c1"># Subtract off those tens.</span>
+
+  <span class="k">if</span> <span class="n">write</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">write</span> <span class="o">==</span> <span class="mi">1</span>  <span class="c1"># Uh-oh...</span>
+      <span class="c1"># Since we can't write "tenty-two" instead of "twelve",</span>
+      <span class="c1"># we have to make a special exception for these.</span>
+      <span class="k">if</span>    <span class="n">left</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="s1">'ten'</span>
+      <span class="k">elsif</span> <span class="n">left</span> <span class="o">==</span> <span class="mi">1</span>
+        <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="s1">'eleven'</span>
+      <span class="k">elsif</span> <span class="n">left</span> <span class="o">==</span> <span class="mi">2</span>
+        <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="s1">'twelve'</span>
+      <span class="k">elsif</span> <span class="n">left</span> <span class="o">==</span> <span class="mi">3</span>
+        <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="s1">'thirteen'</span>
+      <span class="k">elsif</span> <span class="n">left</span> <span class="o">==</span> <span class="mi">4</span>
+        <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="s1">'fourteen'</span>
+      <span class="k">elsif</span> <span class="n">left</span> <span class="o">==</span> <span class="mi">5</span>
+        <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="s1">'fifteen'</span>
+      <span class="k">elsif</span> <span class="n">left</span> <span class="o">==</span> <span class="mi">6</span>
+        <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="s1">'sixteen'</span>
+      <span class="k">elsif</span> <span class="n">left</span> <span class="o">==</span> <span class="mi">7</span>
+        <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="s1">'seventeen'</span>
+      <span class="k">elsif</span> <span class="n">left</span> <span class="o">==</span> <span class="mi">8</span>
+        <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="s1">'eighteen'</span>
+      <span class="k">elsif</span> <span class="n">left</span> <span class="o">==</span> <span class="mi">9</span>
+        <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="s1">'nineteen'</span>
+      <span class="k">end</span>
+      <span class="c1"># Since we took care of the digit in the ones place already,</span>
+      <span class="c1"># we have nothing left to write.</span>
+      <span class="n">left</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">elsif</span> <span class="n">write</span> <span class="o">==</span> <span class="mi">2</span>
+      <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="s1">'twenty'</span>
+    <span class="k">elsif</span> <span class="n">write</span> <span class="o">==</span> <span class="mi">3</span>
+      <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="s1">'thirty'</span>
+    <span class="k">elsif</span> <span class="n">write</span> <span class="o">==</span> <span class="mi">4</span>
+      <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="s1">'forty'</span>
+    <span class="k">elsif</span> <span class="n">write</span> <span class="o">==</span> <span class="mi">5</span>
+      <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="s1">'fifty'</span>
+    <span class="k">elsif</span> <span class="n">write</span> <span class="o">==</span> <span class="mi">6</span>
+      <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="s1">'sixty'</span>
+    <span class="k">elsif</span> <span class="n">write</span> <span class="o">==</span> <span class="mi">7</span>
+      <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="s1">'seventy'</span>
+    <span class="k">elsif</span> <span class="n">write</span> <span class="o">==</span> <span class="mi">8</span>
+      <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="s1">'eighty'</span>
+    <span class="k">elsif</span> <span class="n">write</span> <span class="o">==</span> <span class="mi">9</span>
+      <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="s1">'ninety'</span>
+    <span class="k">end</span>
+
+    <span class="k">if</span> <span class="n">left</span> <span class="o">&gt;</span> <span class="mi">0</span>
+      <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="s1">'-'</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="n">write</span> <span class="o">=</span> <span class="n">left</span>  <span class="c1"># How many ones left to write out?</span>
+  <span class="n">left</span>  <span class="o">=</span> <span class="mi">0</span>     <span class="c1"># Subtract off those ones.</span>
+
+  <span class="k">if</span> <span class="n">write</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    <span class="k">if</span>    <span class="n">write</span> <span class="o">==</span> <span class="mi">1</span>
+      <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="s1">'one'</span>
+    <span class="k">elsif</span> <span class="n">write</span> <span class="o">==</span> <span class="mi">2</span>
+      <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="s1">'two'</span>
+    <span class="k">elsif</span> <span class="n">write</span> <span class="o">==</span> <span class="mi">3</span>
+      <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="s1">'three'</span>
+    <span class="k">elsif</span> <span class="n">write</span> <span class="o">==</span> <span class="mi">4</span>
+      <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="s1">'four'</span>
+    <span class="k">elsif</span> <span class="n">write</span> <span class="o">==</span> <span class="mi">5</span>
+      <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="s1">'five'</span>
+    <span class="k">elsif</span> <span class="n">write</span> <span class="o">==</span> <span class="mi">6</span>
+      <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="s1">'six'</span>
+    <span class="k">elsif</span> <span class="n">write</span> <span class="o">==</span> <span class="mi">7</span>
+      <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="s1">'seven'</span>
+    <span class="k">elsif</span> <span class="n">write</span> <span class="o">==</span> <span class="mi">8</span>
+      <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="s1">'eight'</span>
+    <span class="k">elsif</span> <span class="n">write</span> <span class="o">==</span> <span class="mi">9</span>
+      <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="s1">'nine'</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="k">if</span> <span class="n">numString</span> <span class="o">==</span> <span class="s1">''</span>
+    <span class="c1"># The only way "numString" could be empty is if</span>
+    <span class="c1"># "number" is 0.</span>
+    <span class="k">return</span> <span class="s1">'zero'</span>
+  <span class="k">end</span>
+
+  <span class="c1"># If we got this far, then we had a number somewhere</span>
+  <span class="c1"># in between 0 and 100, so we need to return "numString".</span>
+  <span class="n">numString</span>
+<span class="k">end</span>
+
+<span class="nb">puts</span> <span class="n">englishNumber</span><span class="p">(</span>  <span class="mi">0</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">englishNumber</span><span class="p">(</span>  <span class="mi">9</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">englishNumber</span><span class="p">(</span> <span class="mi">10</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">englishNumber</span><span class="p">(</span> <span class="mi">11</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">englishNumber</span><span class="p">(</span> <span class="mi">17</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">englishNumber</span><span class="p">(</span> <span class="mi">32</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">englishNumber</span><span class="p">(</span> <span class="mi">88</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">englishNumber</span><span class="p">(</span> <span class="mi">99</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">englishNumber</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>zero
+nine
+ten
+eleven
+seventeen
+thirty-two
+eighty-eight
+ninety-nine
+one hundred
+</code></pre></div></div>
+
+<p>Let’s use some arrays and try to clean it up a bit:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">englishNumber</span> <span class="n">number</span>
+  <span class="k">if</span> <span class="n">number</span> <span class="o">&lt;</span> <span class="mi">0</span>  <span class="c1"># No negative numbers.</span>
+    <span class="k">return</span> <span class="s1">'Please enter a number that isn\'t negative.'</span>
+  <span class="k">end</span>
+  <span class="k">if</span> <span class="n">number</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="s1">'zero'</span>
+  <span class="k">end</span>
+
+  <span class="c1"># No more special cases! No more returns!</span>
+
+  <span class="n">numString</span> <span class="o">=</span> <span class="s1">''</span>  <span class="c1"># This is the string we will return.</span>
+
+  <span class="n">onesPlace</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'one'</span><span class="p">,</span>     <span class="s1">'two'</span><span class="p">,</span>       <span class="s1">'three'</span><span class="p">,</span>    <span class="s1">'four'</span><span class="p">,</span>     <span class="s1">'five'</span><span class="p">,</span>
+               <span class="s1">'six'</span><span class="p">,</span>     <span class="s1">'seven'</span><span class="p">,</span>     <span class="s1">'eight'</span><span class="p">,</span>    <span class="s1">'nine'</span><span class="p">]</span>
+  <span class="n">tensPlace</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'ten'</span><span class="p">,</span>     <span class="s1">'twenty'</span><span class="p">,</span>    <span class="s1">'thirty'</span><span class="p">,</span>   <span class="s1">'forty'</span><span class="p">,</span>    <span class="s1">'fifty'</span><span class="p">,</span>
+               <span class="s1">'sixty'</span><span class="p">,</span>   <span class="s1">'seventy'</span><span class="p">,</span>   <span class="s1">'eighty'</span><span class="p">,</span>   <span class="s1">'ninety'</span><span class="p">]</span>
+  <span class="n">teenagers</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'eleven'</span><span class="p">,</span>  <span class="s1">'twelve'</span><span class="p">,</span>    <span class="s1">'thirteen'</span><span class="p">,</span> <span class="s1">'fourteen'</span><span class="p">,</span> <span class="s1">'fifteen'</span><span class="p">,</span>
+               <span class="s1">'sixteen'</span><span class="p">,</span> <span class="s1">'seventeen'</span><span class="p">,</span> <span class="s1">'eighteen'</span><span class="p">,</span> <span class="s1">'nineteen'</span><span class="p">]</span>
+
+  <span class="c1"># "left" is how much of the number we still have left to write out.</span>
+  <span class="c1"># "write" is the part we are writing out right now.</span>
+  <span class="c1"># write and left... get it?  :)</span>
+  <span class="n">left</span>  <span class="o">=</span> <span class="n">number</span>
+  <span class="n">write</span> <span class="o">=</span> <span class="n">left</span><span class="o">/</span><span class="mi">100</span>          <span class="c1"># How many hundreds left to write out?</span>
+  <span class="n">left</span>  <span class="o">=</span> <span class="n">left</span> <span class="o">-</span> <span class="n">write</span><span class="o">*</span><span class="mi">100</span>  <span class="c1"># Subtract off those hundreds.</span>
+
+  <span class="k">if</span> <span class="n">write</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    <span class="c1"># Now here's a really sly trick:</span>
+    <span class="n">hundreds</span>  <span class="o">=</span> <span class="n">englishNumber</span> <span class="n">write</span>
+    <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="n">hundreds</span> <span class="o">+</span> <span class="s1">' hundred'</span>
+    <span class="c1"># That's called "recursion". So what did I just do?</span>
+    <span class="c1"># I told this method to call itself, but with "write" instead of</span>
+    <span class="c1"># "number". Remember that "write" is (at the moment) the number of</span>
+    <span class="c1"># hundreds we have to write out. After we add "hundreds" to</span>
+    <span class="c1"># "numString", we add the string ' hundred' after it.</span>
+    <span class="c1"># So, for example, if we originally called englishNumber with</span>
+    <span class="c1"># 1999 (so "number" = 1999), then at this point "write" would</span>
+    <span class="c1"># be 19, and "left" would be 99. The laziest thing to do at this</span>
+    <span class="c1"># point is to have englishNumber write out the 'nineteen' for us,</span>
+    <span class="c1"># then we write out ' hundred', and then the rest of</span>
+    <span class="c1"># englishNumber writes out 'ninety-nine'.</span>
+
+    <span class="k">if</span> <span class="n">left</span> <span class="o">&gt;</span> <span class="mi">0</span>
+      <span class="c1"># So we don't write 'two hundredfifty-one'...</span>
+      <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="s1">' '</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="n">write</span> <span class="o">=</span> <span class="n">left</span><span class="o">/</span><span class="mi">10</span>          <span class="c1"># How many tens left to write out?</span>
+  <span class="n">left</span>  <span class="o">=</span> <span class="n">left</span> <span class="o">-</span> <span class="n">write</span><span class="o">*</span><span class="mi">10</span>  <span class="c1"># Subtract off those tens.</span>
+
+  <span class="k">if</span> <span class="n">write</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="p">((</span><span class="n">write</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">left</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">))</span>
+      <span class="c1"># Since we can't write "tenty-two" instead of "twelve",</span>
+      <span class="c1"># we have to make a special exception for these.</span>
+      <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="n">teenagers</span><span class="p">[</span><span class="n">left</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+      <span class="c1"># The "-1" is because teenagers[3] is 'fourteen', not 'thirteen'.</span>
+
+      <span class="c1"># Since we took care of the digit in the ones place already,</span>
+      <span class="c1"># we have nothing left to write.</span>
+      <span class="n">left</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">else</span>
+      <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="n">tensPlace</span><span class="p">[</span><span class="n">write</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+      <span class="c1"># The "-1" is because tensPlace[3] is 'forty', not 'thirty'.</span>
+    <span class="k">end</span>
+
+    <span class="k">if</span> <span class="n">left</span> <span class="o">&gt;</span> <span class="mi">0</span>
+      <span class="c1"># So we don't write 'sixtyfour'...</span>
+      <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="s1">'-'</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="n">write</span> <span class="o">=</span> <span class="n">left</span>  <span class="c1"># How many ones left to write out?</span>
+  <span class="n">left</span>  <span class="o">=</span> <span class="mi">0</span>     <span class="c1"># Subtract off those ones.</span>
+
+  <span class="k">if</span> <span class="n">write</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    <span class="n">numString</span> <span class="o">=</span> <span class="n">numString</span> <span class="o">+</span> <span class="n">onesPlace</span><span class="p">[</span><span class="n">write</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="c1"># The "-1" is because onesPlace[3] is 'four', not 'three'.</span>
+  <span class="k">end</span>
+
+  <span class="c1"># Now we just return "numString"...</span>
+  <span class="n">numString</span>
+<span class="k">end</span>
+
+<span class="nb">puts</span> <span class="n">englishNumber</span><span class="p">(</span>  <span class="mi">0</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">englishNumber</span><span class="p">(</span>  <span class="mi">9</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">englishNumber</span><span class="p">(</span> <span class="mi">10</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">englishNumber</span><span class="p">(</span> <span class="mi">11</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">englishNumber</span><span class="p">(</span> <span class="mi">17</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">englishNumber</span><span class="p">(</span> <span class="mi">32</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">englishNumber</span><span class="p">(</span> <span class="mi">88</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">englishNumber</span><span class="p">(</span> <span class="mi">99</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">englishNumber</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">englishNumber</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">englishNumber</span><span class="p">(</span><span class="mi">234</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">englishNumber</span><span class="p">(</span><span class="mi">3211</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">englishNumber</span><span class="p">(</span><span class="mi">999999</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">englishNumber</span><span class="p">(</span><span class="mi">1000000000000</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>zero
+nine
+ten
+eleven
+seventeen
+thirty-two
+eighty-eight
+ninety-nine
+one hundred
+one hundred one
+two hundred thirty-four
+thirty-two hundred eleven
+ninety-nine hundred ninety-nine hundred ninety-nine
+one hundred hundred hundred hundred hundred hundred
+</code></pre></div></div>
+
+<p>I think ‘one trillion’ would be a nicer return value for that last number, or even ‘one million million’ (though all three are correct).</p>
+
+<h3 id="a-few-things-to-try--chapter-8">A Few Things to Try : Chapter 8</h3>
+
+<ul>
+  <li>
+    <p>Expand upon englishNumber. First, put in thousands. So it should return ‘one thousand’ instead of ‘ten hundred’ and ‘ten thousand’ instead of ‘one hundred hundred’.</p>
+  </li>
+  <li>
+    <p>Expand upon englishNumber some more. Now put in millions, so you get ‘one million’ instead of ‘one thousand thousand’. Then try adding billions and trillions. How high can you go?</p>
+  </li>
+  <li>
+    <p>How about weddingNumber? It should work almost the same as englishNumber, except that it should insert the word “and” all over the place, returning things like ‘nineteen hundred and seventy and two’, or however wedding invitations are supposed to look. I’d give you more examples, but I don’t fully understand it myself. You might need to contact a wedding coordinator to help you.</p>
+  </li>
+  <li>
+    <p>“Ninety-nine bottles of beer…” Using englishNumber and your old program, write out the lyrics to this song the right way this time. Punish your computer: have it start at 9999. (Don’t pick a number too large, though, because writing all of that to the screen takes your computer quite a while. A hundred thousand bottles of beer takes some time; and if you pick a million, you’ll be punishing yourself as well!)</p>
+  </li>
+</ul>
+
+<h2 id="classes--chapter-9">Classes : Chapter 9</h2>
+
+<p>We’ve seen several different kinds, or classes, of objects: strings, integers, floats, arrays, and a few special objects (true, false, and nil). In Ruby, these classes are always capitalized: String, Integer, Float, Array… etc. In general, if we want to create a new object of a certain class, we use new:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="no">Array</span><span class="p">.</span><span class="nf">new</span>  <span class="o">+</span> <span class="p">[</span><span class="mi">12345</span><span class="p">]</span>  <span class="c1"># Array  addition.</span>
+<span class="n">b</span> <span class="o">=</span> <span class="no">String</span><span class="p">.</span><span class="nf">new</span> <span class="o">+</span> <span class="s1">'hello'</span>  <span class="c1"># String addition.</span>
+<span class="n">c</span> <span class="o">=</span> <span class="no">Time</span><span class="p">.</span><span class="nf">new</span>
+
+<span class="nb">puts</span> <span class="s1">'a = '</span><span class="o">+</span><span class="n">a</span><span class="p">.</span><span class="nf">to_s</span>
+<span class="nb">puts</span> <span class="s1">'b = '</span><span class="o">+</span><span class="n">b</span><span class="p">.</span><span class="nf">to_s</span>
+<span class="nb">puts</span> <span class="s1">'c = '</span><span class="o">+</span><span class="n">c</span><span class="p">.</span><span class="nf">to_s</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = [12345]
+b = hello
+c = 2021-02-26 13:39:11 -0800
+</code></pre></div></div>
+
+<p>Because we can create arrays and strings using […] and ‘…’ respectively, we rarely create them using new.</p>
+
+<h3 id="the-time-class">The Time Class</h3>
+
+<p>Time objects represent moments in time. You can add (or subtract) numbers to (or from) times to get new times: adding 1.5 to a time makes a new time one-and-a-half seconds later:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">time</span>  <span class="o">=</span> <span class="no">Time</span><span class="p">.</span><span class="nf">new</span>   <span class="c1"># The moment I generated this web page.</span>
+<span class="n">time2</span> <span class="o">=</span> <span class="n">time</span> <span class="o">+</span> <span class="mi">60</span>  <span class="c1"># One minute later.</span>
+
+<span class="nb">puts</span> <span class="n">time</span>
+<span class="nb">puts</span> <span class="n">time2</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2021-02-26 13:39:11 -0800
+2021-02-26 13:40:11 -0800
+</code></pre></div></div>
+
+<p>You can also make a time for a specific moment using Time.mktime:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="no">Time</span><span class="p">.</span><span class="nf">mktime</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># Y2K.</span>
+<span class="nb">puts</span> <span class="no">Time</span><span class="p">.</span><span class="nf">mktime</span><span class="p">(</span><span class="mi">1976</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span> <span class="c1"># When I was born.</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2000-01-01 00:00:00 -0800
+1976-08-03 10:11:00 -0700
+</code></pre></div></div>
+
+<p>Notice: that’s when I was born in Pacific Daylight Savings Time (PDT). When Y2K struck, though, it was Pacific Standard Time (PST), at least to us West Coasters.</p>
+
+<h3 id="a-few-things-to-try--chapter-9">A Few Things to Try : Chapter 9</h3>
+
+<ul>
+  <li>
+    <p>One billion seconds… Find out the exact second you were born (if you can). Figure out when you will turn (or perhaps when you did turn?) one billion seconds old. Then go mark your calendar.</p>
+  </li>
+  <li>
+    <p>Happy Birthday! Ask what year a person was born in, then the month, then the day. Figure out how old they are and give them a big SPANK! for each birthday they have had.</p>
+  </li>
+</ul>
+
+<h3 id="the-hash-class">The Hash Class</h3>
+
+<p>Hashes are a lot like arrays: they have a bunch of slots which can point to various objects. In an array, the slots are lined up in a row, and each one is numbered (starting from zero). In a hash, the slots aren’t in a row (they are just sort of jumbled together), and you can use any object to refer to a slot, not just a number.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">colorArray</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># same as Array.new</span>
+<span class="n">colorHash</span>  <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># same as Hash.new</span>
+
+<span class="n">colorArray</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>         <span class="o">=</span> <span class="s1">'red'</span>
+<span class="n">colorArray</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>         <span class="o">=</span> <span class="s1">'green'</span>
+<span class="n">colorArray</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>         <span class="o">=</span> <span class="s1">'blue'</span>
+<span class="n">colorHash</span><span class="p">[</span><span class="s1">'strings'</span><span class="p">]</span>  <span class="o">=</span> <span class="s1">'red'</span>
+<span class="n">colorHash</span><span class="p">[</span><span class="s1">'numbers'</span><span class="p">]</span>  <span class="o">=</span> <span class="s1">'green'</span>
+<span class="n">colorHash</span><span class="p">[</span><span class="s1">'keywords'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'blue'</span>
+
+<span class="n">colorArray</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">color</span><span class="o">|</span>
+  <span class="nb">puts</span> <span class="n">color</span>
+<span class="k">end</span>
+<span class="n">colorHash</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">codeType</span><span class="p">,</span> <span class="n">color</span><span class="o">|</span>
+  <span class="nb">puts</span> <span class="n">codeType</span> <span class="o">+</span> <span class="s1">':  '</span> <span class="o">+</span> <span class="n">color</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>red
+green
+blue
+strings:  red
+numbers:  green
+keywords:  blue
+</code></pre></div></div>
+
+<p>Though people usually use strings to name the slots in a hash, you could use any kind of object, even arrays and other hashes :</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">weirdHash</span> <span class="o">=</span> <span class="no">Hash</span><span class="p">.</span><span class="nf">new</span>
+
+<span class="n">weirdHash</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'monkeys'</span>
+<span class="n">weirdHash</span><span class="p">[[]]</span> <span class="o">=</span> <span class="s1">'emptiness'</span>
+<span class="n">weirdHash</span><span class="p">[</span><span class="no">Time</span><span class="p">.</span><span class="nf">new</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'no time like the present'</span>
+</code></pre></div></div>
+
+<p>Hashes and arrays are good for different things.</p>
+
+<h3 id="extending-classes">Extending Classes</h3>
+
+<p>We could write something like 22.to_eng instead of englishNumber 22</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Integer</span>
+  <span class="k">def</span> <span class="nf">to_eng</span>
+    <span class="k">if</span> <span class="nb">self</span> <span class="o">==</span> <span class="mi">5</span>
+      <span class="n">english</span> <span class="o">=</span> <span class="s1">'five'</span>
+    <span class="k">else</span>
+      <span class="n">english</span> <span class="o">=</span> <span class="s1">'fifty-eight'</span>
+    <span class="k">end</span>
+
+    <span class="n">english</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c1"># I'd better test on a couple of numbers...</span>
+<span class="nb">puts</span> <span class="mi">5</span><span class="p">.</span><span class="nf">to_eng</span>
+<span class="nb">puts</span> <span class="mi">58</span><span class="p">.</span><span class="nf">to_eng</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>five
+fifty-eight
+</code></pre></div></div>
+
+<p>We defined an integer method by jumping into the Integer class, defining the method there, and jumping back out.</p>
+
+<h3 id="creating-classes">Creating Classes</h3>
+
+<p>We could make the Die class:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Die</span>
+
+  <span class="k">def</span> <span class="nf">roll</span>
+    <span class="mi">1</span> <span class="o">+</span> <span class="nb">rand</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+
+<span class="c1"># Let's make a couple of dice...</span>
+<span class="n">dice</span> <span class="o">=</span> <span class="p">[</span><span class="no">Die</span><span class="p">.</span><span class="nf">new</span><span class="p">,</span> <span class="no">Die</span><span class="p">.</span><span class="nf">new</span><span class="p">]</span>
+
+<span class="c1"># ...and roll them.</span>
+<span class="n">dice</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">die</span><span class="o">|</span>
+  <span class="nb">puts</span> <span class="n">die</span><span class="p">.</span><span class="nf">roll</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>6
+2
+</code></pre></div></div>
+
+<p>If we skipped the section on random numbers, rand(6) just gives a random number between 0 and 5.</p>
+
+<h3 id="instance-variables">Instance Variables</h3>
+
+<p>We could also call it a string object. Sometimes programmers might call it an instance of the class String, but this is just a fancy (and rather long-winded) way of saying string. An instance of a class is just an object of that class.</p>
+
+<p>A method’s local variables last until the method is finished. An object’s instance variables, on the other hand, will last as long as the object does.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Die</span>
+
+  <span class="k">def</span> <span class="nf">roll</span>
+    <span class="vi">@numberShowing</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="nb">rand</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">showing</span>
+    <span class="vi">@numberShowing</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+
+<span class="n">die</span> <span class="o">=</span> <span class="no">Die</span><span class="p">.</span><span class="nf">new</span>
+<span class="n">die</span><span class="p">.</span><span class="nf">roll</span>
+<span class="nb">puts</span> <span class="n">die</span><span class="p">.</span><span class="nf">showing</span>
+<span class="nb">puts</span> <span class="n">die</span><span class="p">.</span><span class="nf">showing</span>
+<span class="n">die</span><span class="p">.</span><span class="nf">roll</span>
+<span class="nb">puts</span> <span class="n">die</span><span class="p">.</span><span class="nf">showing</span>
+<span class="nb">puts</span> <span class="n">die</span><span class="p">.</span><span class="nf">showing</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>4
+4
+6
+6
+</code></pre></div></div>
+
+<p>So roll rolls the die and showing tells us which number is showing.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Die</span>
+
+  <span class="k">def</span> <span class="nf">roll</span>
+    <span class="vi">@numberShowing</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="nb">rand</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">showing</span>
+    <span class="vi">@numberShowing</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+
+<span class="c1"># Since I'm not going to use this die again,</span>
+<span class="c1"># I don't need to save it in a variable.</span>
+<span class="nb">puts</span> <span class="no">Die</span><span class="p">.</span><span class="nf">new</span><span class="p">.</span><span class="nf">showing</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+
+<p>It would be nice if we could set up our new die object right when it’s created. That’s what initialize is for:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Die</span>
+
+  <span class="k">def</span> <span class="nf">initialize</span>
+    <span class="c1"># I'll just roll the die, though we</span>
+    <span class="c1"># could do something else if we wanted</span>
+    <span class="c1"># to, like setting the die with 6 showing.</span>
+    <span class="n">roll</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">roll</span>
+    <span class="vi">@numberShowing</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="nb">rand</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">showing</span>
+    <span class="vi">@numberShowing</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+
+<span class="nb">puts</span> <span class="no">Die</span><span class="p">.</span><span class="nf">new</span><span class="p">.</span><span class="nf">showing</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1
+</code></pre></div></div>
+
+<p>When an object is created, its initialize method (if it has one defined) is always called.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Dragon</span>
+
+  <span class="k">def</span> <span class="nf">initialize</span> <span class="nb">name</span>
+    <span class="vi">@name</span> <span class="o">=</span> <span class="nb">name</span>
+    <span class="vi">@asleep</span> <span class="o">=</span> <span class="kp">false</span>
+    <span class="vi">@stuffInBelly</span>     <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># He's full.</span>
+    <span class="vi">@stuffInIntestine</span> <span class="o">=</span>  <span class="mi">0</span>  <span class="c1"># He doesn't need to go.</span>
+
+    <span class="nb">puts</span> <span class="vi">@name</span> <span class="o">+</span> <span class="s1">' is born.'</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">feed</span>
+    <span class="nb">puts</span> <span class="s1">'You feed '</span> <span class="o">+</span> <span class="vi">@name</span> <span class="o">+</span> <span class="s1">'.'</span>
+    <span class="vi">@stuffInBelly</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">passageOfTime</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">walk</span>
+    <span class="nb">puts</span> <span class="s1">'You walk '</span> <span class="o">+</span> <span class="vi">@name</span> <span class="o">+</span> <span class="s1">'.'</span>
+    <span class="vi">@stuffInIntestine</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">passageOfTime</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">putToBed</span>
+    <span class="nb">puts</span> <span class="s1">'You put '</span> <span class="o">+</span> <span class="vi">@name</span> <span class="o">+</span> <span class="s1">' to bed.'</span>
+    <span class="vi">@asleep</span> <span class="o">=</span> <span class="kp">true</span>
+    <span class="mi">3</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span>
+      <span class="k">if</span> <span class="vi">@asleep</span>
+        <span class="n">passageOfTime</span>
+      <span class="k">end</span>
+      <span class="k">if</span> <span class="vi">@asleep</span>
+        <span class="nb">puts</span> <span class="vi">@name</span> <span class="o">+</span> <span class="s1">' snores, filling the room with smoke.'</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+    <span class="k">if</span> <span class="vi">@asleep</span>
+      <span class="vi">@asleep</span> <span class="o">=</span> <span class="kp">false</span>
+      <span class="nb">puts</span> <span class="vi">@name</span> <span class="o">+</span> <span class="s1">' wakes up slowly.'</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">toss</span>
+    <span class="nb">puts</span> <span class="s1">'You toss '</span> <span class="o">+</span> <span class="vi">@name</span> <span class="o">+</span> <span class="s1">' up into the air.'</span>
+    <span class="nb">puts</span> <span class="s1">'He giggles, which singes your eyebrows.'</span>
+    <span class="n">passageOfTime</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">rock</span>
+    <span class="nb">puts</span> <span class="s1">'You rock '</span> <span class="o">+</span> <span class="vi">@name</span> <span class="o">+</span> <span class="s1">' gently.'</span>
+    <span class="vi">@asleep</span> <span class="o">=</span> <span class="kp">true</span>
+    <span class="nb">puts</span> <span class="s1">'He briefly dozes off...'</span>
+    <span class="n">passageOfTime</span>
+    <span class="k">if</span> <span class="vi">@asleep</span>
+      <span class="vi">@asleep</span> <span class="o">=</span> <span class="kp">false</span>
+      <span class="nb">puts</span> <span class="s1">'...but wakes when you stop.'</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="kp">private</span>
+
+  <span class="c1"># "private" means that the methods defined here are</span>
+  <span class="c1"># methods internal to the object.  (You can feed</span>
+  <span class="c1"># your dragon, but you can't ask him if he's hungry.)</span>
+
+  <span class="k">def</span> <span class="nf">hungry?</span>
+    <span class="c1"># Method names can end with "?".</span>
+    <span class="c1"># Usually, we only do this if the method</span>
+    <span class="c1"># returns true or false, like this:</span>
+    <span class="vi">@stuffInBelly</span> <span class="o">&lt;=</span> <span class="mi">2</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">poopy?</span>
+    <span class="vi">@stuffInIntestine</span> <span class="o">&gt;=</span> <span class="mi">8</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">passageOfTime</span>
+    <span class="k">if</span> <span class="vi">@stuffInBelly</span> <span class="o">&gt;</span> <span class="mi">0</span>
+      <span class="c1"># Move food from belly to intestine.</span>
+      <span class="vi">@stuffInBelly</span>     <span class="o">=</span> <span class="vi">@stuffInBelly</span>     <span class="o">-</span> <span class="mi">1</span>
+      <span class="vi">@stuffInIntestine</span> <span class="o">=</span> <span class="vi">@stuffInIntestine</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">else</span>  <span class="c1"># Our dragon is starving!</span>
+      <span class="k">if</span> <span class="vi">@asleep</span>
+        <span class="vi">@asleep</span> <span class="o">=</span> <span class="kp">false</span>
+        <span class="nb">puts</span> <span class="s1">'He wakes up suddenly!'</span>
+      <span class="k">end</span>
+      <span class="nb">puts</span> <span class="vi">@name</span> <span class="o">+</span> <span class="s1">' is starving!  In desperation, he ate YOU!'</span>
+      <span class="nb">exit</span>  <span class="c1"># This quits the program.</span>
+    <span class="k">end</span>
+
+    <span class="k">if</span> <span class="vi">@stuffInIntestine</span> <span class="o">&gt;=</span> <span class="mi">10</span>
+      <span class="vi">@stuffInIntestine</span> <span class="o">=</span> <span class="mi">0</span>
+      <span class="nb">puts</span> <span class="s1">'Whoops!  '</span> <span class="o">+</span> <span class="vi">@name</span> <span class="o">+</span> <span class="s1">' had an accident...'</span>
+    <span class="k">end</span>
+
+    <span class="k">if</span> <span class="n">hungry?</span>
+      <span class="k">if</span> <span class="vi">@asleep</span>
+        <span class="vi">@asleep</span> <span class="o">=</span> <span class="kp">false</span>
+        <span class="nb">puts</span> <span class="s1">'He wakes up suddenly!'</span>
+      <span class="k">end</span>
+      <span class="nb">puts</span> <span class="vi">@name</span> <span class="o">+</span> <span class="s1">'\'s stomach grumbles...'</span>
+    <span class="k">end</span>
+
+    <span class="k">if</span> <span class="n">poopy?</span>
+      <span class="k">if</span> <span class="vi">@asleep</span>
+        <span class="vi">@asleep</span> <span class="o">=</span> <span class="kp">false</span>
+        <span class="nb">puts</span> <span class="s1">'He wakes up suddenly!'</span>
+      <span class="k">end</span>
+      <span class="nb">puts</span> <span class="vi">@name</span> <span class="o">+</span> <span class="s1">' does the potty dance...'</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+
+<span class="n">pet</span> <span class="o">=</span> <span class="no">Dragon</span><span class="p">.</span><span class="nf">new</span> <span class="s1">'Norbert'</span>
+<span class="n">pet</span><span class="p">.</span><span class="nf">feed</span>
+<span class="n">pet</span><span class="p">.</span><span class="nf">toss</span>
+<span class="n">pet</span><span class="p">.</span><span class="nf">walk</span>
+<span class="n">pet</span><span class="p">.</span><span class="nf">putToBed</span>
+<span class="n">pet</span><span class="p">.</span><span class="nf">rock</span>
+<span class="n">pet</span><span class="p">.</span><span class="nf">putToBed</span>
+<span class="n">pet</span><span class="p">.</span><span class="nf">putToBed</span>
+<span class="n">pet</span><span class="p">.</span><span class="nf">putToBed</span>
+<span class="n">pet</span><span class="p">.</span><span class="nf">putToBed</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Norbert is born.
+You feed Norbert.
+You toss Norbert up into the air.
+He giggles, which singes your eyebrows.
+You walk Norbert.
+You put Norbert to bed.
+Norbert snores, filling the room with smoke.
+Norbert snores, filling the room with smoke.
+Norbert snores, filling the room with smoke.
+Norbert wakes up slowly.
+You rock Norbert gently.
+He briefly dozes off...
+...but wakes when you stop.
+You put Norbert to bed.
+He wakes up suddenly!
+Norbert's stomach grumbles...
+You put Norbert to bed.
+He wakes up suddenly!
+Norbert's stomach grumbles...
+You put Norbert to bed.
+He wakes up suddenly!
+Norbert's stomach grumbles...
+Norbert does the potty dance...
+You put Norbert to bed.
+He wakes up suddenly!
+Norbert is starving!  In desperation, he ate YOU!
+</code></pre></div></div>
+
+<h3 id="a-few-things-to-try--chapter-91">A Few Things to Try : Chapter 9.1</h3>
+
+<ul>
+  <li>
+    <p>Make an OrangeTree class. It should have a height method which returns its height, and a oneYearPasses method, which, when called, ages the tree one year. Each year the tree grows taller (however much you think an orange tree should grow in a year), and after some number of years (again, your call) the tree should die. For the first few years, it should not produce fruit, but after a while it should, and I guess that older trees produce more each year than younger trees… whatever you think makes most sense. And, of course, you should be able to countTheOranges (which returns the number of oranges on the tree), and pickAnOrange (which reduces the @orangeCount by one and returns a string telling you how delicious the orange was, or else it just tells you that there are no more oranges to pick this year). Make sure that any oranges you don’t pick one year fall off before the next year.</p>
+  </li>
+  <li>
+    <p>Write a program so that you can interact with your baby dragon. You should be able to enter commands like feed and walk, and have those methods be called on your dragon. Of course, since what you are inputting are just strings, you will have to have some sort of method dispatch, where your program checks which string was entered, and then calls the appropriate method.</p>
+  </li>
+</ul>
+
+<h2 id="blocks-and-procs--chapter-10">Blocks and Procs : Chapter 10</h2>
+
+<p>It’s the ability to take a block of code (code in between do and end), wrap it up in an object (called a proc), store it in a variable or pass it to a method, and run the code in the block whenever you feel like (more than once, if you want). So it’s kind of like a method itself, except that it isn’t bound to an object (it is an object), and you can store it or pass it around like you can with any object.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">toast</span> <span class="o">=</span> <span class="no">Proc</span><span class="p">.</span><span class="nf">new</span> <span class="k">do</span>
+  <span class="nb">puts</span> <span class="s1">'Cheers!'</span>
+<span class="k">end</span>
+
+<span class="n">toast</span><span class="p">.</span><span class="nf">call</span>
+<span class="n">toast</span><span class="p">.</span><span class="nf">call</span>
+<span class="n">toast</span><span class="p">.</span><span class="nf">call</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Cheers!
+Cheers!
+Cheers!
+</code></pre></div></div>
+
+<p>Actually, it’s even more like a method than I have shown you, because blocks can take parameters:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">doYouLike</span> <span class="o">=</span> <span class="no">Proc</span><span class="p">.</span><span class="nf">new</span> <span class="k">do</span> <span class="o">|</span><span class="n">aGoodThing</span><span class="o">|</span>
+  <span class="nb">puts</span> <span class="s1">'I *really* like '</span><span class="o">+</span><span class="n">aGoodThing</span><span class="o">+</span><span class="s1">'!'</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>doYouLike.call 'chocolate'
+doYouLike.call 'ruby'
+
+I *really* like chocolate!
+I *really* like ruby!
+</code></pre></div></div>
+
+<h3 id="methods-which-take-procs">Methods Which Take Procs</h3>
+
+<p>When we pass a proc into a method, we can control how, if, or how many times we call the proc.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">doSelfImportantly</span> <span class="n">someProc</span>
+  <span class="nb">puts</span> <span class="s1">'Everybody just HOLD ON!  I have something to do...'</span>
+  <span class="n">someProc</span><span class="p">.</span><span class="nf">call</span>
+  <span class="nb">puts</span> <span class="s1">'Ok everyone, I\'m done.  Go on with what you were doing.'</span>
+<span class="k">end</span>
+
+<span class="n">sayHello</span> <span class="o">=</span> <span class="no">Proc</span><span class="p">.</span><span class="nf">new</span> <span class="k">do</span>
+  <span class="nb">puts</span> <span class="s1">'hello'</span>
+<span class="k">end</span>
+
+<span class="n">sayGoodbye</span> <span class="o">=</span> <span class="no">Proc</span><span class="p">.</span><span class="nf">new</span> <span class="k">do</span>
+  <span class="nb">puts</span> <span class="s1">'goodbye'</span>
+<span class="k">end</span>
+
+<span class="n">doSelfImportantly</span> <span class="n">sayHello</span>
+<span class="n">doSelfImportantly</span> <span class="n">sayGoodbye</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Everybody just HOLD ON!  I have something to do...
+hello
+Ok everyone, I'm done.  Go on with what you were doing.
+Everybody just HOLD ON!  I have something to do...
+goodbye
+Ok everyone, I'm done.  Go on with what you were doing.
+</code></pre></div></div>
+
+<p>Here’s a method which will call the proc passed in about half of the time, and another which will call it twice:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">maybeDo</span> <span class="n">someProc</span>
+  <span class="k">if</span> <span class="nb">rand</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="n">someProc</span><span class="p">.</span><span class="nf">call</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="k">def</span> <span class="nf">twiceDo</span> <span class="n">someProc</span>
+  <span class="n">someProc</span><span class="p">.</span><span class="nf">call</span>
+  <span class="n">someProc</span><span class="p">.</span><span class="nf">call</span>
+<span class="k">end</span>
+
+<span class="n">wink</span> <span class="o">=</span> <span class="no">Proc</span><span class="p">.</span><span class="nf">new</span> <span class="k">do</span>
+  <span class="nb">puts</span> <span class="s1">'&lt;wink&gt;'</span>
+<span class="k">end</span>
+
+<span class="n">glance</span> <span class="o">=</span> <span class="no">Proc</span><span class="p">.</span><span class="nf">new</span> <span class="k">do</span>
+  <span class="nb">puts</span> <span class="s1">'&lt;glance&gt;'</span>
+<span class="k">end</span>
+
+<span class="n">maybeDo</span> <span class="n">wink</span>
+<span class="n">maybeDo</span> <span class="n">glance</span>
+<span class="n">twiceDo</span> <span class="n">wink</span>
+<span class="n">twiceDo</span> <span class="n">glance</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;wink&gt;
+&lt;wink&gt;
+&lt;glance&gt;
+&lt;glance&gt;
+</code></pre></div></div>
+
+<p>The method will return the last non-false value returned by the proc.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">doUntilFalse</span> <span class="n">firstInput</span><span class="p">,</span> <span class="n">someProc</span>
+  <span class="n">input</span>  <span class="o">=</span> <span class="n">firstInput</span>
+  <span class="n">output</span> <span class="o">=</span> <span class="n">firstInput</span>
+
+  <span class="k">while</span> <span class="n">output</span>
+    <span class="n">input</span>  <span class="o">=</span> <span class="n">output</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">someProc</span><span class="p">.</span><span class="nf">call</span> <span class="n">input</span>
+  <span class="k">end</span>
+
+  <span class="n">input</span>
+<span class="k">end</span>
+
+<span class="n">buildArrayOfSquares</span> <span class="o">=</span> <span class="no">Proc</span><span class="p">.</span><span class="nf">new</span> <span class="k">do</span> <span class="o">|</span><span class="n">array</span><span class="o">|</span>
+  <span class="n">lastNumber</span> <span class="o">=</span> <span class="n">array</span><span class="p">.</span><span class="nf">last</span>
+  <span class="k">if</span> <span class="n">lastNumber</span> <span class="o">&lt;=</span> <span class="mi">0</span>
+    <span class="kp">false</span>
+  <span class="k">else</span>
+    <span class="n">array</span><span class="p">.</span><span class="nf">pop</span>                         <span class="c1"># Take off the last number...</span>
+    <span class="n">array</span><span class="p">.</span><span class="nf">push</span> <span class="n">lastNumber</span><span class="o">*</span><span class="n">lastNumber</span>  <span class="c1"># ...and replace it with its square...</span>
+    <span class="n">array</span><span class="p">.</span><span class="nf">push</span> <span class="n">lastNumber</span><span class="o">-</span><span class="mi">1</span>           <span class="c1"># ...followed by the next smaller number.</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">alwaysFalse</span> <span class="o">=</span> <span class="no">Proc</span><span class="p">.</span><span class="nf">new</span> <span class="k">do</span> <span class="o">|</span><span class="n">justIgnoreMe</span><span class="o">|</span>
+  <span class="kp">false</span>
+<span class="k">end</span>
+
+<span class="nb">puts</span> <span class="n">doUntilFalse</span><span class="p">([</span><span class="mi">5</span><span class="p">],</span> <span class="n">buildArrayOfSquares</span><span class="p">).</span><span class="nf">inspect</span>
+<span class="nb">puts</span> <span class="n">doUntilFalse</span><span class="p">(</span><span class="s1">'I\'m writing this at 3:00 am; someone knock me out!'</span><span class="p">,</span> <span class="n">alwaysFalse</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[25, 16, 9, 4, 1, 0]
+I'm writing this at 3:00 am; someone knock me out!
+</code></pre></div></div>
+
+<h3 id="methods-which-return-procs">Methods Which Return Procs</h3>
+
+<p>We can do with procs is to create them in methods and return them. This allows all sorts of crazy programming power (things with impressive names, like lazy evaluation, infinite data structures, and currying).
+In this example, compose takes two procs and returns a new proc which, when called, calls the first proc and passes its result into the second proc.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">compose</span> <span class="n">proc1</span><span class="p">,</span> <span class="n">proc2</span>
+  <span class="no">Proc</span><span class="p">.</span><span class="nf">new</span> <span class="k">do</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span>
+    <span class="n">proc2</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="n">proc1</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">squareIt</span> <span class="o">=</span> <span class="no">Proc</span><span class="p">.</span><span class="nf">new</span> <span class="k">do</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span>
+  <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
+<span class="k">end</span>
+
+<span class="n">doubleIt</span> <span class="o">=</span> <span class="no">Proc</span><span class="p">.</span><span class="nf">new</span> <span class="k">do</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span>
+  <span class="n">x</span> <span class="o">+</span> <span class="n">x</span>
+<span class="k">end</span>
+
+<span class="n">doubleThenSquare</span> <span class="o">=</span> <span class="n">compose</span> <span class="n">doubleIt</span><span class="p">,</span> <span class="n">squareIt</span>
+<span class="n">squareThenDouble</span> <span class="o">=</span> <span class="n">compose</span> <span class="n">squareIt</span><span class="p">,</span> <span class="n">doubleIt</span>
+
+<span class="nb">puts</span> <span class="n">doubleThenSquare</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">squareThenDouble</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>100
+50
+</code></pre></div></div>
+
+<h3 id="passing-blocks-not-procs-into-methods">Passing Blocks (Not Procs) into Methods</h3>
+
+<p>A lot of the problem is that there are three steps you have to go through (defining the method, making the proc, and calling the method with the proc), when it sort of feels like there should only be two (defining the method, and passing the block right into the method, without using a proc at all), since most of the time you don’t want to use the proc/block after you pass it into the method.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Array</span>
+  <span class="k">def</span> <span class="nf">eachEven</span><span class="p">(</span><span class="o">&amp;</span><span class="n">wasABlock_nowAProc</span><span class="p">)</span>
+    <span class="c1"># We start with "true" because arrays start with 0, which is even.</span>
+    <span class="n">isEven</span> <span class="o">=</span> <span class="kp">true</span>
+
+    <span class="nb">self</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">object</span><span class="o">|</span>
+      <span class="k">if</span> <span class="n">isEven</span>
+        <span class="n">wasABlock_nowAProc</span><span class="p">.</span><span class="nf">call</span> <span class="n">object</span>
+      <span class="k">end</span>
+
+      <span class="n">isEven</span> <span class="o">=</span> <span class="p">(</span><span class="ow">not</span> <span class="n">isEven</span><span class="p">)</span>  <span class="c1"># Toggle from even to odd, or odd to even.</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="p">[</span><span class="s1">'apple'</span><span class="p">,</span> <span class="s1">'bad apple'</span><span class="p">,</span> <span class="s1">'cherry'</span><span class="p">,</span> <span class="s1">'durian'</span><span class="p">].</span><span class="nf">eachEven</span> <span class="k">do</span> <span class="o">|</span><span class="n">fruit</span><span class="o">|</span>
+  <span class="nb">puts</span> <span class="s1">'Yum!  I just love '</span><span class="o">+</span><span class="n">fruit</span><span class="o">+</span><span class="s1">' pies, don\'t you?'</span>
+<span class="k">end</span>
+
+<span class="c1"># Remember, we are getting the even-numbered elements</span>
+<span class="c1"># of the array, all of which happen to be odd numbers,</span>
+<span class="c1"># just because I like to cause problems like that.</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">].</span><span class="nf">eachEven</span> <span class="k">do</span> <span class="o">|</span><span class="n">oddBall</span><span class="o">|</span>
+  <span class="nb">puts</span> <span class="n">oddBall</span><span class="p">.</span><span class="nf">to_s</span><span class="o">+</span><span class="s1">' is NOT an even number!'</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Yum!  I just love apple pies, don't you?
+Yum!  I just love cherry pies, don't you?
+1 is NOT an even number!
+3 is NOT an even number!
+5 is NOT an even number!
+</code></pre></div></div>
+
+<p>I remember one time I wanted to be able to time how long different sections of a program were taking. (This is also known as profiling the code.)</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">profile</span> <span class="n">descriptionOfBlock</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span>
+  <span class="n">startTime</span> <span class="o">=</span> <span class="no">Time</span><span class="p">.</span><span class="nf">now</span>
+
+  <span class="n">block</span><span class="p">.</span><span class="nf">call</span>
+
+  <span class="n">duration</span> <span class="o">=</span> <span class="no">Time</span><span class="p">.</span><span class="nf">now</span> <span class="o">-</span> <span class="n">startTime</span>
+
+  <span class="nb">puts</span> <span class="n">descriptionOfBlock</span><span class="o">+</span><span class="s1">':  '</span><span class="o">+</span><span class="n">duration</span><span class="p">.</span><span class="nf">to_s</span><span class="o">+</span><span class="s1">' seconds'</span>
+<span class="k">end</span>
+
+<span class="n">profile</span> <span class="s1">'25000 doublings'</span> <span class="k">do</span>
+  <span class="n">number</span> <span class="o">=</span> <span class="mi">1</span>
+
+  <span class="mi">25000</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">+</span> <span class="n">number</span>
+  <span class="k">end</span>
+
+  <span class="c1"># Show the number of digits in this HUGE number.</span>
+  <span class="nb">puts</span> <span class="n">number</span><span class="p">.</span><span class="nf">to_s</span><span class="p">.</span><span class="nf">length</span><span class="p">.</span><span class="nf">to_s</span><span class="o">+</span><span class="s1">' digits'</span>
+<span class="k">end</span>
+
+<span class="n">profile</span> <span class="s1">'count to a million'</span> <span class="k">do</span>
+  <span class="n">number</span> <span class="o">=</span> <span class="mi">0</span>
+
+  <span class="mi">1000000</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">+</span> <span class="mi">1</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>7526 digits
+25000 doublings:  0.026852 seconds
+count to a million:  0.039258 seconds
+</code></pre></div></div>
+
+<h3 id="a-few-things-to-try--chapter-10">A Few Things to Try : Chapter 10</h3>
+
+<ul>
+  <li>Grandfather Clock. Write a method which takes a block and calls it once for each hour that has passed today. That way, if I were to pass in the block do puts ‘DONG!’ end, it would chime (sort of) like a grandfather clock. Test your method out with a few different blocks (including the one I just gave you).
+  <strong>Hint</strong>: You can use Time.now.hour to get the current hour. However, this returns a number between 0 and 23, so you will have to alter those numbers in order to get ordinary clock-face numbers (1 to 12).</li>
+  <li>
+    <p>Program Logger. Write a method called log, which takes a string description of a block and, of course, a block. Similar to doSelfImportantly, it should puts a string telling that it has started the block, and another string at the end telling you that it has finished the block, and also telling you what the block returned. Test your method by sending it a code block. Inside the block, put another call to log, passing another block to it. (This is called nesting.) In other words, your output should look something like this:</p>
+
+    <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Beginning "outer block"...
+  Beginning "some little block"...
+  ..."some little block" finished, returning:  5
+  Beginning "yet another block"...
+  ..."yet another block" finished, returning:  I like Thai food!
+  ..."outer block" finished, returning:  false
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Better Logger. The output from that last logger was kind of hard to read, and it would just get worse the more you used it. It would be so much easier to read if it indented the lines in the inner blocks. To do this, you’ll need to keep track of how deeply nested you are every time the logger wants to write something. To do this, use a global variable, a variable you can see from anywhere in your code. To make a global variable, just precede your variable name with $, like these: $global, $nestingDepth, and $bigTopPeeWee. In the end, your logger should output code like this:</p>
+
+    <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Beginning "outer block"...
+  Beginning "some little block"...
+      Beginning "teeny-tiny block"...
+      ..."teeny-tiny block" finished, returning:  lots of love
+  ..."some little block" finished, returning:  42
+  Beginning "yet another block"...
+  ..."yet another block" finished, returning:  I love Indian food!
+  ..."outer block" finished, returning:  true
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li><a href="https://pine.fm/LearnToProgram/chap_01.html">https://pine.fm/LearnToProgram/chap_01.html</a></li>
+</ul>
+
+    </article>
+    <footer>
+        <div class="footer-iconbar">
+            <span class="toc-icon" title="সূচীপত্র"></span>
+            <a href="#" class="go-to-top" title="উপরে যাও"></a>
+        </div>
+    </footer>
+</div>
+
+</div>
+    </div>
+
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+            var context = {
+                baseurl: '/publog/bn',
+                lang: 'bn',
+                title: 'রুবি-তে হাতেখড়ি',
+                description: '',
+                type: ''
+            };
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+
+<script>
+    
+    var documents = [
+    {
+    "id": 0,
+    "url": "/publog/bn/introduction-to-ruby/",
+    "title": "রুবি-তে হাতেখড়ি",
+    "tags": "ruby||programming",
+    "date": "০১ এপ্রিল ২০২২",
+    "reading_time": "২০ মিনিট",
+    "content": "সংখ্যা : অধ্যায় ১ রুবি “নমস্কার বিশ্ব” প্রোগ্রাম puts "নমস্কার বিশ্ব" সংরক্ষণ করে ফাইলটি চালান। ruby calc.rb puts-এ হাতেখড়ি puts 1+2 puts এর পরে যা আসে তা কেবল স্ক্রিনে লেখে। পূর্ণসংখ্যা এবং ভগ্নাংশ-সংখ্যা দশমিক ছাড়া সংখ্যাগুলোকে পূর্ণসংখ্যা বলে, আর দশমিক দিয়ে সংখ্যাগুলোকে ভগ্নাংশ সংখ্যা বলে। কয়েকটি পূর্ণসংখ্যা (integers): 5 -205...",
+    "body": "2022/04/01 - সংখ্যা : অধ্যায় ১: রুবি “নমস্কার বিশ্ব” প্রোগ্রাম    puts  নমস্কার বিশ্ব  সংরক্ষণ করে ফাইলটি চালান।ruby calc. rb puts-এ হাতেখড়ি:    puts 1+2 puts এর পরে যা আসে তা কেবল স্ক্রিনে লেখে। পূর্ণসংখ্যা এবং ভগ্নাংশ-সংখ্যা: দশমিক ছাড়া সংখ্যাগুলোকে পূর্ণসংখ্যা বলে, আর দশমিক দিয়ে সংখ্যাগুলোকে ভগ্নাংশ সংখ্যা বলে। কয়েকটি পূর্ণসংখ্যা (integers):    5-20599999999999999999999999990 কয়েকটি ভগ্নাংশ সংখ্যা(floats):    54. 3210. 001-205. 38840. 0 সহজ পাটিগণিত: কিছু সহজ পাটিগণিত করা যাক:    puts 1. 0 + 2. 0puts 2..."
+    }
+    ];
+
+    var idx = lunr(function () {
+        this.ref('id')
+        this.field('title')
+        this.field('body')
+
+        documents.forEach(function (doc) {
+            this.add(doc)
+        }, this)
+    });
+
+    function slugify(text) {
+        return text
+            .toString()
+            .toLowerCase()
+            .replace(/\s+/g, '-') // Replace spaces with -
+            .replace(/[^\w-]+/g, '') // Remove all non-word chars
+            .replace(/--+/g, '-') // Replace multiple - with single -
+            .replace(/^-+/, '') // Trim - from start of text
+            .replace(/-+$/, ''); // Trim - from end of text
+        ;
+    }
+
+    function lunr_search(term) {
+        if(term) {
+            var results = idx.search(term);
+            if(results.length>0){
+                for (var i = 0; i < results.length; i++) {
+                    var ref = results[i]['ref'];
+                    var post = documents[ref];
+                    post.tags = post.tags.split('||');
+
+                    var tagHtml = '';
+                    for(var j = 0; j < post.tags.length; j++){
+                        var tag = post.tags[j];
+                        tagHtml += `
+<a
+			class="tag-link"
+			href="/publog/bn/tags/${slugify(tag)}"
+			rel="category tag"
+            title="${tag} লিঙ্ক"
+		>
+			${tag}
+		</a>            
+                        `;
+                    }
+                    var postHtml = `
+<div class="post">
+	<h3 class="post-title">
+		<a href="${post.url}" title="${post.title} লিঙ্ক"> ${post.title} </a>
+	</h3>
+	<div class="post-tags">
+		${tagHtml}
+	</div>
+    <div class="post-info">
+        <span class="post-read-time">${post.reading_time}</span>
+        <span class="post-date">${post.date}</span>
+    </div>
+	<span> ${post.content} </span>
+</div>
+                    `;
+                    document.querySelector('#search-results').innerHTML = postHtml;
+                }
+            }
+        }
+    }
+</script>
+    <script src="/publog/public/js/script.js"></script>
+  </body>
+</html>

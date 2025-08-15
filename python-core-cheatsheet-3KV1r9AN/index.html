@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="http://gmpg.org/xfn/11" rel="profile" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+    <!-- SEO Tags --> 
+
+<title>Python Core Cheatsheet &middot; Publog</title>
+<meta property="og:title" content="Python Core Cheatsheet &middot; Publog" />
+
+
+
+  <meta name="description" content="Welcome to the official developer blog of Shivishbrahma (Purbayan Chowdhury), a web developer, problem solver, data science enthusiast and number cruncher" />
+  <meta property="og:description" content="Welcome to the official developer blog of Shivishbrahma (Purbayan Chowdhury), a web developer, problem solver, data science enthusiast and number cruncher" />
+  <meta property="twitter:description" content="Welcome to the official developer blog of Shivishbrahma (Purbayan Chowdhury), a web developer, problem solver, data science enthusiast and number cruncher" />
+
+
+<meta property="og:locale" content="en" />
+
+
+  <link rel="canonical" href="/publog/python-core-cheatsheet-3KV1r9AN/" />
+  <meta property="og:url" content="/publog/python-core-cheatsheet-3KV1r9AN/" />
+
+
+
+  <meta name="author" content="Purbayan Chowdhury" />
+
+
+
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2025-07-25T04:58:40+00:00" />
+
+
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:image" content="/publog/public/android-chrome-512x512.png" />
+  <meta property="twitter:image" content="/publog/public/android-chrome-512x512.png" />
+  
+  
+  
+    <meta property="og:image:alt" content="Python Core Cheatsheet cover image" />
+  
+
+<!-- /SEO Tags --> 
+
+    <link rel="stylesheet" href="/publog/public/css/poole.css" />
+    <link rel="stylesheet" href="/publog/public/css/dracula.css" />
+    <link rel="stylesheet" href="/publog/public/css/lanyon.css" />
+    <link rel="stylesheet" href="/publog/public/css/style.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Noto+Sans+Serif+Bengali&display=swap" />
+
+    <link rel="shortcut icon" href="/publog/public/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/publog/public/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/publog/public/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/publog/public/favicon-16x16.png" />
+    <link rel="manifest" href="/publog/public/site.webmanifest">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/publog/atom.xml" />
+
+    <meta name="google-site-verification" content="du2PIAAAw_DV4AiAM7Hw4UqkUC-9_xyHauRF5O5ElvE" />
+    
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            (i[r] =
+                i[r] ||
+                function () {
+                    (i[r].q = i[r].q || []).push(arguments);
+                }),
+                (i[r].l = 1 * new Date());
+            (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'G-Y33HYSK8XN', 'auto');
+        ga('send', 'pageview');
+    </script>
+    
+</head>
+
+
+    <body class="layout-reverse sidebar-overlay theme-base-10">
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" />
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-item">
+        <p>Welcome to the official developer blog of Shivishbrahma (Purbayan Chowdhury), a web developer, problem solver, data science enthusiast and number cruncher</p>
+    </div>
+
+    <nav class="sidebar-nav">
+        <a class="sidebar-nav-item" href="/publog/" title="Home link">
+            Home
+        </a>
+
+         
+         
+         
+             
+                 
+             
+         
+             
+                 
+             
+         
+             
+                
+                    <a class="sidebar-nav-item"
+                        href="/publog/about/" title="About link">About</a>
+                 
+             
+         
+             
+         
+             
+         
+             
+                 
+             
+         
+             
+         
+             
+         
+             
+        
+
+        <span class="sidebar-nav-item">Currently v0.1.0</span>
+    </nav>
+
+
+    <div class="sidebar-item">
+        <p>
+            
+            <a href="/publog/python-core-cheatsheet-3KV1r9AN/" class="" title="English Link">English</a> | 
+            
+            <a href="/publog/bn/python-core-cheatsheet-3KV1r9AN/" class="" title="Bengali লিংক">Bengali</a>
+        </p>
+   
+        <p>
+           Purbayan Chowdhury &copy; 2025 | All rights reserved
+        </p>
+    </div>
+</div>
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+      content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/publog/" title="Home">
+              Publog
+            </a>
+            <small>
+              Developer Blog of Shivishbrahma
+            </small>
+          </h3>
+        </div>
+        <div class="search-form">
+          <a href="#" class="search-button">
+            <img
+              src="data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%3Csvg%20width%3D%22512px%22%20height%3D%22512px%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M15.7955%2015.8111L21%2021M18%2010.5C18%2014.6421%2014.6421%2018%2010.5%2018C6.35786%2018%203%2014.6421%203%2010.5C3%206.35786%206.35786%203%2010.5%203C14.6421%203%2018%206.35786%2018%2010.5Z%22%20stroke%3D%22%23555%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E"
+              width="24"
+              height="24"
+              alt="" />
+          </a>
+          <input
+            type="search"
+            id="search"
+            placeholder="Search">
+        </div>
+      </div>
+
+      <div class="container content"><aside class="post-toc hide">
+    <h3 class="toc-title">
+        Table of Contents
+        <span class="close-toc" title="Close"></span>
+    </h3>
+    <div class="toc">
+        <ol id="toc" class="toc__list">
+<li class="post-toc-item toc-h2"><a href="#date-and-time">Date and Time</a>
+<ol>
+<li class="post-toc-item toc-h3"><a href="#date-directives">Date Directives</a></li>
+<li class="post-toc-item toc-h3"><a href="#time-directives">Time Directives</a></li>
+</ol>
+</li>
+<li class="post-toc-item toc-h2"><a href="#data-types-and-structures">Data Types and Structures</a>
+<ol>
+<li class="post-toc-item toc-h3"><a href="#string">String</a></li>
+<li class="post-toc-item toc-h3"><a href="#list">List</a></li>
+</ol>
+</li>
+<li class="post-toc-item toc-h2"><a href="#dictionary">Dictionary</a></li>
+<li class="post-toc-item toc-h2"><a href="#set">Set</a></li>
+<li class="post-toc-item toc-h2"><a href="#tuple">Tuple</a>
+<ol>
+<li class="post-toc-item toc-h3"><a href="#utility-functions">Utility Functions</a></li>
+</ol>
+</li>
+</ol>
+    </div>
+</aside>
+
+<div class="post">
+    <header class="post-header">
+        
+        <div class="post-cover-image">
+            <img src="https://placehold.co/940x540/161925/ffffff/webp?text=Python Core Cheatsheet" alt="Python Core Cheatsheet cover image">
+        </div>
+        
+        <h1 class="post-title">Python Core Cheatsheet</h1>
+        <div class="post-tags">
+            
+            
+            <a class="tag-link" href="/publog/tags/python/"
+                rel="category tag" title="python link">
+                python
+            </a>
+            
+            
+            <a class="tag-link" href="/publog/tags/cheatsheet/"
+                rel="category tag" title="cheatsheet link">
+                cheatsheet
+            </a>
+            
+        </div>
+        <div class="post-info">
+            <span class="post-read-time">7 minutes</span>
+            <span class="post-date">25 July 2025</span>
+        </div>
+        <div class="post-share">
+            <span class="facebook-share"></span>
+            <span class="twitter-share"></span>
+            <span class="linkedin-share"></span>
+            <span class="reddit-share"></span>
+        </div>
+    </header>
+    <article class="post-content">
+        <h2 id="date-and-time">Date and Time</h2>
+
+<h3 id="date-directives">Date Directives</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Format</th>
+      <th>Meaning</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">%Y</code></td>
+      <td>Year (4 digits)</td>
+      <td><code class="language-plaintext highlighter-rouge">2025</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">%y</code></td>
+      <td>Year (2 digits)</td>
+      <td><code class="language-plaintext highlighter-rouge">25</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">%m</code></td>
+      <td>Month (01-12)</td>
+      <td><code class="language-plaintext highlighter-rouge">07</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">%B</code></td>
+      <td>Full month name</td>
+      <td><code class="language-plaintext highlighter-rouge">July</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">%b</code></td>
+      <td>Abbreviated month name</td>
+      <td><code class="language-plaintext highlighter-rouge">Jul</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">%d</code></td>
+      <td>Day of the month (01–31)</td>
+      <td><code class="language-plaintext highlighter-rouge">17</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">%j</code></td>
+      <td>Day of year (001–366)</td>
+      <td><code class="language-plaintext highlighter-rouge">198</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">%A</code></td>
+      <td>Full weekday name</td>
+      <td><code class="language-plaintext highlighter-rouge">Thursday</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">%a</code></td>
+      <td>Abbreviated weekday name</td>
+      <td><code class="language-plaintext highlighter-rouge">Thu</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">%w</code></td>
+      <td>Weekday as decimal (0=Sunday)</td>
+      <td><code class="language-plaintext highlighter-rouge">4</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">%U</code></td>
+      <td>Week number (Sunday as first day)</td>
+      <td><code class="language-plaintext highlighter-rouge">28</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">%W</code></td>
+      <td>Week number (Monday as first day)</td>
+      <td><code class="language-plaintext highlighter-rouge">28</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="time-directives">Time Directives</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Format</th>
+      <th>Meaning</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">%H</code></td>
+      <td>Hour (24-hour clock, 00–23)</td>
+      <td><code class="language-plaintext highlighter-rouge">18</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">%I</code></td>
+      <td>Hour (12-hour clock, 01–12)</td>
+      <td><code class="language-plaintext highlighter-rouge">06</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">%p</code></td>
+      <td>AM or PM</td>
+      <td><code class="language-plaintext highlighter-rouge">PM</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">%M</code></td>
+      <td>Minute (00–59)</td>
+      <td><code class="language-plaintext highlighter-rouge">45</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">%S</code></td>
+      <td>Second (00–59)</td>
+      <td><code class="language-plaintext highlighter-rouge">30</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">%f</code></td>
+      <td>Microsecond (000000–999999)</td>
+      <td><code class="language-plaintext highlighter-rouge">123456</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">%z</code></td>
+      <td>UTC offset</td>
+      <td><code class="language-plaintext highlighter-rouge">+0530</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">%Z</code></td>
+      <td>Time zone name</td>
+      <td><code class="language-plaintext highlighter-rouge">IST</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="data-types-and-structures">Data Types and Structures</h2>
+
+<h3 id="string">String</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Syntax</th>
+      <th>Purpose</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">str.upper()</code></td>
+      <td>Convert to uppercase</td>
+      <td><code class="language-plaintext highlighter-rouge">"hello".upper()</code> → <code class="language-plaintext highlighter-rouge">"HELLO"</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">str.lower()</code></td>
+      <td>Convert to lowercase</td>
+      <td><code class="language-plaintext highlighter-rouge">"HELLO".lower()</code> → <code class="language-plaintext highlighter-rouge">"hello"</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">str.title()</code></td>
+      <td>Convert to title case</td>
+      <td><code class="language-plaintext highlighter-rouge">"hello world".title()</code> → <code class="language-plaintext highlighter-rouge">"Hello World"</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">str.capitalize()</code></td>
+      <td>Capitalize first letter</td>
+      <td><code class="language-plaintext highlighter-rouge">"hello".capitalize()</code> → <code class="language-plaintext highlighter-rouge">"Hello"</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">str.strip()</code></td>
+      <td>Remove whitespace from both ends</td>
+      <td><code class="language-plaintext highlighter-rouge">"  hello  ".strip()</code> → <code class="language-plaintext highlighter-rouge">"hello"</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">str.split(sep)</code></td>
+      <td>Split string into list</td>
+      <td><code class="language-plaintext highlighter-rouge">"a,b,c".split(",")</code> → <code class="language-plaintext highlighter-rouge">["a", "b", "c"]</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">str.join(iterable)</code></td>
+      <td>Join iterable into string</td>
+      <td><code class="language-plaintext highlighter-rouge">",".join(["a", "b", "c"])</code> → <code class="language-plaintext highlighter-rouge">"a,b,c"</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">str.replace(old, new)</code></td>
+      <td>Replace substring</td>
+      <td><code class="language-plaintext highlighter-rouge">"hello world".replace("world", "Python")</code> → <code class="language-plaintext highlighter-rouge">"hello Python"</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">str.find(sub)</code></td>
+      <td>Find substring index</td>
+      <td><code class="language-plaintext highlighter-rouge">"hello".find("e")</code> → <code class="language-plaintext highlighter-rouge">1</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">str.count(sub)</code></td>
+      <td>Count occurrences of substring</td>
+      <td><code class="language-plaintext highlighter-rouge">"hello".count("l")</code> → <code class="language-plaintext highlighter-rouge">2</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">str.startswith(prefix)</code></td>
+      <td>Check if string starts with prefix</td>
+      <td><code class="language-plaintext highlighter-rouge">"hello".startswith("he")</code> → <code class="language-plaintext highlighter-rouge">True</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">str.endswith(suffix)</code></td>
+      <td>Check if string ends with suffix</td>
+      <td><code class="language-plaintext highlighter-rouge">"hello".endswith("lo")</code> → <code class="language-plaintext highlighter-rouge">True</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">str.isdigit()</code></td>
+      <td>Check if string is a digit</td>
+      <td><code class="language-plaintext highlighter-rouge">"123".isdigit()</code> → <code class="language-plaintext highlighter-rouge">True</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">str.isalpha()</code></td>
+      <td>Check if string is alphabetic</td>
+      <td><code class="language-plaintext highlighter-rouge">"abc".isalpha()</code> → <code class="language-plaintext highlighter-rouge">True</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">str.isalnum()</code></td>
+      <td>Check if string is alphanumeric</td>
+      <td><code class="language-plaintext highlighter-rouge">"abc123".isalnum()</code> → <code class="language-plaintext highlighter-rouge">True</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">str.islower()</code></td>
+      <td>Check if string is lowercase</td>
+      <td><code class="language-plaintext highlighter-rouge">"hello".islower()</code> → <code class="language-plaintext highlighter-rouge">True</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">str.isupper()</code></td>
+      <td>Check if string is uppercase</td>
+      <td><code class="language-plaintext highlighter-rouge">"HELLO".isupper()</code> → <code class="language-plaintext highlighter-rouge">True</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">str.isprintable()</code></td>
+      <td>Check if string is printable</td>
+      <td><code class="language-plaintext highlighter-rouge">"hello".isprintable()</code> → <code class="language-plaintext highlighter-rouge">True</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">str.swapcase()</code></td>
+      <td>Swap case of all characters</td>
+      <td><code class="language-plaintext highlighter-rouge">"Hello World".swapcase()</code> → <code class="language-plaintext highlighter-rouge">"hELLO wORLD"</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">str.zfill(width)</code></td>
+      <td>Pad string with zeros on the left</td>
+      <td><code class="language-plaintext highlighter-rouge">"42".zfill(5)</code> → <code class="language-plaintext highlighter-rouge">"00042"</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="list">List</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Syntax</th>
+      <th>Purpose</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">list.append(item)</code></td>
+      <td>Add item to end of list</td>
+      <td><code class="language-plaintext highlighter-rouge">[1, 2].append(3)</code> → <code class="language-plaintext highlighter-rouge">[1, 2, 3]</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">list.extend(iterable)</code></td>
+      <td>Extend list with iterable</td>
+      <td><code class="language-plaintext highlighter-rouge">[1, 2].extend([3, 4])</code> → <code class="language-plaintext highlighter-rouge">[1, 2, 3, 4]</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">list.insert(index, item)</code></td>
+      <td>Insert item at index</td>
+      <td><code class="language-plaintext highlighter-rouge">[1, 2].insert(1, 1.5)</code> → <code class="language-plaintext highlighter-rouge">[1, 1.5, 2]</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">list.remove(item)</code></td>
+      <td>Remove first occurrence of item</td>
+      <td><code class="language-plaintext highlighter-rouge">[1, 2, 3].remove(2)</code> → <code class="language-plaintext highlighter-rouge">[1, 3]</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">list.pop(index)</code></td>
+      <td>Remove and return item at index</td>
+      <td><code class="language-plaintext highlighter-rouge">[1, 2, 3].pop(1)</code> → <code class="language-plaintext highlighter-rouge">2</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">list.clear()</code></td>
+      <td>Remove all items from list</td>
+      <td><code class="language-plaintext highlighter-rouge">[1, 2, 3].clear()</code> → <code class="language-plaintext highlighter-rouge">[]</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">list.index(item)</code></td>
+      <td>Return index of first occurrence</td>
+      <td><code class="language-plaintext highlighter-rouge">[1, 2, 3].index(2)</code> → <code class="language-plaintext highlighter-rouge">1</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">list.count(item)</code></td>
+      <td>Count occurrences of item</td>
+      <td><code class="language-plaintext highlighter-rouge">[1, 2, 3].count(2)</code> → <code class="language-plaintext highlighter-rouge">1</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">list.sort()</code></td>
+      <td>Sort list in place</td>
+      <td><code class="language-plaintext highlighter-rouge">[3, 1, 2].sort()</code> → <code class="language-plaintext highlighter-rouge">[1, 2, 3]</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">list.reverse()</code></td>
+      <td>Reverse list in place</td>
+      <td><code class="language-plaintext highlighter-rouge">[1, 2, 3].reverse()</code> → <code class="language-plaintext highlighter-rouge">[3, 2, 1]</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">list.copy()</code></td>
+      <td>Return shallow copy of list</td>
+      <td><code class="language-plaintext highlighter-rouge">[1, 2, 3].copy()</code> → <code class="language-plaintext highlighter-rouge">[1, 2, 3]</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">list.index(item, start, end)</code></td>
+      <td>Return index of item in range</td>
+      <td><code class="language-plaintext highlighter-rouge">[1, 2, 3].index(2, 0, 3)</code> → <code class="language-plaintext highlighter-rouge">1</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">list.sort(key=None, reverse=False)</code></td>
+      <td>Sort list with optional key and reverse</td>
+      <td><code class="language-plaintext highlighter-rouge">[3, 1, 2].sort(key=lambda x: -x)</code> → <code class="language-plaintext highlighter-rouge">[3, 2, 1]</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">a_list[0]</code></td>
+      <td>Access first element of list</td>
+      <td><code class="language-plaintext highlighter-rouge">[1, 2, 3][0]</code> → <code class="language-plaintext highlighter-rouge">1</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">a_list[-1]</code></td>
+      <td>Access last element of list</td>
+      <td><code class="language-plaintext highlighter-rouge">[1, 2, 3][-1]</code> → <code class="language-plaintext highlighter-rouge">3</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">a_list[1:3]</code></td>
+      <td>Slice list from index 1 to 2</td>
+      <td><code class="language-plaintext highlighter-rouge">[1, 2, 3][1:3]</code> → <code class="language-plaintext highlighter-rouge">[2, 3]</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">a_list[:2]</code></td>
+      <td>Slice list from start to index 1</td>
+      <td><code class="language-plaintext highlighter-rouge">[1, 2, 3][:2]</code> → <code class="language-plaintext highlighter-rouge">[1, 2]</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">a_list[1:]</code></td>
+      <td>Slice list from index 1 to end</td>
+      <td><code class="language-plaintext highlighter-rouge">[1, 2, 3][1:]</code> → <code class="language-plaintext highlighter-rouge">[2, 3]</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">a_list[::2]</code></td>
+      <td>Slice list with step 2</td>
+      <td><code class="language-plaintext highlighter-rouge">[1, 2, 3, 4][::2]</code> → <code class="language-plaintext highlighter-rouge">[1, 3]</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">a_list[::-1]</code></td>
+      <td>Reverse list</td>
+      <td><code class="language-plaintext highlighter-rouge">[1, 2, 3][::-1]</code> → <code class="language-plaintext highlighter-rouge">[3, 2, 1]</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">a_list * 2</code></td>
+      <td>Repeat list</td>
+      <td><code class="language-plaintext highlighter-rouge">[1, 2] * 2</code> → <code class="language-plaintext highlighter-rouge">[1, 2, 1, 2]</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">a_list + b_list</code></td>
+      <td>Concatenate lists</td>
+      <td><code class="language-plaintext highlighter-rouge">[1, 2] + [3, 4]</code> → <code class="language-plaintext highlighter-rouge">[1, 2, 3, 4]</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">len(a_list)</code></td>
+      <td>Get length of list</td>
+      <td><code class="language-plaintext highlighter-rouge">len([1, 2, 3])</code> → <code class="language-plaintext highlighter-rouge">3</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="dictionary">Dictionary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Syntax</th>
+      <th>Purpose</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dict[key]</code></td>
+      <td>Access value by key</td>
+      <td><code class="language-plaintext highlighter-rouge">{"a": 1, "b": 2}["a"]</code> → <code class="language-plaintext highlighter-rouge">1</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dict[key] = value</code></td>
+      <td>Set value for key</td>
+      <td><code class="language-plaintext highlighter-rouge">{"a": 1, "b": 2}["c"] = 3</code> → <code class="language-plaintext highlighter-rouge">{"a": 1, "b": 2, "c": 3}</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dict.get(key, default)</code></td>
+      <td>Get value by key with default</td>
+      <td><code class="language-plaintext highlighter-rouge">{"a": 1}.get("b", 0)</code> → <code class="language-plaintext highlighter-rouge">0</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dict.keys()</code></td>
+      <td>Get all keys</td>
+      <td><code class="language-plaintext highlighter-rouge">{"a": 1, "b": 2}.keys()</code> → <code class="language-plaintext highlighter-rouge">dict_keys(['a', 'b'])</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dict.values()</code></td>
+      <td>Get all values</td>
+      <td><code class="language-plaintext highlighter-rouge">{"a": 1, "b": 2}.values()</code> → <code class="language-plaintext highlighter-rouge">dict_values([1, 2])</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dict.items()</code></td>
+      <td>Get all key-value pairs</td>
+      <td><code class="language-plaintext highlighter-rouge">{"a": 1, "b": 2}.items()</code> → <code class="language-plaintext highlighter-rouge">dict_items([('a', 1), ('b', 2)])</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dict.pop(key)</code></td>
+      <td>Remove and return value by key</td>
+      <td><code class="language-plaintext highlighter-rouge">{"a": 1, "b": 2}.pop("a")</code> → <code class="language-plaintext highlighter-rouge">1</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dict.popitem()</code></td>
+      <td>Remove and return last key-value pair</td>
+      <td><code class="language-plaintext highlighter-rouge">{"a": 1, "b": 2}.popitem()</code> → <code class="language-plaintext highlighter-rouge">('b', 2)</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dict.clear()</code></td>
+      <td>Clear dictionary</td>
+      <td><code class="language-plaintext highlighter-rouge">{"a": 1, "b": 2}.clear()</code> → <code class="language-plaintext highlighter-rouge">{}</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dict.update(other_dict)</code></td>
+      <td>Update with another dictionary</td>
+      <td><code class="language-plaintext highlighter-rouge">{"a": 1}.update({"b": 2})</code> → <code class="language-plaintext highlighter-rouge">{"a": 1, "b": 2}</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dict.copy()</code></td>
+      <td>Return shallow copy of dictionary</td>
+      <td><code class="language-plaintext highlighter-rouge">{"a": 1, "b": 2}.copy()</code> → <code class="language-plaintext highlighter-rouge">{"a": 1, "b": 2}</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dict.fromkeys(keys, value)</code></td>
+      <td>Create dictionary with keys and value</td>
+      <td><code class="language-plaintext highlighter-rouge">dict.fromkeys(["a", "b"], 0)</code> → <code class="language-plaintext highlighter-rouge">{"a": 0, "b": 0}</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">key in dict</code></td>
+      <td>Check if key exists</td>
+      <td><code class="language-plaintext highlighter-rouge">"a" in {"a": 1, "b": 2}</code> → <code class="language-plaintext highlighter-rouge">True</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dict.setdefault(key, default)</code></td>
+      <td>Get value or set default if key not exists</td>
+      <td><code class="language-plaintext highlighter-rouge">{"a": 1}.setdefault("b", 2)</code> → <code class="language-plaintext highlighter-rouge">2</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dict1 \| dict2</code></td>
+      <td>Merge two dictionaries</td>
+      <td><code class="language-plaintext highlighter-rouge">{"a": 1} \| {"b": 2}</code> → <code class="language-plaintext highlighter-rouge">{"a": 1, "b": 2}</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="set">Set</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Syntax</th>
+      <th>Purpose</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">set([1, 2, 3])</code></td>
+      <td>Create set from list</td>
+      <td><code class="language-plaintext highlighter-rouge">set([1, 2, 3])</code> → <code class="language-plaintext highlighter-rouge">{1, 2, 3}</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">set.add(item)</code></td>
+      <td>Add item to set</td>
+      <td><code class="language-plaintext highlighter-rouge">{1, 2}.add(3)</code> → <code class="language-plaintext highlighter-rouge">{1, 2, 3}</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">set.remove(item)</code></td>
+      <td>Remove item from set</td>
+      <td><code class="language-plaintext highlighter-rouge">{1, 2, 3}.remove(2)</code> → <code class="language-plaintext highlighter-rouge">{1, 3}</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">set.discard(item)</code></td>
+      <td>Remove item if exists</td>
+      <td><code class="language-plaintext highlighter-rouge">{1, 2, 3}.discard(2)</code> → <code class="language-plaintext highlighter-rouge">{1, 3}</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">set.pop()</code></td>
+      <td>Remove and return arbitrary item</td>
+      <td><code class="language-plaintext highlighter-rouge">{1, 2, 3}.pop()</code> → <code class="language-plaintext highlighter-rouge">1</code> (or <code class="language-plaintext highlighter-rouge">2</code> or <code class="language-plaintext highlighter-rouge">3</code>)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">set.clear()</code></td>
+      <td>Remove all items from set</td>
+      <td><code class="language-plaintext highlighter-rouge">{1, 2, 3}.clear()</code> → <code class="language-plaintext highlighter-rouge">set()</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">set.union(other_set)</code></td>
+      <td>Union of two sets</td>
+      <td><code class="language-plaintext highlighter-rouge">{1, 2}.union({3, 4})</code> → <code class="language-plaintext highlighter-rouge">{1, 2, 3, 4}</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">set.intersection(other_set)</code></td>
+      <td>Intersection of two sets</td>
+      <td><code class="language-plaintext highlighter-rouge">{1, 2}.intersection({2, 3})</code> → <code class="language-plaintext highlighter-rouge">{2}</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">set.difference(other_set)</code></td>
+      <td>Difference of two sets</td>
+      <td><code class="language-plaintext highlighter-rouge">{1, 2}.difference({2, 3})</code> → <code class="language-plaintext highlighter-rouge">{1}</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">set.symmetric_difference(other_set)</code></td>
+      <td>Symmetric difference of two sets</td>
+      <td><code class="language-plaintext highlighter-rouge">{1, 2}.symmetric_difference({2, 3})</code> → <code class="language-plaintext highlighter-rouge">{1, 3}</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">set.issubset(other_set)</code></td>
+      <td>Check if set is subset</td>
+      <td><code class="language-plaintext highlighter-rouge">{1}.issubset({1, 2})</code> → <code class="language-plaintext highlighter-rouge">True</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">set.issuperset(other_set)</code></td>
+      <td>Check if set is superset</td>
+      <td><code class="language-plaintext highlighter-rouge">{1, 2}.issuperset({1})</code> → <code class="language-plaintext highlighter-rouge">True</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">set.copy()</code></td>
+      <td>Return shallow copy of set</td>
+      <td><code class="language-plaintext highlighter-rouge">{1, 2}.copy()</code> → <code class="language-plaintext highlighter-rouge">{1, 2}</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">set.update(other_set)</code></td>
+      <td>Update set with another set</td>
+      <td><code class="language-plaintext highlighter-rouge">{1, 2}.update({3, 4})</code> → <code class="language-plaintext highlighter-rouge">{1, 2, 3, 4}</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">set.intersection_update(other_set)</code></td>
+      <td>Update set with intersection</td>
+      <td><code class="language-plaintext highlighter-rouge">{1, 2}.intersection_update({2, 3})</code> → <code class="language-plaintext highlighter-rouge">{2}</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">set.difference_update(other_set)</code></td>
+      <td>Update set with difference</td>
+      <td><code class="language-plaintext highlighter-rouge">{1, 2}.difference_update({2, 3})</code> → <code class="language-plaintext highlighter-rouge">{1}</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">set.symmetric_difference_update(other_set)</code></td>
+      <td>Update set with symmetric difference</td>
+      <td><code class="language-plaintext highlighter-rouge">{1, 2}.symmetric_difference_update({2, 3})</code> → <code class="language-plaintext highlighter-rouge">{1, 3}</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">len(set)</code></td>
+      <td>Get number of items in set</td>
+      <td><code class="language-plaintext highlighter-rouge">len({1, 2, 3})</code> → <code class="language-plaintext highlighter-rouge">3</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">item in set</code></td>
+      <td>Check if item exists in set</td>
+      <td><code class="language-plaintext highlighter-rouge">1 in {1, 2, 3}</code> → <code class="language-plaintext highlighter-rouge">True</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">set1 \| set2</code></td>
+      <td>Union of two sets</td>
+      <td><code class="language-plaintext highlighter-rouge">{1, 2} \| {3, 4}</code> → <code class="language-plaintext highlighter-rouge">{1, 2, 3, 4}</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">set1 &amp; set2</code></td>
+      <td>Intersection of two sets</td>
+      <td><code class="language-plaintext highlighter-rouge">{1, 2} &amp; {2, 3}</code> → <code class="language-plaintext highlighter-rouge">{2}</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">set1 - set2</code></td>
+      <td>Difference of two sets</td>
+      <td><code class="language-plaintext highlighter-rouge">{1, 2} - {2, 3}</code> → <code class="language-plaintext highlighter-rouge">{1}</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">set1 ^ set2</code></td>
+      <td>Symmetric difference of two sets</td>
+      <td><code class="language-plaintext highlighter-rouge">{1, 2} ^ {2, 3}</code> → <code class="language-plaintext highlighter-rouge">{1, 3}</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="tuple">Tuple</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Syntax</th>
+      <th>Purpose</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">tuple([1, 2, 3])</code></td>
+      <td>Create tuple from list</td>
+      <td><code class="language-plaintext highlighter-rouge">tuple([1, 2, 3])</code> → <code class="language-plaintext highlighter-rouge">(1, 2, 3)</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">tuple.count(item)</code></td>
+      <td>Count occurrences of item</td>
+      <td><code class="language-plaintext highlighter-rouge">(1, 2, 3).count(2)</code> → <code class="language-plaintext highlighter-rouge">1</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">tuple.index(item)</code></td>
+      <td>Return index of first occurrence</td>
+      <td><code class="language-plaintext highlighter-rouge">(1, 2, 3).index(2)</code> → <code class="language-plaintext highlighter-rouge">1</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">len(tuple)</code></td>
+      <td>Get length of tuple</td>
+      <td><code class="language-plaintext highlighter-rouge">len((1, 2, 3))</code> → <code class="language-plaintext highlighter-rouge">3</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">item in tuple</code></td>
+      <td>Check if item exists in tuple</td>
+      <td><code class="language-plaintext highlighter-rouge">1 in (1, 2, 3)</code> → <code class="language-plaintext highlighter-rouge">True</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">tuple1 + tuple2</code></td>
+      <td>Concatenate two tuples</td>
+      <td><code class="language-plaintext highlighter-rouge">(1, 2) + (3, 4)</code> → <code class="language-plaintext highlighter-rouge">(1, 2, 3, 4)</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">tuple1 * n</code></td>
+      <td>Repeat tuple n times</td>
+      <td><code class="language-plaintext highlighter-rouge">(1, 2) * 2</code> → <code class="language-plaintext highlighter-rouge">(1, 2, 1, 2)</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">tuple[0]</code></td>
+      <td>Access first element of tuple</td>
+      <td><code class="language-plaintext highlighter-rouge">(1, 2, 3)[0]</code> → <code class="language-plaintext highlighter-rouge">1</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">tuple[-1]</code></td>
+      <td>Access last element of tuple</td>
+      <td><code class="language-plaintext highlighter-rouge">(1, 2, 3)[-1]</code> → <code class="language-plaintext highlighter-rouge">3</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">tuple[1:3]</code></td>
+      <td>Slice tuple from index 1 to 2</td>
+      <td><code class="language-plaintext highlighter-rouge">(1, 2, 3)[1:3]</code> → <code class="language-plaintext highlighter-rouge">(2, 3)</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">tuple[:2]</code></td>
+      <td>Slice tuple from start to index 1</td>
+      <td><code class="language-plaintext highlighter-rouge">(1, 2, 3)[:2]</code> → <code class="language-plaintext highlighter-rouge">(1, 2)</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">tuple[1:]</code></td>
+      <td>Slice tuple from index 1 to end</td>
+      <td><code class="language-plaintext highlighter-rouge">(1, 2, 3)[1:]</code> → <code class="language-plaintext highlighter-rouge">(2, 3)</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">tuple[::2]</code></td>
+      <td>Slice tuple with step 2</td>
+      <td><code class="language-plaintext highlighter-rouge">(1, 2, 3, 4)[::2]</code> → <code class="language-plaintext highlighter-rouge">(1, 3)</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">tuple[::-1]</code></td>
+      <td>Reverse tuple</td>
+      <td><code class="language-plaintext highlighter-rouge">(1, 2, 3)[::-1]</code> → <code class="language-plaintext highlighter-rouge">(3, 2, 1)</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">tuple.index(item, start, end)</code></td>
+      <td>Return index of item in range</td>
+      <td><code class="language-plaintext highlighter-rouge">(1, 2, 3).index(2, 0, 3)</code> → <code class="language-plaintext highlighter-rouge">1</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="utility-functions">Utility Functions</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Function</th>
+      <th>Use</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">print()</code></td>
+      <td>Display output</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">max()</code></td>
+      <td>Largest value</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">min()</code></td>
+      <td>Smallest value</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">sum()</code></td>
+      <td>Sum of values</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">round()</code></td>
+      <td>Round to decimals</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">len()</code></td>
+      <td>Count elements</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">sorted()</code></td>
+      <td>Sort values</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">help()</code></td>
+      <td>Documentation</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">type()</code></td>
+      <td>Get type</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dir()</code></td>
+      <td>List attributes</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">id()</code></td>
+      <td>Get object ID</td>
+    </tr>
+  </tbody>
+</table>
+
+    </article>
+    <footer>
+        <div class="footer-iconbar">
+            <span class="toc-icon" title="Table of Contents"></span>
+            <a href="#" class="go-to-top" title="Go to Top"></a>
+        </div>
+    </footer>
+</div>
+
+
+<div class="related">
+    <h2>Related Posts</h2>
+    <ul class="related-posts">
+        
+        <li>
+            <h3>
+                <a href="/publog/snowflake-sql-cheatsheet-VniOxVHf/" title="Snowflake SQL Cheatsheet link">
+                    Snowflake SQL Cheatsheet
+                    <small>07 August 2025</small>
+                </a>
+            </h3>
+        </li>
+        
+        <li>
+            <h3>
+                <a href="/publog/top-sql-interview-questions-Y7x8i1fB/" title="Top SQL Interview Questions link">
+                    Top SQL Interview Questions
+                    <small>27 June 2025</small>
+                </a>
+            </h3>
+        </li>
+        
+        <li>
+            <h3>
+                <a href="/publog/nano-shortcuts-beginner-friendly-editor-z0aLs1CC/" title="Nano Shortcuts - Beginner Friendly Editor link">
+                    Nano Shortcuts - Beginner Friendly Editor
+                    <small>06 January 2025</small>
+                </a>
+            </h3>
+        </li>
+        
+    </ul>
+</div>
+</div>
+    </div>
+
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+            var context = {
+                baseurl: '/publog',
+                lang: 'en',
+                title: 'Python Core Cheatsheet',
+                description: '',
+                type: ''
+            };
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+
+<script>
+    
+    var documents = [
+    {
+    "id": 0,
+    "url": "/publog/snowflake-sql-cheatsheet-VniOxVHf/",
+    "title": "Snowflake SQL Cheatsheet",
+    "tags": "snowflake||sql||cheatsheet",
+    "date": "07 August 2025",
+    "reading_time": "4 minutes",
+    "content": "## SQL Essentials ### Joins |Join Type|Description|Syntax| |-|-|-| |INNER|Returns rows that match on both sides of the join|`SELECT * FROM table1 INNER JOIN table2 ON table1.column = table2.column`| |LEFT|Returns all rows from the left table, and the matched rows from the right table|`SELECT * FROM table1 LEFT JOIN table2 ON...",
+    "body": "2025/08/07 - SQL Essentials: Joins:       Join Type   Description   Syntax         INNER   Returns rows that match on both sides of the join   SELECT * FROM table1 INNER JOIN table2 ON table1. column = table2. column       LEFT   Returns all rows from the left table, and the matched rows from the right table   SELECT * FROM table1 LEFT JOIN table2 ON table1. column = table2. column       RIGHT   Returns all rows from the right table, and the matched rows from the left table   SELECT * FROM table1 RIGHT JO..."
+    }, {
+    "id": 1,
+    "url": "/publog/python-core-cheatsheet-3KV1r9AN/",
+    "title": "Python Core Cheatsheet",
+    "tags": "python||cheatsheet",
+    "date": "25 July 2025",
+    "reading_time": "7 minutes",
+    "content": "Date and Time Date Directives Format Meaning Example %Y Year (4 digits) 2025 %y Year (2 digits) 25 %m Month (01-12) 07 %B Full month name July %b Abbreviated month name Jul %d Day of the month (01–31) 17 %j Day of year (001–366) 198 %A Full weekday name Thursday...",
+    "body": "2025/07/25 - Date and Time: Date Directives:       Format   Meaning   Example         %Y   Year (4 digits)   2025       %y   Year (2 digits)   25       %m   Month (01-12)   07       %B   Full month name   July       %b   Abbreviated month name   Jul       %d   Day of the month (01–31)   17       %j   Day of year (001–366)   198       %A   Full weekday name   Thursday       %a   Abbreviated weekday name   Thu       %w   Weekday as decimal (0=Sunday)   4       %U   Week number (Sunday as first day)   28    ..."
+    }, {
+    "id": 2,
+    "url": "/publog/top-sql-interview-questions-Y7x8i1fB/",
+    "title": "Top SQL Interview Questions",
+    "tags": "sql||interview||mysql||postgresql",
+    "date": "27 June 2025",
+    "reading_time": "2 minutes",
+    "content": "Write an SQL query to fetch the second-highest salary from an employees table. SELECT MAX(salary) AS SecondHighestSalary FROM employees WHERE salary &lt; (SELECT MAX(salary) FROM employees); SELECT salary AS SecondHighestSalary FROM employees ORDER BY salary DESC LIMIT 1 OFFSET 1; SELECT salary AS SecondHighestSalary FROM ( SELECT salary, row_number() OVER...",
+    "body": "2025/06/27 -    Write an SQL query to fetch the second-highest salary from an employees table.    SELECT MAX(salary) AS SecondHighestSalary FROM employees WHERE salary &lt; (SELECT MAX(salary) FROM employees);     SELECT salary AS SecondHighestSalary FROM employees ORDER BY salary DESC LIMIT 1 OFFSET 1;     SELECT salary AS SecondHighestSalary FROM (   SELECT salary, row_number() OVER (ORDER BY salary DESC) AS rank   FROM employees ) AS RankedSalaries WHERE rank = 2;      Write an SQL query to get the dup..."
+    }, {
+    "id": 3,
+    "url": "/publog/nano-shortcuts-beginner-friendly-editor-z0aLs1CC/",
+    "title": "Nano Shortcuts - Beginner Friendly Editor",
+    "tags": "nano||shortcut||editor||text",
+    "date": "06 January 2025",
+    "reading_time": "3 minutes",
+    "content": "When it comes to text editing in the terminal, Nano stands out. It is user-friendly and simple. Nano’s straightforward interface makes it an excellent choice for anyone from novice to expert. In this blog post, we will explore essential Nano shortcuts. These will help you navigate and use this powerful...",
+    "body": "2025/01/06 - When it comes to text editing in the terminal, Nano stands out. It is user-friendly and simple. Nano’s straightforward interface makes it an excellent choice for anyone from novice to expert. In this blog post, we will explore essential Nano shortcuts. These will help you navigate and use this powerful text editor with ease. What is Nano?: Nano is a command-line text editor, found in most Unix-like operating systems. It is simple in design and easy to use, which makes it an ideal choice for b..."
+    }, {
+    "id": 4,
+    "url": "/publog/windows-wammp-setup/",
+    "title": "Custom WAMMP Setup in Windows (mod_wsgi support)",
+    "tags": "windows||apache||php",
+    "date": "30 April 2023",
+    "reading_time": "2 minutes",
+    "content": "Are you tired of using pre-packaged WAMPP solutions that limit your control and flexibility? Do you need to run Python web applications on Windows using the Apache web server? Look no further! This guide will walk you through the process of setting up a custom WAMPP environment on Windows, complete...",
+    "body": "2023/04/30 - Are you tired of using pre-packaged WAMPP solutions that limit your control and flexibility? Do you need to run Python web applications on Windows using the Apache web server? Look no further! This guide will walk you through the process of setting up a custom WAMPP environment on Windows, complete with mod_wsgi support for running Python web applications. By following this guide, you’ll learn how to:  Install and configure Apache, MySQL, and PHP/Python on Windows Set up mod_wsgi to run Pytho..."
+    }, {
+    "id": 5,
+    "url": "/publog/introduction-to-ruby/",
+    "title": "Introduction To Ruby",
+    "tags": "ruby||programming",
+    "date": "01 April 2022",
+    "reading_time": "21 minutes",
+    "content": "Welcome to the world of Ruby, a dynamic and versatile programming language that’s been delighting developers and powering innovative applications for over two decades. Known for its simplicity, readability, and ease of use, Ruby has become a favorite among beginners and experienced programmers alike. In this introduction to Ruby, we’ll...",
+    "body": "2022/04/01 - Welcome to the world of Ruby, a dynamic and versatile programming language that’s been delighting developers and powering innovative applications for over two decades. Known for its simplicity, readability, and ease of use, Ruby has become a favorite among beginners and experienced programmers alike. In this introduction to Ruby, we’ll take you on a journey through the basics of the language, covering its syntax, features, and ecosystem. You’ll learn how to write Ruby code, work with data str..."
+    }
+    ];
+
+    var idx = lunr(function () {
+        this.ref('id')
+        this.field('title')
+        this.field('body')
+
+        documents.forEach(function (doc) {
+            this.add(doc)
+        }, this)
+    });
+
+    function slugify(text) {
+        return text
+            .toString()
+            .toLowerCase()
+            .replace(/\s+/g, '-') // Replace spaces with -
+            .replace(/[^\w-]+/g, '') // Remove all non-word chars
+            .replace(/--+/g, '-') // Replace multiple - with single -
+            .replace(/^-+/, '') // Trim - from start of text
+            .replace(/-+$/, ''); // Trim - from end of text
+        ;
+    }
+
+    function lunr_search(term) {
+        if(term) {
+            var results = idx.search(term);
+            if(results.length>0){
+                for (var i = 0; i < results.length; i++) {
+                    var ref = results[i]['ref'];
+                    var post = documents[ref];
+                    post.tags = post.tags.split('||');
+
+                    var tagHtml = '';
+                    for(var j = 0; j < post.tags.length; j++){
+                        var tag = post.tags[j];
+                        tagHtml += `
+<a
+			class="tag-link"
+			href="/publog/tags/${slugify(tag)}"
+			rel="category tag"
+            title="${tag} link"
+		>
+			${tag}
+		</a>            
+                        `;
+                    }
+                    var postHtml = `
+<div class="post">
+	<h3 class="post-title">
+		<a href="${post.url}" title="${post.title} link"> ${post.title} </a>
+	</h3>
+	<div class="post-tags">
+		${tagHtml}
+	</div>
+    <div class="post-info">
+        <span class="post-read-time">${post.reading_time}</span>
+        <span class="post-date">${post.date}</span>
+    </div>
+	<span> ${post.content} </span>
+</div>
+                    `;
+                    document.querySelector('#search-results').innerHTML = postHtml;
+                }
+            }
+        }
+    }
+</script>
+    <script src="/publog/public/js/script.js"></script>
+  </body>
+</html>

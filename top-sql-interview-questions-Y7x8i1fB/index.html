@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="http://gmpg.org/xfn/11" rel="profile" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+    <!-- SEO Tags --> 
+
+<title>Top SQL Interview Questions &middot; Publog</title>
+<meta property="og:title" content="Top SQL Interview Questions &middot; Publog" />
+
+
+
+  <meta name="description" content="Welcome to the official developer blog of Shivishbrahma (Purbayan Chowdhury), a web developer, problem solver, data science enthusiast and number cruncher" />
+  <meta property="og:description" content="Welcome to the official developer blog of Shivishbrahma (Purbayan Chowdhury), a web developer, problem solver, data science enthusiast and number cruncher" />
+  <meta property="twitter:description" content="Welcome to the official developer blog of Shivishbrahma (Purbayan Chowdhury), a web developer, problem solver, data science enthusiast and number cruncher" />
+
+
+<meta property="og:locale" content="en" />
+
+
+  <link rel="canonical" href="/publog/top-sql-interview-questions-Y7x8i1fB/" />
+  <meta property="og:url" content="/publog/top-sql-interview-questions-Y7x8i1fB/" />
+
+
+
+  <meta name="author" content="Purbayan Chowdhury" />
+
+
+
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2025-06-27T05:39:04+00:00" />
+
+
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:image" content="/publog/public/android-chrome-512x512.png" />
+  <meta property="twitter:image" content="/publog/public/android-chrome-512x512.png" />
+  
+  
+  
+    <meta property="og:image:alt" content="Top SQL Interview Questions cover image" />
+  
+
+<!-- /SEO Tags --> 
+
+    <link rel="stylesheet" href="/publog/public/css/poole.css" />
+    <link rel="stylesheet" href="/publog/public/css/dracula.css" />
+    <link rel="stylesheet" href="/publog/public/css/lanyon.css" />
+    <link rel="stylesheet" href="/publog/public/css/style.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Noto+Sans+Serif+Bengali&display=swap" />
+
+    <link rel="shortcut icon" href="/publog/public/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/publog/public/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/publog/public/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/publog/public/favicon-16x16.png" />
+    <link rel="manifest" href="/publog/public/site.webmanifest">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/publog/atom.xml" />
+
+    <meta name="google-site-verification" content="du2PIAAAw_DV4AiAM7Hw4UqkUC-9_xyHauRF5O5ElvE" />
+    
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            (i[r] =
+                i[r] ||
+                function () {
+                    (i[r].q = i[r].q || []).push(arguments);
+                }),
+                (i[r].l = 1 * new Date());
+            (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'G-Y33HYSK8XN', 'auto');
+        ga('send', 'pageview');
+    </script>
+    
+</head>
+
+
+    <body class="layout-reverse sidebar-overlay theme-base-10">
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" />
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-item">
+        <p>Welcome to the official developer blog of Shivishbrahma (Purbayan Chowdhury), a web developer, problem solver, data science enthusiast and number cruncher</p>
+    </div>
+
+    <nav class="sidebar-nav">
+        <a class="sidebar-nav-item" href="/publog/" title="Home link">
+            Home
+        </a>
+
+         
+         
+         
+             
+                 
+             
+         
+             
+                 
+             
+         
+             
+                
+                    <a class="sidebar-nav-item"
+                        href="/publog/about/" title="About link">About</a>
+                 
+             
+         
+             
+         
+             
+         
+             
+                 
+             
+         
+             
+         
+             
+         
+             
+        
+
+        <span class="sidebar-nav-item">Currently v0.1.0</span>
+    </nav>
+
+
+    <div class="sidebar-item">
+        <p>
+            
+            <a href="/publog/top-sql-interview-questions-Y7x8i1fB/" class="" title="English Link">English</a> | 
+            
+            <a href="/publog/bn/top-sql-interview-questions-Y7x8i1fB/" class="" title="Bengali লিংক">Bengali</a>
+        </p>
+   
+        <p>
+           Purbayan Chowdhury &copy; 2025 | All rights reserved
+        </p>
+    </div>
+</div>
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+      content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/publog/" title="Home">
+              Publog
+            </a>
+            <small>
+              Developer Blog of Shivishbrahma
+            </small>
+          </h3>
+        </div>
+        <div class="search-form">
+          <a href="#" class="search-button">
+            <img
+              src="data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%3Csvg%20width%3D%22512px%22%20height%3D%22512px%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M15.7955%2015.8111L21%2021M18%2010.5C18%2014.6421%2014.6421%2018%2010.5%2018C6.35786%2018%203%2014.6421%203%2010.5C3%206.35786%206.35786%203%2010.5%203C14.6421%203%2018%206.35786%2018%2010.5Z%22%20stroke%3D%22%23555%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E"
+              width="24"
+              height="24"
+              alt="" />
+          </a>
+          <input
+            type="search"
+            id="search"
+            placeholder="Search">
+        </div>
+      </div>
+
+      <div class="container content"><aside class="post-toc hide">
+    <h3 class="toc-title">
+        Table of Contents
+        <span class="close-toc" title="Close"></span>
+    </h3>
+    <div class="toc">
+        <ol id="toc" class="toc__list">
+</ol>
+    </div>
+</aside>
+
+<div class="post">
+    <header class="post-header">
+        
+        <div class="post-cover-image">
+            <img src="https://placehold.co/940x540/161925/ffffff/webp?text=Top SQL Interview Questions" alt="Top SQL Interview Questions cover image">
+        </div>
+        
+        <h1 class="post-title">Top SQL Interview Questions</h1>
+        <div class="post-tags">
+            
+            
+            <a class="tag-link" href="/publog/tags/sql/"
+                rel="category tag" title="sql link">
+                sql
+            </a>
+            
+            
+            <a class="tag-link" href="/publog/tags/interview/"
+                rel="category tag" title="interview link">
+                interview
+            </a>
+            
+            
+            <a class="tag-link" href="/publog/tags/mysql/"
+                rel="category tag" title="mysql link">
+                mysql
+            </a>
+            
+            
+            <a class="tag-link" href="/publog/tags/postgresql/"
+                rel="category tag" title="postgresql link">
+                postgresql
+            </a>
+            
+        </div>
+        <div class="post-info">
+            <span class="post-read-time">2 minutes</span>
+            <span class="post-date">27 June 2025</span>
+        </div>
+        <div class="post-share">
+            <span class="facebook-share"></span>
+            <span class="twitter-share"></span>
+            <span class="linkedin-share"></span>
+            <span class="reddit-share"></span>
+        </div>
+    </header>
+    <article class="post-content">
+        <ol>
+  <li>
+    <p>Write an SQL query to fetch the second-highest salary from an <code class="language-plaintext highlighter-rouge">employees</code> table.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">SELECT</span> <span class="k">MAX</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span> <span class="k">AS</span> <span class="n">SecondHighestSalary</span>
+ <span class="k">FROM</span> <span class="n">employees</span>
+ <span class="k">WHERE</span> <span class="n">salary</span> <span class="o">&lt;</span> <span class="p">(</span><span class="k">SELECT</span> <span class="k">MAX</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">employees</span><span class="p">);</span>
+</code></pre></div>    </div>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">SELECT</span> <span class="n">salary</span> <span class="k">AS</span> <span class="n">SecondHighestSalary</span>
+ <span class="k">FROM</span> <span class="n">employees</span>
+ <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">salary</span> <span class="k">DESC</span>
+ <span class="k">LIMIT</span> <span class="mi">1</span> <span class="k">OFFSET</span> <span class="mi">1</span><span class="p">;</span>
+</code></pre></div>    </div>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">SELECT</span> <span class="n">salary</span> <span class="k">AS</span> <span class="n">SecondHighestSalary</span>
+ <span class="k">FROM</span> <span class="p">(</span>
+     <span class="k">SELECT</span> <span class="n">salary</span><span class="p">,</span> <span class="n">row_number</span><span class="p">()</span> <span class="n">OVER</span> <span class="p">(</span><span class="k">ORDER</span> <span class="k">BY</span> <span class="n">salary</span> <span class="k">DESC</span><span class="p">)</span> <span class="k">AS</span> <span class="n">rank</span>
+     <span class="k">FROM</span> <span class="n">employees</span>
+ <span class="p">)</span> <span class="k">AS</span> <span class="n">RankedSalaries</span>
+ <span class="k">WHERE</span> <span class="n">rank</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write an SQL query to get the duplicate records from a table.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">SELECT</span> <span class="k">column_name</span><span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="k">count</span>
+ <span class="k">FROM</span> <span class="k">table_name</span>
+ <span class="k">GROUP</span> <span class="k">BY</span> <span class="k">column_name</span>
+ <span class="k">HAVING</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write a query to find the employees who earn more than their managers.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">SELECT</span> <span class="n">e1</span><span class="p">.</span><span class="o">*</span>
+ <span class="k">FROM</span> <span class="n">employees</span> <span class="n">e1</span>
+ <span class="k">JOIN</span> <span class="n">employees</span> <span class="n">e2</span> <span class="k">ON</span> <span class="n">e1</span><span class="p">.</span><span class="n">manager_id</span> <span class="o">=</span> <span class="n">e2</span><span class="p">.</span><span class="n">id</span>
+ <span class="k">WHERE</span> <span class="n">e1</span><span class="p">.</span><span class="n">salary</span> <span class="o">&gt;</span> <span class="n">e2</span><span class="p">.</span><span class="n">salary</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write an SQL query to retrieve the top <code class="language-plaintext highlighter-rouge">N</code> records from a table.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">SELECT</span> <span class="o">*</span>
+ <span class="k">FROM</span> <span class="k">table_name</span>
+ <span class="k">ORDER</span> <span class="k">BY</span> <span class="k">column_name</span> <span class="k">DESC</span>
+ <span class="k">LIMIT</span> <span class="n">N</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write an SQL query to count the number of employees in each department.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">SELECT</span> <span class="n">department</span><span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="n">employee_count</span>
+ <span class="k">FROM</span> <span class="n">employees</span>
+ <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">department</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write a query to find the department with the highest number of employees.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">SELECT</span> <span class="n">department</span><span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="n">employee_count</span>
+ <span class="k">FROM</span> <span class="n">employees</span>
+ <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">department</span>
+ <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">employee_count</span> <span class="k">DESC</span>
+ <span class="k">LIMIT</span> <span class="mi">1</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write a query to retrieve employees who have the same salary.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">SELECT</span> <span class="n">e1</span><span class="p">.</span><span class="o">*</span>
+ <span class="k">FROM</span> <span class="n">employees</span> <span class="n">e1</span>
+ <span class="k">JOIN</span> <span class="n">employees</span> <span class="n">e2</span> <span class="k">ON</span> <span class="n">e1</span><span class="p">.</span><span class="n">salary</span> <span class="o">=</span> <span class="n">e2</span><span class="p">.</span><span class="n">salary</span>
+ <span class="k">WHERE</span> <span class="n">e1</span><span class="p">.</span><span class="n">id</span> <span class="o">!=</span> <span class="n">e2</span><span class="p">.</span><span class="n">id</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write an SQL query to list all employees whose name starts with ‘A’.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">SELECT</span> <span class="o">*</span>
+ <span class="k">FROM</span> <span class="n">employees</span>
+ <span class="k">WHERE</span> <span class="n">name</span> <span class="k">LIKE</span> <span class="s1">'A%'</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write an SQL query to get the last record from a table.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">SELECT</span> <span class="o">*</span>
+ <span class="k">FROM</span> <span class="n">employees</span>
+ <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">employee_id</span> <span class="k">DESC</span>
+ <span class="k">LIMIT</span> <span class="mi">1</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write a query to get employees who joined in the last 6 months.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span>
+<span class="k">FROM</span> <span class="n">employees</span>
+<span class="k">WHERE</span> <span class="n">join_date</span> <span class="o">&gt;=</span> <span class="n">DATE_SUB</span><span class="p">(</span><span class="n">CURDATE</span><span class="p">(),</span> <span class="n">INTERVAL</span> <span class="mi">6</span> <span class="k">MONTH</span><span class="p">);</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write an SQL query to find the <code class="language-plaintext highlighter-rouge">Nth</code> highest salary from a table.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="n">salary</span> <span class="k">AS</span> <span class="n">NthHighestSalary</span>
+<span class="k">FROM</span> <span class="n">employees</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">salary</span> <span class="k">DESC</span>
+<span class="k">LIMIT</span> <span class="mi">1</span> <span class="k">OFFSET</span> <span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</code></pre></div>    </div>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">salary</span> <span class="k">AS</span> <span class="n">NthHighestSalary</span>
+<span class="k">FROM</span> <span class="p">(</span>
+    <span class="k">SELECT</span> <span class="n">salary</span><span class="p">,</span> <span class="n">ROW_NUMBER</span><span class="p">()</span> <span class="n">OVER</span> <span class="p">(</span><span class="k">ORDER</span> <span class="k">BY</span> <span class="n">salary</span> <span class="k">DESC</span><span class="p">)</span> <span class="k">AS</span> <span class="n">rank</span>
+    <span class="k">FROM</span> <span class="n">employees</span>
+<span class="p">)</span> <span class="k">AS</span> <span class="n">RankedSalaries</span>
+<span class="k">WHERE</span> <span class="n">rank</span> <span class="o">=</span> <span class="n">N</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write a query to remove duplicate rows from a table without using <code class="language-plaintext highlighter-rouge">DISTINCT</code>.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">DELETE</span> <span class="k">FROM</span> <span class="n">sales</span>
+<span class="k">WHERE</span> <span class="n">id</span> <span class="k">NOT</span> <span class="k">IN</span> <span class="p">(</span>
+    <span class="k">SELECT</span> <span class="n">id</span>
+    <span class="k">FROM</span> <span class="p">(</span>
+        <span class="k">SELECT</span> <span class="n">id</span><span class="p">,</span> <span class="n">ROW_NUMBER</span><span class="p">()</span> <span class="n">OVER</span> <span class="p">(</span><span class="k">PARTITION</span> <span class="k">BY</span> <span class="n">order_date</span><span class="p">,</span> <span class="n">product_name</span><span class="p">,</span> <span class="n">customer_id</span> <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">id</span><span class="p">)</span> <span class="k">AS</span> <span class="n">rnk</span>
+    <span class="p">)</span> <span class="k">AS</span> <span class="n">RankedSales</span>
+    <span class="k">WHERE</span> <span class="n">rnk</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write a query to find missing numbers in a sequence of IDs.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">t1</span><span class="p">.</span><span class="n">id</span> <span class="o">+</span> <span class="mi">1</span> <span class="k">AS</span> <span class="n">MissingID</span>
+<span class="k">FROM</span> <span class="n">employees</span> <span class="n">t1</span>
+<span class="k">LEFT</span> <span class="k">JOIN</span> <span class="n">employees</span> <span class="n">t2</span> <span class="k">ON</span> <span class="n">t1</span><span class="p">.</span><span class="n">id</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">=</span> <span class="n">t2</span><span class="p">.</span><span class="n">id</span>
+<span class="k">WHERE</span> <span class="n">t2</span><span class="p">.</span><span class="n">id</span> <span class="k">IS</span> <span class="k">NULL</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">MissingID</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write an SQL query to display the first and last name in a single column.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">CONCAT</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="n">last_name</span><span class="p">)</span> <span class="k">AS</span> <span class="n">full_name</span>
+<span class="k">FROM</span> <span class="n">employees</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write an SQL query to get the cumulative sum of salaries for each employee.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">salary</span><span class="p">,</span> <span class="k">SUM</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span> <span class="n">OVER</span> <span class="p">(</span><span class="k">ORDER</span> <span class="k">BY</span> <span class="n">id</span><span class="p">)</span> <span class="k">AS</span> <span class="n">cumulative_salary</span>
+<span class="k">FROM</span> <span class="n">employees</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write an SQL query to swap the values of two columns without using a third variable.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">UPDATE</span> <span class="n">employees</span>
+<span class="k">SET</span> <span class="n">column1</span> <span class="o">=</span> <span class="n">column2</span><span class="p">,</span> <span class="n">column2</span> <span class="o">=</span> <span class="n">column1</span>
+<span class="k">WHERE</span> <span class="n">condition</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write a query to fetch employees whose names contain only vowels.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span>
+<span class="k">FROM</span> <span class="n">employees</span>
+<span class="k">WHERE</span> <span class="n">name</span> <span class="n">REGEXP</span> <span class="s1">'^[aeiouAEIOU]+$'</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write an SQL query to transpose rows into columns.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>Product</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2023</td>
+          <td>A</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>2023</td>
+          <td>B</td>
+          <td>150</td>
+        </tr>
+        <tr>
+          <td>2024</td>
+          <td>A</td>
+          <td>200</td>
+        </tr>
+        <tr>
+          <td>2024</td>
+          <td>B</td>
+          <td>250</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>Product_A</th>
+          <th>Product_B</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2023</td>
+          <td>100</td>
+          <td>150</td>
+        </tr>
+        <tr>
+          <td>2024</td>
+          <td>200</td>
+          <td>250</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> 
+    <span class="nb">Year</span><span class="p">,</span>
+    <span class="k">SUM</span><span class="p">(</span><span class="k">CASE</span> <span class="k">WHEN</span> <span class="n">Product</span> <span class="o">=</span> <span class="s1">'A'</span> <span class="k">THEN</span> <span class="n">Amount</span> <span class="k">ELSE</span> <span class="mi">0</span> <span class="k">END</span><span class="p">)</span> <span class="k">AS</span> <span class="n">Product_A</span><span class="p">,</span>
+    <span class="k">SUM</span><span class="p">(</span><span class="k">CASE</span> <span class="k">WHEN</span> <span class="n">Product</span> <span class="o">=</span> <span class="s1">'B'</span> <span class="k">THEN</span> <span class="n">Amount</span> <span class="k">ELSE</span> <span class="mi">0</span> <span class="k">END</span><span class="p">)</span> <span class="k">AS</span> <span class="n">Product_B</span>
+<span class="k">FROM</span> 
+    <span class="n">Sales</span>
+<span class="k">GROUP</span> <span class="k">BY</span> 
+    <span class="nb">Year</span>
+<span class="k">ORDER</span> <span class="k">BY</span> 
+    <span class="nb">Year</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write an SQL query to find the employees with the highest salary in each department.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">department</span><span class="p">,</span> <span class="n">salary</span>
+<span class="k">FROM</span> <span class="p">(</span>
+    <span class="k">SELECT</span>
+        <span class="n">e</span><span class="p">.</span><span class="o">*</span><span class="p">,</span>
+        <span class="n">RANK</span><span class="p">()</span> <span class="n">OVER</span> <span class="p">(</span><span class="k">PARTITION</span> <span class="k">BY</span> <span class="n">department</span> <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">salary</span> <span class="k">DESC</span><span class="p">)</span> <span class="k">as</span> <span class="n">rnk</span>
+    <span class="k">FROM</span> <span class="n">employees</span> <span class="n">e</span>
+<span class="p">)</span> <span class="n">sub</span>
+<span class="k">WHERE</span> <span class="n">rnk</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write a query to find customers who made multiple purchases on the same day.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">customer_id</span><span class="p">,</span> <span class="n">order_date</span><span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="n">purchase_count</span>
+<span class="k">FROM</span> <span class="n">orders</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">customer_id</span><span class="p">,</span> <span class="n">order_date</span>
+<span class="k">HAVING</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write a query to get the moving average of sales for the last 3 months.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> 
+    <span class="k">month</span><span class="p">,</span>
+    <span class="k">AVG</span><span class="p">(</span><span class="n">sales</span><span class="p">)</span> <span class="n">OVER</span> <span class="p">(</span><span class="k">ORDER</span> <span class="k">BY</span> <span class="k">month</span> <span class="k">ROWS</span> <span class="k">BETWEEN</span> <span class="mi">2</span> <span class="k">PRECEDING</span> <span class="k">AND</span> <span class="k">CURRENT</span> <span class="k">ROW</span><span class="p">)</span> <span class="k">AS</span> <span class="n">moving_average</span>
+<span class="k">FROM</span> <span class="n">Sales</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="k">month</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write an SQL query to rank employees by salary in each department.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> 
+    <span class="n">id</span><span class="p">,</span> 
+    <span class="n">name</span><span class="p">,</span> 
+    <span class="n">department</span><span class="p">,</span> 
+    <span class="n">salary</span><span class="p">,</span> 
+    <span class="n">RANK</span><span class="p">()</span> <span class="n">OVER</span> <span class="p">(</span><span class="k">PARTITION</span> <span class="k">BY</span> <span class="n">department</span> <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">salary</span> <span class="k">DESC</span><span class="p">)</span> <span class="k">AS</span> <span class="n">salary_rank</span>
+<span class="k">FROM</span> <span class="n">employees</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write an SQL query to find employees who have more than one manager.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">employee_id</span><span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span> <span class="n">manager_id</span><span class="p">)</span> <span class="k">AS</span> <span class="n">manager_count</span>
+<span class="k">FROM</span> <span class="n">employee_managers</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">employee_id</span>
+<span class="k">HAVING</span> <span class="n">manager_count</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write a query to retrieve the most frequent order date from an <code class="language-plaintext highlighter-rouge">orders</code> table.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">order_date</span><span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="n">order_count</span>
+<span class="k">FROM</span> <span class="n">orders</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">order_date</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">order_count</span> <span class="k">DESC</span>
+<span class="k">LIMIT</span> <span class="mi">1</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write an SQL query to compare two tables and find mismatched records.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span>
+<span class="k">FROM</span> <span class="n">TableA</span> <span class="n">a</span>
+<span class="k">FULL</span> <span class="k">OUTER</span> <span class="k">JOIN</span> <span class="n">TableB</span> <span class="n">b</span> <span class="k">ON</span> <span class="n">a</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">b</span><span class="p">.</span><span class="n">id</span>
+<span class="k">WHERE</span> <span class="n">a</span><span class="p">.</span><span class="n">id</span> <span class="k">IS</span> <span class="k">NULL</span> <span class="k">OR</span> <span class="n">b</span><span class="p">.</span><span class="n">id</span> <span class="k">IS</span> <span class="k">NULL</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write an SQL query to calculate the difference between consecutive rows.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> 
+    <span class="n">id</span><span class="p">,</span> 
+    <span class="n">value</span><span class="p">,</span>
+    <span class="n">value</span> <span class="o">-</span> <span class="n">LAG</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="n">OVER</span> <span class="p">(</span><span class="k">ORDER</span> <span class="k">BY</span> <span class="n">id</span><span class="p">)</span> <span class="k">AS</span> <span class="n">difference</span>
+<span class="k">FROM</span> <span class="n">TableName</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write a query to pivot table data dynamically.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- Outer SELECT to choose all columns resulting from the PIVOT operation</span>
+<span class="k">SELECT</span> <span class="o">*</span>
+<span class="k">FROM</span> <span class="p">(</span>
+    <span class="c1">-- Inner SELECT to retrieve the raw data of city, year, and sales</span>
+    <span class="k">SELECT</span> <span class="n">city</span><span class="p">,</span> <span class="nb">year</span><span class="p">,</span> <span class="n">sales</span>
+    <span class="k">FROM</span> <span class="n">sales</span>
+<span class="p">)</span>
+<span class="c1">-- PIVOT operation to convert rows to columns</span>
+<span class="n">PIVOT</span> <span class="p">(</span>
+    <span class="k">SUM</span><span class="p">(</span><span class="n">sales</span><span class="p">)</span> 
+    <span class="c1">-- Specify the year values to pivot and alias them as Sales_&lt;year&gt;</span>
+    <span class="k">FOR</span> <span class="nb">year</span> <span class="k">IN</span> <span class="p">(</span><span class="mi">2019</span> <span class="k">AS</span> <span class="n">Sales_2019</span><span class="p">,</span> <span class="mi">2020</span> <span class="k">AS</span> <span class="n">Sales_2020</span><span class="p">,</span> <span class="mi">2021</span> <span class="k">AS</span> <span class="n">Sales_2021</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">city</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write a query to delete every alternate row from a table.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">WITH</span> <span class="n">CTE</span> <span class="k">AS</span> <span class="p">(</span>
+    <span class="k">SELECT</span> <span class="o">*</span><span class="p">,</span> <span class="n">ROW_NUMBER</span><span class="p">()</span> <span class="n">OVER</span> <span class="p">(</span><span class="k">ORDER</span> <span class="k">BY</span> <span class="n">id</span><span class="p">)</span> <span class="k">AS</span> <span class="n">row_num</span>
+    <span class="k">FROM</span> <span class="k">table_name</span>
+<span class="p">)</span>
+<span class="k">DELETE</span> <span class="k">FROM</span> <span class="k">table_name</span>
+<span class="k">WHERE</span> <span class="n">id</span> <span class="k">IN</span> <span class="p">(</span><span class="k">SELECT</span> <span class="n">id</span> <span class="k">FROM</span> <span class="n">CTE</span> <span class="k">WHERE</span> <span class="n">row_num</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">);</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write an SQL query to get the first purchase date for each customer.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">customer_id</span><span class="p">,</span> <span class="k">MIN</span><span class="p">(</span><span class="n">ordered_at</span><span class="p">)</span> <span class="k">AS</span> <span class="n">first_purchase_date</span>
+<span class="k">FROM</span> <span class="n">orders</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">customer_id</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write an SQL query to get the running total of sales per month.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">WITH</span> <span class="n">MonthlySales</span> <span class="k">AS</span> <span class="p">(</span>
+    <span class="k">SELECT</span> 
+        <span class="k">month</span><span class="p">,</span>
+        <span class="k">count</span><span class="p">(</span><span class="k">distinct</span> <span class="n">order_id</span><span class="p">)</span> <span class="k">AS</span> <span class="n">monthly_sales</span>
+    <span class="k">FROM</span> <span class="n">orders</span>
+    <span class="k">WHERE</span> <span class="n">ordered_at</span> <span class="k">IS</span> <span class="k">NOT</span> <span class="k">NULL</span>
+    <span class="k">AND</span> <span class="n">cancelled_at</span> <span class="k">IS</span> <span class="k">NULL</span>
+    <span class="k">GROUP</span> <span class="k">BY</span> <span class="k">month</span>
+<span class="p">)</span>
+<span class="k">SELECT</span> 
+    <span class="k">month</span><span class="p">,</span>
+    <span class="n">monthly_sales</span><span class="p">,</span>
+    <span class="k">SUM</span><span class="p">(</span><span class="n">monthly_sales</span><span class="p">)</span> <span class="n">OVER</span> <span class="p">(</span><span class="k">ORDER</span> <span class="k">BY</span> <span class="k">month</span><span class="p">)</span> <span class="k">AS</span> <span class="n">running_total</span>
+<span class="k">FROM</span> <span class="n">MonthlySales</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="k">month</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write an SQL query to assign a rank to employees based on their salaries.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> 
+    <span class="n">id</span><span class="p">,</span> 
+    <span class="n">name</span><span class="p">,</span> 
+    <span class="n">salary</span><span class="p">,</span>
+    <span class="n">RANK</span><span class="p">()</span> <span class="n">OVER</span> <span class="p">(</span><span class="k">ORDER</span> <span class="k">BY</span> <span class="n">salary</span> <span class="k">DESC</span><span class="p">)</span> <span class="k">AS</span> <span class="n">salary_rank</span>
+<span class="k">FROM</span> <span class="n">employees</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write an SQL query to find the percentage contribution of each employee’s salary to the total salary.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> 
+    <span class="n">id</span><span class="p">,</span> 
+    <span class="n">name</span><span class="p">,</span> 
+    <span class="n">salary</span><span class="p">,</span>
+    <span class="p">(</span><span class="n">salary</span> <span class="o">/</span> <span class="k">SUM</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span> <span class="n">OVER</span> <span class="p">())</span> <span class="o">*</span> <span class="mi">100</span> <span class="k">AS</span> <span class="n">salary_percentage</span>
+<span class="k">FROM</span> <span class="n">employees</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write a query to find the cumulative sum of sales using a window function.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span>
+    <span class="n">order_date</span><span class="p">,</span>
+    <span class="n">sales_amount</span><span class="p">,</span>
+    <span class="k">SUM</span><span class="p">(</span><span class="n">sales_amount</span><span class="p">)</span> <span class="n">OVER</span> <span class="p">(</span><span class="k">ORDER</span> <span class="k">BY</span> <span class="n">order_date</span><span class="p">)</span> <span class="k">AS</span> <span class="n">cumulative_sales</span>
+<span class="k">FROM</span> <span class="n">orders</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write an SQL query to get the difference between two consecutive transactions.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> 
+    <span class="n">id</span><span class="p">,</span> 
+    <span class="n">transaction_date</span><span class="p">,</span> 
+    <span class="n">amount</span><span class="p">,</span>
+    <span class="n">amount</span> <span class="o">-</span> <span class="n">LAG</span><span class="p">(</span><span class="n">amount</span><span class="p">)</span> <span class="n">OVER</span> <span class="p">(</span><span class="k">ORDER</span> <span class="k">BY</span> <span class="n">transaction_date</span><span class="p">)</span> <span class="k">AS</span> <span class="n">transaction_difference</span>
+<span class="k">FROM</span> <span class="n">transactions</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Write an SQL query to find the <code class="language-plaintext highlighter-rouge">LEAD()</code> and <code class="language-plaintext highlighter-rouge">LAG()</code> salary for each employee.</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> 
+    <span class="n">id</span><span class="p">,</span> 
+    <span class="n">name</span><span class="p">,</span> 
+    <span class="n">salary</span><span class="p">,</span>
+    <span class="n">LEAD</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span> <span class="n">OVER</span> <span class="p">(</span><span class="k">ORDER</span> <span class="k">BY</span> <span class="n">id</span><span class="p">)</span> <span class="k">AS</span> <span class="n">next_salary</span><span class="p">,</span>
+    <span class="n">LAG</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span> <span class="n">OVER</span> <span class="p">(</span><span class="k">ORDER</span> <span class="k">BY</span> <span class="n">id</span><span class="p">)</span> <span class="k">AS</span> <span class="n">previous_salary</span>
+<span class="k">FROM</span>
+    <span class="n">employees</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+    </article>
+    <footer>
+        <div class="footer-iconbar">
+            <span class="toc-icon" title="Table of Contents"></span>
+            <a href="#" class="go-to-top" title="Go to Top"></a>
+        </div>
+    </footer>
+</div>
+
+
+<div class="related">
+    <h2>Related Posts</h2>
+    <ul class="related-posts">
+        
+        <li>
+            <h3>
+                <a href="/publog/snowflake-sql-cheatsheet-VniOxVHf/" title="Snowflake SQL Cheatsheet link">
+                    Snowflake SQL Cheatsheet
+                    <small>07 August 2025</small>
+                </a>
+            </h3>
+        </li>
+        
+        <li>
+            <h3>
+                <a href="/publog/python-core-cheatsheet-3KV1r9AN/" title="Python Core Cheatsheet link">
+                    Python Core Cheatsheet
+                    <small>25 July 2025</small>
+                </a>
+            </h3>
+        </li>
+        
+        <li>
+            <h3>
+                <a href="/publog/nano-shortcuts-beginner-friendly-editor-z0aLs1CC/" title="Nano Shortcuts - Beginner Friendly Editor link">
+                    Nano Shortcuts - Beginner Friendly Editor
+                    <small>06 January 2025</small>
+                </a>
+            </h3>
+        </li>
+        
+    </ul>
+</div>
+</div>
+    </div>
+
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+            var context = {
+                baseurl: '/publog',
+                lang: 'en',
+                title: 'Top SQL Interview Questions',
+                description: '',
+                type: ''
+            };
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+
+<script>
+    
+    var documents = [
+    {
+    "id": 0,
+    "url": "/publog/snowflake-sql-cheatsheet-VniOxVHf/",
+    "title": "Snowflake SQL Cheatsheet",
+    "tags": "snowflake||sql||cheatsheet",
+    "date": "07 August 2025",
+    "reading_time": "4 minutes",
+    "content": "## SQL Essentials ### Joins |Join Type|Description|Syntax| |-|-|-| |INNER|Returns rows that match on both sides of the join|`SELECT * FROM table1 INNER JOIN table2 ON table1.column = table2.column`| |LEFT|Returns all rows from the left table, and the matched rows from the right table|`SELECT * FROM table1 LEFT JOIN table2 ON...",
+    "body": "2025/08/07 - SQL Essentials: Joins:       Join Type   Description   Syntax         INNER   Returns rows that match on both sides of the join   SELECT * FROM table1 INNER JOIN table2 ON table1. column = table2. column       LEFT   Returns all rows from the left table, and the matched rows from the right table   SELECT * FROM table1 LEFT JOIN table2 ON table1. column = table2. column       RIGHT   Returns all rows from the right table, and the matched rows from the left table   SELECT * FROM table1 RIGHT JO..."
+    }, {
+    "id": 1,
+    "url": "/publog/python-core-cheatsheet-3KV1r9AN/",
+    "title": "Python Core Cheatsheet",
+    "tags": "python||cheatsheet",
+    "date": "25 July 2025",
+    "reading_time": "7 minutes",
+    "content": "## Date and Time ### Date Directives | Format | Meaning | Example | | ------ | --------------------------------- | ---------- | | `%Y` | Year (4 digits) | `2025` | | `%y` | Year (2 digits) | `25` | | `%m` | Month (01-12) | `07` | | `%B` |...",
+    "body": "2025/07/25 - Date and Time: Date Directives:       Format   Meaning   Example         %Y   Year (4 digits)   2025       %y   Year (2 digits)   25       %m   Month (01-12)   07       %B   Full month name   July       %b   Abbreviated month name   Jul       %d   Day of the month (01–31)   17       %j   Day of year (001–366)   198       %A   Full weekday name   Thursday       %a   Abbreviated weekday name   Thu       %w   Weekday as decimal (0=Sunday)   4       %U   Week number (Sunday as first day)   28    ..."
+    }, {
+    "id": 2,
+    "url": "/publog/top-sql-interview-questions-Y7x8i1fB/",
+    "title": "Top SQL Interview Questions",
+    "tags": "sql||interview||mysql||postgresql",
+    "date": "27 June 2025",
+    "reading_time": "2 minutes",
+    "content": "Write an SQL query to fetch the second-highest salary from an employees table. SELECT MAX(salary) AS SecondHighestSalary FROM employees WHERE salary &lt; (SELECT MAX(salary) FROM employees); SELECT salary AS SecondHighestSalary FROM employees ORDER BY salary DESC LIMIT 1 OFFSET 1; SELECT salary AS SecondHighestSalary FROM ( SELECT salary, row_number() OVER...",
+    "body": "2025/06/27 -    Write an SQL query to fetch the second-highest salary from an employees table.    SELECT MAX(salary) AS SecondHighestSalary FROM employees WHERE salary &lt; (SELECT MAX(salary) FROM employees);     SELECT salary AS SecondHighestSalary FROM employees ORDER BY salary DESC LIMIT 1 OFFSET 1;     SELECT salary AS SecondHighestSalary FROM (   SELECT salary, row_number() OVER (ORDER BY salary DESC) AS rank   FROM employees ) AS RankedSalaries WHERE rank = 2;      Write an SQL query to get the dup..."
+    }, {
+    "id": 3,
+    "url": "/publog/nano-shortcuts-beginner-friendly-editor-z0aLs1CC/",
+    "title": "Nano Shortcuts - Beginner Friendly Editor",
+    "tags": "nano||shortcut||editor||text",
+    "date": "06 January 2025",
+    "reading_time": "3 minutes",
+    "content": "When it comes to text editing in the terminal, Nano stands out. It is user-friendly and simple. Nano’s straightforward interface makes it an excellent choice for anyone from novice to expert. In this blog post, we will explore essential Nano shortcuts. These will help you navigate and use this powerful...",
+    "body": "2025/01/06 - When it comes to text editing in the terminal, Nano stands out. It is user-friendly and simple. Nano’s straightforward interface makes it an excellent choice for anyone from novice to expert. In this blog post, we will explore essential Nano shortcuts. These will help you navigate and use this powerful text editor with ease. What is Nano?: Nano is a command-line text editor, found in most Unix-like operating systems. It is simple in design and easy to use, which makes it an ideal choice for b..."
+    }, {
+    "id": 4,
+    "url": "/publog/windows-wammp-setup/",
+    "title": "Custom WAMMP Setup in Windows (mod_wsgi support)",
+    "tags": "windows||apache||php",
+    "date": "30 April 2023",
+    "reading_time": "2 minutes",
+    "content": "Are you tired of using pre-packaged WAMPP solutions that limit your control and flexibility? Do you need to run Python web applications on Windows using the Apache web server? Look no further! This guide will walk you through the process of setting up a custom WAMPP environment on Windows, complete...",
+    "body": "2023/04/30 - Are you tired of using pre-packaged WAMPP solutions that limit your control and flexibility? Do you need to run Python web applications on Windows using the Apache web server? Look no further! This guide will walk you through the process of setting up a custom WAMPP environment on Windows, complete with mod_wsgi support for running Python web applications. By following this guide, you’ll learn how to:  Install and configure Apache, MySQL, and PHP/Python on Windows Set up mod_wsgi to run Pytho..."
+    }, {
+    "id": 5,
+    "url": "/publog/introduction-to-ruby/",
+    "title": "Introduction To Ruby",
+    "tags": "ruby||programming",
+    "date": "01 April 2022",
+    "reading_time": "21 minutes",
+    "content": "Welcome to the world of Ruby, a dynamic and versatile programming language that’s been delighting developers and powering innovative applications for over two decades. Known for its simplicity, readability, and ease of use, Ruby has become a favorite among beginners and experienced programmers alike. In this introduction to Ruby, we’ll...",
+    "body": "2022/04/01 - Welcome to the world of Ruby, a dynamic and versatile programming language that’s been delighting developers and powering innovative applications for over two decades. Known for its simplicity, readability, and ease of use, Ruby has become a favorite among beginners and experienced programmers alike. In this introduction to Ruby, we’ll take you on a journey through the basics of the language, covering its syntax, features, and ecosystem. You’ll learn how to write Ruby code, work with data str..."
+    }
+    ];
+
+    var idx = lunr(function () {
+        this.ref('id')
+        this.field('title')
+        this.field('body')
+
+        documents.forEach(function (doc) {
+            this.add(doc)
+        }, this)
+    });
+
+    function slugify(text) {
+        return text
+            .toString()
+            .toLowerCase()
+            .replace(/\s+/g, '-') // Replace spaces with -
+            .replace(/[^\w-]+/g, '') // Remove all non-word chars
+            .replace(/--+/g, '-') // Replace multiple - with single -
+            .replace(/^-+/, '') // Trim - from start of text
+            .replace(/-+$/, ''); // Trim - from end of text
+        ;
+    }
+
+    function lunr_search(term) {
+        if(term) {
+            var results = idx.search(term);
+            if(results.length>0){
+                for (var i = 0; i < results.length; i++) {
+                    var ref = results[i]['ref'];
+                    var post = documents[ref];
+                    post.tags = post.tags.split('||');
+
+                    var tagHtml = '';
+                    for(var j = 0; j < post.tags.length; j++){
+                        var tag = post.tags[j];
+                        tagHtml += `
+<a
+			class="tag-link"
+			href="/publog/tags/${slugify(tag)}"
+			rel="category tag"
+            title="${tag} link"
+		>
+			${tag}
+		</a>            
+                        `;
+                    }
+                    var postHtml = `
+<div class="post">
+	<h3 class="post-title">
+		<a href="${post.url}" title="${post.title} link"> ${post.title} </a>
+	</h3>
+	<div class="post-tags">
+		${tagHtml}
+	</div>
+    <div class="post-info">
+        <span class="post-read-time">${post.reading_time}</span>
+        <span class="post-date">${post.date}</span>
+    </div>
+	<span> ${post.content} </span>
+</div>
+                    `;
+                    document.querySelector('#search-results').innerHTML = postHtml;
+                }
+            }
+        }
+    }
+</script>
+    <script src="/publog/public/js/script.js"></script>
+  </body>
+</html>
