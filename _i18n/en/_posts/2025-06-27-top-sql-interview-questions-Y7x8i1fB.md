@@ -327,14 +327,20 @@ tags: sql interview mysql postgresql
 30. Write an SQL query to get the running total of sales per month.
 
     ```sql
+    WITH MonthlySales AS (
+        SELECT 
+            month,
+            count(distinct order_id) AS monthly_sales
+        FROM orders
+        WHERE ordered_at IS NOT NULL
+        AND cancelled_at IS NULL
+        GROUP BY month
+    )
     SELECT 
         month,
-        count(distinct order_id) AS monthly_sales,
-        SUM(count(distinct order_id)) OVER (ORDER BY month) AS running_total
-    FROM orders
-    WHERE ordered_at IS NOT NULL
-    AND cancelled_at IS NULL
-    GROUP BY month
+        monthly_sales,
+        SUM(monthly_sales) OVER (ORDER BY month) AS running_total
+    FROM MonthlySales
     ORDER BY month;
     ```
 
