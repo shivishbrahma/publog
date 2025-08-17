@@ -401,3 +401,157 @@ tags: sql interview mysql postgresql
     FROM
         employees;
     ```
+
+## Time Series
+
+1.⁠ ⁠Calculate daily user retention for a 30-day cohort window.
+
+```sql
+with daily_activity as (
+    select date(event_ts) event_date, count(distinct user_id) as daily_user_count from events
+    group by 1
+)
+select
+    event_date, 
+    daily_user_count - lag(daily_user_count) over(order by event_date) daily_user_count_diff,
+    (daily_user_count - lag(daily_user_count) over(order by event_date)) *100 / (lag(daily_user_count) over(order by event_date)) daily_user_retention
+from daily_activity;
+```
+
+2.⁠ ⁠Retrieve the latest 3 events per user using window functions.
+
+```sql
+select events.*, row_number() over (partition by user_id order by event_ts desc) rn
+from events
+qualify rn <= 3;
+```
+
+3.⁠ ⁠Detect out-of-order events in time-series logs using timestamps.
+
+```sql
+with ordered_events as (
+    select 
+        user_id, event_name, event_ts, 
+        row_number() over(partition by user_id order by event_ts) as event_order
+    from events
+),
+out_of_order_events AS (
+    SELECT 
+        a.user_id,
+        a.event_name AS current_event,
+        a.event_ts AS current_event_ts,
+        b.event_name AS previous_event,
+        b.event_ts AS previous_event_ts
+    FROM 
+        ordered_events a
+    JOIN 
+        ordered_events b ON a.user_id = b.user_id AND a.event_order = b.event_order + 1
+    WHERE 
+        a.event_ts < b.event_ts
+)
+SELECT 
+    user_id,
+    current_event,
+    current_event_ts,
+    previous_event,
+    previous_event_ts
+FROM 
+    out_of_order_events
+ORDER BY 
+    user_id, current_event_ts;
+```
+
+4.⁠ ⁠Backfill missing dates in a partitioned dataset using calendar table.
+
+```sql
+```
+
+5.⁠ ⁠Compute rolling 7-day distinct active users per platform.
+
+```sql
+select 
+    date(event_ts) as event_date,
+    platform_name,
+    count(distinct user_id) over (partition by platform_name order by date(event_ts) rows between 6 preceding and current row) as active_users
+from events
+group by 1, 2;
+```
+
+6.⁠ ⁠Identify users with no activity in the last 30 days (churn analysis).
+
+```sql
+select user_id
+from events
+where event_ts > current_timestamp - interval '30' day
+group by user_id
+having count(*) = 0;
+```
+
+7.⁠ ⁠Perform multi-level aggregation (category → subcategory → product).
+
+```sql
+```
+
+8.⁠ ⁠Compare current vs previous month revenue per region.
+
+```sql
+with monthly_revenue as (
+    select region,
+        extract(month from order_date) as month_name,
+        sum(revenue) as total_revenue
+    from orders
+    group by 1, 2
+)
+select distinct
+    region,
+    month_name,
+    total_revenue current_month_revenue,
+    lag(total_revenue) over (partition by region order by month_name) as previous_month_revenue,
+    previous_month_revenue - current_month_revenue as revenue_difference
+from monthly_revenue;
+```
+
+9.⁠ ⁠Join fact and dimension tables with SCD Type 2 handling.
+
+10.⁠ ⁠Detect schema drift between raw and curated layers via metadata.
+
+11.⁠ ⁠Calculate 95th percentile of transaction amounts by user.
+
+12.⁠ ⁠Fetch top 3 categories contributing to 80% of total revenue.
+
+13.⁠ ⁠Identify seasonal patterns in monthly product sales.
+
+14.⁠ ⁠Use broadcast join hints to optimize small dimension lookups.
+
+15.⁠ ⁠Flag revenue anomalies using z-score or standard deviation.
+
+16.⁠ ⁠Remove duplicates using ROW_NUMBER on ingestion timestamp.
+
+17.⁠ ⁠Calculate session time from login-logout events.
+
+18.⁠ ⁠Compare revenue growth across last 3 quarters per product line.
+
+19.⁠ ⁠Identify users who upgraded to premium but never used the features.
+
+20.⁠ ⁠Track update frequency on records in an SCD Type 2 table.
+
+1.⁠ ⁠Write a SQL query using Delta tables to compute cumulative revenue per day
+2.⁠ ⁠Retrieve the first and last login per user from a huge event log table
+3.⁠ ⁠Find the top 3 customers by spend in each region (use window functions)
+4.⁠ ⁠Detect duplicate records in a transactional table and delete extras safely
+5.⁠ ⁠Get users who made purchases in 3 consecutive months
+6.⁠ ⁠Identify skewed joins in SQL and propose fixes using broadcast hints
+7.⁠ ⁠Compute a 7-day moving average of product sales on Delta Lake
+8.⁠ ⁠Pivot daily sales into month-wise columns
+9.⁠ ⁠Find customers who bought products every month in a year
+10.⁠ ⁠Rank products by sales per year, resetting rank each year
+11.⁠ ⁠Find employees earning more than their department average
+12.⁠ ⁠Find the median transaction amount (no built-in median)
+13.⁠ ⁠Get all users who placed their first order in the last 30 days
+14.⁠ ⁠Compare price change between two dates for each product
+15.⁠ ⁠Identify customers whose first and last transaction is on the same day
+16.⁠ ⁠Calculate the percentage of returning users for each month
+17.⁠ ⁠Retrieve products that have never been sold
+18.⁠ ⁠Detect schema drift in historical Delta data snapshots
+19.⁠ ⁠Find departments where at least 2 employees have identical salaries
+20.⁠ ⁠Group users by login streaks of 3+ consecutive days.
