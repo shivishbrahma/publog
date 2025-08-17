@@ -254,3 +254,31 @@ NULL Handling: COALESCE(), NULLIF()
 String Functions: CONCAT(), SUBSTRING(), TRIM()
 Date Functions: CURRENT_DATE, DATEADD(), DATEDIFF()
 Conditional: CASE WHEN ... THEN ... ELSE ... END -->
+
+### Date Time Functions
+
+Supported values for datetime parts are
+
+- `YEAR`
+- `MONTH`
+- `DAY`
+- `HOUR`
+- `MINUTE`
+- `SECOND`
+- `QUARTER`
+- `WEEK`
+- `DAYOFWEEK`
+- `DAYOFMONTH`
+- `DAYOFYEAR`
+- `WEEKDAY`
+- `EPOCH`
+
+```sql
+-- EXTRACT usage
+SELECT 
+    EXTRACT(YEAR FROM order_date) AS year,
+    EXTRACT(MONTH FROM order_date) AS month,
+    COUNT(*) AS order_count
+FROM orders
+GROUP BY year, month;
+```
