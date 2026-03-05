@@ -480,11 +480,11 @@ group by 1, 2;
 6.⁠ ⁠Identify users with no activity in the last 30 days (churn analysis).
 
 ```sql
-select user_id
-from events
-where event_ts > current_timestamp - interval '30' day
-group by user_id
-having count(*) = 0;
+SELECT u.user_id
+FROM users u -- Assuming a 'users' table exists
+LEFT JOIN events e ON u.user_id = e.user_id
+AND e.event_ts > current_timestamp - interval '30' day
+WHERE e.user_id IS NULL;
 ```
 
 7.⁠ ⁠Perform multi-level aggregation (category → subcategory → product).
