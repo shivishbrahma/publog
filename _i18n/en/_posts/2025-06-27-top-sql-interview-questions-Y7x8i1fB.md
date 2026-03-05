@@ -420,10 +420,16 @@ from daily_activity;
 
 2.⁠ ⁠Retrieve the latest 3 events per user using window functions.
 
-```sql
-select events.*, row_number() over (partition by user_id order by event_ts desc) rn
-from events
-qualify rn <= 3;
+WITH RankedEvents AS (
+    SELECT
+        events.*,
+        ROW_NUMBER() OVER (PARTITION BY user_id ORDER BY event_ts DESC) AS rn
+    FROM events
+)
+SELECT
+    user_id, event_name, event_ts
+FROM RankedEvents
+WHERE rn <= 3;
 ```
 
 3.⁠ ⁠Detect out-of-order events in time-series logs using timestamps.
